@@ -72,7 +72,7 @@ public class JsonApiClientBuilderTests
                            """;
         var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
         var messageHandlerMock = new MockHttpMessageHandler();
-        messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title,id&filter=and(equals(title,'Dracula'),equals(annullato,'false'))")
+        messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title,id&filter=and(equals(title,'Dracula'),not(equals(annullato,'true')))")
             .Respond("application/vnd.api+json", responseData);
         IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
         httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));

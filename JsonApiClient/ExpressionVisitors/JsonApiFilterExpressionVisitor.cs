@@ -90,7 +90,7 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
         {
             _sb.Append("equals(");
             _sb.Append(node.Member.Name.Uncapitalize());
-            _sb.Append(",'true')");
+            _sb.Append($",'true')");
         }
         else
         {
@@ -133,19 +133,8 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
     protected override Expression VisitUnary(UnaryExpression node)
     {
         if (node.NodeType != ExpressionType.Not) return base.VisitUnary(node);
-        if (node.Operand is MemberExpression memberExp)
-        {
-            _sb.Append("equals(");
-            Visit(memberExp);
-            _sb.Append(",'false')");
-            return node;
-        }
-                
-        _sb.Append("not(");
-        Visit(node.Operand);
-        _sb.Append(')');
+        HandleNegation(node);
         return node;
-
     }
 
     private void AppendValue(object? value)
@@ -195,6 +184,13 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
         _sb.Append(',');
         Visit(node.Right);
         _sb.Append("))");
+    }
+
+    private void HandleNegation(UnaryExpression node)
+    {
+        _sb.Append("not(");
+        Visit(node.Operand);
+        _sb.Append(')');
     }
 
     private void HandleComparison(BinaryExpression node, string operatorName)

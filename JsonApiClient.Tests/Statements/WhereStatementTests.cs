@@ -167,4 +167,26 @@ public class WhereStatementTests
         result.Key.Should().Be("filter");
         result.Value.Should().Be("any(chapter,'Intro','Summary','Conclusion')");
     }
+    
+    [Fact]
+    public void Parse_ComplexLambda1_ShouldReturnCorrectFilter()
+    {
+        var dateTime = DateTime.Parse("2022/05/12");
+        var result = new WhereStatement<TestModel>(m => 
+            new[] { "Intro", "Summary", "Conclusion" }.Contains(m.Chapter) && !m.Description.Contains("ciao") || m.LastModified <= dateTime).Translate();
+
+        result.Key.Should().Be("filter");
+        result.Value.Should().Be("or(and(any(chapter,'Intro','Summary','Conclusion'),not(contains(description,'ciao'))),lessOrEqual(lastModified,'2022-05-12 00:00:00'))");
+    }
+    
+    [Fact]
+    public void Parse_ComplexLambda2_ShouldReturnCorrectFilter()
+    {
+        var dateTime = DateTime.Parse("2022/05/12");
+        var result = new WhereStatement<TestModel>(m => 
+            new[] { "Intro", "Summary", "Conclusion" }.Contains(m.Chapter) && (!m.Description.Contains("ciao") || m.LastModified <= dateTime)).Translate();
+
+        result.Key.Should().Be("filter");
+        result.Value.Should().Be("and(any(chapter,'Intro','Summary','Conclusion'),or(not(contains(description,'ciao')),lessOrEqual(lastModified,'2022-05-12 00:00:00')))");
+    }
 }
