@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using JsonApiClient.Exceptions;
 using JsonApiClient.Extensions;
+using JsonApiClient.Interfaces;
 
 namespace JsonApiClient.Statements;
 
@@ -23,15 +24,15 @@ public class SelectStatement<TEntity>(Expression<Func<TEntity,object>> expressio
     private void ValidateExpression()
     {
         if (expression.Body is not NewExpression newExpression)
-            throw new StatementParsingException($"Invalid expression body type. Expected: {nameof(NewExpression)}. Found: {expression.Body.NodeType}");
+            throw new StatementTranslationException($"Invalid expression body type. Expected: {nameof(NewExpression)}. Found: {expression.Body.NodeType}");
 
         var firstWrongTypeArgument = newExpression.Arguments.FirstOrDefault(arg => arg is not MemberExpression);
         if (firstWrongTypeArgument != null)
-            throw new StatementParsingException($"Invalid expression body argument type. Expected: {nameof(MemberExpression)}. Found: {firstWrongTypeArgument.NodeType}");
+            throw new StatementTranslationException($"Invalid expression body argument type. Expected: {nameof(MemberExpression)}. Found: {firstWrongTypeArgument.NodeType}");
         
         var firstInvalidMemberName = newExpression.Arguments.FirstOrDefault(arg => arg is MemberExpression member && !IsValidMemberName(member.Member.Name));
         if (firstInvalidMemberName != null)
-            throw new StatementParsingException($"Invalid member name: member {(firstInvalidMemberName as MemberExpression)!.Member.Name} is not a valid property name for {typeof(TEntity).Name}");
+            throw new StatementTranslationException($"Invalid member name: member {(firstInvalidMemberName as MemberExpression)!.Member.Name} is not a valid property name for {typeof(TEntity).Name}");
     }
 
     private bool IsValidMemberName(string memberName)

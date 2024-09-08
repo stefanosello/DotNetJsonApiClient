@@ -47,4 +47,90 @@ public class JsonApiClientBuilderTests
         var response = await jsonApiClient.GetAsync();
         response.Should().BeEquivalentTo(new Book() { Title = "Dracula", Id = 1 });
     }
+    
+    [Fact]
+    public async Task Test2()
+    {
+        var responseData = """
+                             {
+                               "links": {
+                                 "self": "https://example.jsonapi.com/books",
+                                 "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+                                 "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+                               },
+                               "data": [{
+                                 "type": "book",
+                                 "id": "1",
+                                 "attributes": {
+                                   "title": "Dracula"
+                                 },
+                                 "links": {
+                                   "self": "https://example.jsonapi.com/books/1"
+                                 }
+                               }]
+                             }
+                           """;
+        var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
+        var messageHandlerMock = new MockHttpMessageHandler();
+        messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title,id&filter=and(equals(title,'Dracula'),equals(annullato,'false'))")
+            .Respond("application/vnd.api+json", responseData);
+        IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
+        httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
+
+        sut.SetHttpClient(httpClientFactory, "jsonApiTests");
+        sut
+          .Select<Book>(x => new
+          {
+            x.Title,
+            x.Id
+          })
+          .Where<Book>(x => x.Title == "Dracula" && !x.Annullato);
+
+        var jsonApiClient = sut.Build();
+        var response = await jsonApiClient.GetAsync();
+        response.Should().BeEquivalentTo(new Book() { Title = "Dracula", Id = 1 });
+    }
+    
+    [Fact]
+    public async Task Test3()
+    {
+      var responseData = """
+                           {
+                             "links": {
+                               "self": "https://example.jsonapi.com/books",
+                               "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+                               "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+                             },
+                             "data": [{
+                               "type": "book",
+                               "id": "1",
+                               "attributes": {
+                                 "title": "Dracula"
+                               },
+                               "links": {
+                                 "self": "https://example.jsonapi.com/books/1"
+                               }
+                             }]
+                           }
+                         """;
+      var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
+      var messageHandlerMock = new MockHttpMessageHandler();
+      messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title,id&filter=and(equals(title,'Dracula'),equals(annullato,'true'))")
+        .Respond("application/vnd.api+json", responseData);
+      IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
+      httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
+
+      sut.SetHttpClient(httpClientFactory, "jsonApiTests");
+      sut
+        .Select<Book>(x => new
+        {
+          x.Title,
+          x.Id
+        })
+        .Where<Book>(x => x.Title == "Dracula" && x.Annullato);
+
+      var jsonApiClient = sut.Build();
+      var response = await jsonApiClient.GetAsync();
+      response.Should().BeEquivalentTo(new Book() { Title = "Dracula", Id = 1 });
+    }
 }

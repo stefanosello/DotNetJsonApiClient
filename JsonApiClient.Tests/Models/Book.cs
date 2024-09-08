@@ -10,6 +10,8 @@ public class Book
     public string Title { get; set; } = null!;
 
     public DateTime? PublishDate { get; set; } = null;
+    
+    public bool Annullato { get; set; }
 
     public virtual Author? Author { get; set; } = null;
 }

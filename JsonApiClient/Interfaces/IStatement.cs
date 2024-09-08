@@ -1,6 +1,6 @@
-namespace JsonApiClient.Statements;
+namespace JsonApiClient.Interfaces;
 
-public interface IStatement
+internal interface IStatement
 {
     KeyValuePair<string,string> Translate(string? targetResourceName = null);
 }

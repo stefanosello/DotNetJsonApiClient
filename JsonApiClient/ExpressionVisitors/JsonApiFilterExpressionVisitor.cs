@@ -86,7 +86,17 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
             return node;
         }
         
-        _sb.Append(node.Member.Name.Uncapitalize());
+        if (node.Type == typeof(bool))
+        {
+            _sb.Append("equals(");
+            _sb.Append(node.Member.Name.Uncapitalize());
+            _sb.Append(",'true')");
+        }
+        else
+        {
+            _sb.Append(node.Member.Name.Uncapitalize());
+        }
+        
         return node;
     }
 
@@ -119,6 +129,24 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
         AppendValue(node.Value);
         return node;
     }
+    
+    protected override Expression VisitUnary(UnaryExpression node)
+    {
+        if (node.NodeType != ExpressionType.Not) return base.VisitUnary(node);
+        if (node.Operand is MemberExpression memberExp)
+        {
+            _sb.Append("equals(");
+            Visit(memberExp);
+            _sb.Append(",'false')");
+            return node;
+        }
+                
+        _sb.Append("not(");
+        Visit(node.Operand);
+        _sb.Append(')');
+        return node;
+
+    }
 
     private void AppendValue(object? value)
     {
@@ -129,6 +157,9 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
                 break;
             case string strValue:
                 _sb.Append($"'{strValue}'");
+                break;
+            case bool boolValue:
+                _sb.Append($"'{boolValue.ToString().ToLower()}'");
                 break;
             case DateTime dateTime:
                 _sb.Append($"'{dateTime:yyyy-MM-dd HH:mm:ss}'");
