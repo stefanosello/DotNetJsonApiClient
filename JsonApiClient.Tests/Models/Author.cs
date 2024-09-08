@@ -1,12 +1,11 @@
 using JsonApiClient.Attributes;
-using JsonApiDotNetCore.Resources;
 
 namespace JsonApiClient.Tests.Models;
 
 [JsonApiEntity("books")]
-public class Author : Identifiable<int>
+public class Author
 {
-    public override int Id { get; set; }
+    public int Id { get; set; }
     
     public string FirstName { get; set; }
     

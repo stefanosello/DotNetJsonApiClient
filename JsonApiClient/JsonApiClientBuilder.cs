@@ -4,12 +4,10 @@ using JsonApiClient.Attributes;
 using JsonApiClient.Extensions;
 using JsonApiClient.Interfaces;
 using JsonApiClient.Statements;
-using JsonApiDotNetCore.Errors;
-using JsonApiDotNetCore.Resources;
 
 namespace JsonApiClient;
 
-public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientBuilder<TRootEntity> where TRootEntity : class, IIdentifiable
+public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientBuilder<TRootEntity> where TRootEntity : class
 {
     private IHttpClientFactory? _httpClientFactory = null;
     private string? _httpClientId = null;
@@ -22,9 +20,15 @@ public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientB
         return this;
     }
 
-    public IJsonApiClientBuilder<TRootEntity> Select<TEntity>(Expression<Func<TEntity, object>> selectStatement) where TEntity : class, IIdentifiable
+    public IJsonApiClientBuilder<TRootEntity> Select<TEntity>(Expression<Func<TEntity, object>> selectStatement) where TEntity : class
     {
         _statements.Add(new SelectStatement<TEntity>(selectStatement));
+        return this;
+    }
+    
+    public IJsonApiClientBuilder<TRootEntity> Where<TEntity>(Expression<Func<TEntity, bool>> whereStatement) where TEntity : class
+    {
+        _statements.Add(new WhereStatement<TEntity>(whereStatement));
         return this;
     }
 
@@ -32,7 +36,7 @@ public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientB
     {
         // TODO: validation before building
         if (_httpClientId == null || _httpClientFactory == null)
-            throw new InvalidConfigurationException("HttpClientFactory and HttpClientId cannot be null.");
+            throw new InvalidOperationException("HttpClientFactory and HttpClientId cannot be null.");
         return new JsonApiClient<TRootEntity>(_httpClientFactory, _httpClientId, BuildUrl());
     }
 
@@ -45,7 +49,7 @@ public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientB
         NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
         foreach (var statement in _statements)
         {
-            KeyValuePair<string, string> param = statement.Parse();
+            KeyValuePair<string, string> param = statement.Translate();
             queryString.Add(param.Key, param.Value);
         }
         urlBuilder.Query = queryString.ToString();

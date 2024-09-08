@@ -1,8 +1,6 @@
-using JsonApiDotNetCore.Resources;
-
 namespace JsonApiClient.Statements;
 
 public interface IStatement
 {
-    KeyValuePair<string,string> Parse();
+    KeyValuePair<string,string> Translate(string? targetResourceName = null);
 }

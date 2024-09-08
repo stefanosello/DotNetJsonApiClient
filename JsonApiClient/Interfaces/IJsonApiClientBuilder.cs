@@ -1,14 +1,13 @@
 using System.Linq.Expressions;
-using JsonApiDotNetCore.Resources;
 
 namespace JsonApiClient.Interfaces;
 
-public interface IJsonApiClientBuilder<TRootEntity> where TRootEntity : class, IIdentifiable
+public interface IJsonApiClientBuilder<TRootEntity> where TRootEntity : class
 {
     IJsonApiClientBuilder<TRootEntity> SetHttpClient(IHttpClientFactory httpClientFactory, string httpClientId);
 
     IJsonApiClientBuilder<TRootEntity> Select<TEntity>(Expression<Func<TEntity, object>> selectStatement)
-        where TEntity : class, IIdentifiable;
+        where TEntity : class;
 
     IJsonApiClient<TRootEntity> Build();
 }

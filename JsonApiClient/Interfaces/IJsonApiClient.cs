@@ -1,8 +1,6 @@
-using JsonApiDotNetCore.Resources;
-
 namespace JsonApiClient.Interfaces;
 
-public interface IJsonApiClient<TEntity> where TEntity : class, IIdentifiable
+public interface IJsonApiClient<TEntity> where TEntity : class
 {
     Task<TEntity?> GetAsync(CancellationToken cancellationToken = default);
 }

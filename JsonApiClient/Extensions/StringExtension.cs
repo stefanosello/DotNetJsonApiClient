@@ -5,6 +5,8 @@ public static class StringExtension
     public static string Uncapitalize(this string arg)
     {
         if (string.IsNullOrEmpty(arg)) return arg;
-        return char.ToLower(arg[0]) + arg[1..];
+        IEnumerable<string> strings = arg.Split(".");
+        IEnumerable<string> uncapitalizedStrings = strings.Select(s => char.ToLower(s[0]) + s[1..]);
+        return string.Join(".", uncapitalizedStrings);
     }
 }
