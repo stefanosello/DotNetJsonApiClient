@@ -10,28 +10,28 @@ public class JsonApiClientBuilderTests
     [Fact]
     public async Task Test1()
     {
-        var responseData = """
-                             {
-                               "links": {
-                                 "self": "https://example.jsonapi.com/books",
-                                 "next": "http://https://example.jsonapi.com/books?page[offset]=2",
-                                 "last": "http://https://example.jsonapi.com/books?page[offset]=10"
-                               },
-                               "data": [{
-                                 "type": "book",
-                                 "id": "1",
-                                 "attributes": {
-                                   "title": "Dracula"
-                                 },
-                                 "links": {
-                                   "self": "https://example.jsonapi.com/books/1"
-                                 }
-                               }]
-                             }
-                           """;
+        const string responseData = """
+          {
+            "links": {
+              "self": "https://example.jsonapi.com/books",
+              "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+              "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+            },
+            "data": [{
+              "type": "book",
+              "id": "1",
+              "attributes": {
+                "title": "Dracula"
+              },
+              "links": {
+                "self": "https://example.jsonapi.com/books/1"
+              }
+            }]
+          }
+        """;
         var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
         var messageHandlerMock = new MockHttpMessageHandler();
-        messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title,id")
+        messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title")
             .Respond("application/vnd.api+json", responseData);
         IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
         httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
@@ -39,8 +39,7 @@ public class JsonApiClientBuilderTests
         sut.SetHttpClient(httpClientFactory, "jsonApiTests");
         sut.Select<Book>(x => new
         {
-            x.Title,
-            x.Id
+            x.Title
         });
 
         var jsonApiClient = sut.Build();
@@ -72,7 +71,7 @@ public class JsonApiClientBuilderTests
                            """;
         var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
         var messageHandlerMock = new MockHttpMessageHandler();
-        messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title,id&filter=and(equals(title,'Dracula'),not(equals(annullato,'true')))")
+        messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title&filter=and(equals(title,'Dracula'),not(equals(annullato,'true')))")
             .Respond("application/vnd.api+json", responseData);
         IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
         httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
@@ -81,8 +80,7 @@ public class JsonApiClientBuilderTests
         sut
           .Select<Book>(x => new
           {
-            x.Title,
-            x.Id
+            x.Title
           })
           .Where<Book>(x => x.Title == "Dracula" && !x.Annullato);
 
@@ -115,7 +113,7 @@ public class JsonApiClientBuilderTests
                          """;
       var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
       var messageHandlerMock = new MockHttpMessageHandler();
-      messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title,id&filter=and(equals(title,'Dracula'),equals(annullato,'true'))")
+      messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title&filter=and(equals(title,'Dracula'),equals(annullato,'true'))")
         .Respond("application/vnd.api+json", responseData);
       IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
       httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
@@ -124,8 +122,7 @@ public class JsonApiClientBuilderTests
       sut
         .Select<Book>(x => new
         {
-          x.Title,
-          x.Id
+          x.Title
         })
         .Where<Book>(x => x.Title == "Dracula" && x.Annullato);
 

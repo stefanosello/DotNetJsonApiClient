@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using JsonApiClient.Attributes;
 using JsonApiClient.Exceptions;
 using JsonApiClient.Extensions;
 using JsonApiClient.Interfaces;
@@ -35,9 +36,15 @@ public class SelectStatement<TEntity>(Expression<Func<TEntity,object>> expressio
             throw new StatementTranslationException($"Invalid member name: member {(firstInvalidMemberName as MemberExpression)!.Member.Name} is not a valid property name for {typeof(TEntity).Name}");
     }
 
-    private bool IsValidMemberName(string memberName)
+    private static bool IsValidMemberName(string memberName)
     {
-        IEnumerable<string> validMemberNames = typeof(TEntity).GetMembers().Select(m => m.Name);
-        return validMemberNames.Contains(memberName);
+        IEnumerable<string> validPropertyNames = typeof(TEntity)
+            .GetProperties()
+            .Where(p =>
+                Attribute.GetCustomAttribute(p, typeof(JsonApiAttributeAttribute)) is not null ||
+                Attribute.GetCustomAttribute(p, typeof(JsonApiRelationshipAttribute)) is not null)
+            .Select(p => p.Name);
+        
+        return validPropertyNames.Contains(memberName);
     }
 }

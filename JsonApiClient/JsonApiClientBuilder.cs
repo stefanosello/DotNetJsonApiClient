@@ -1,6 +1,7 @@
 using System.Collections.Specialized;
 using System.Linq.Expressions;
 using JsonApiClient.Attributes;
+using JsonApiClient.Exceptions;
 using JsonApiClient.Extensions;
 using JsonApiClient.Interfaces;
 using JsonApiClient.Statements;
@@ -60,7 +61,9 @@ public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientB
     private string GetPath()
     {
         Type rootType = typeof(TRootEntity);
-        JsonApiEntityAttribute? attribute = (JsonApiEntityAttribute?) Attribute.GetCustomAttribute(rootType, typeof(JsonApiEntityAttribute));
-        return attribute is null ? $"{rootType.Name.Uncapitalize()}/{rootType.Name.Uncapitalize()}" : $"/{attribute.JsonApiNamespace}/{attribute.JsonApiResource ?? rootType.Name.Uncapitalize()}";
+        JsonApiResourceAttribute attribute =
+            (JsonApiResourceAttribute?)Attribute.GetCustomAttribute(rootType, typeof(JsonApiResourceAttribute)) ??
+            throw new MissingAttributeException($"The provided root type is not decorated with the {nameof(JsonApiResourceAttribute)} attribute.");
+        return $"/{attribute.ApiNamespace}/{attribute.ResourceName ?? rootType.Name.Uncapitalize()}";
     }
 }
