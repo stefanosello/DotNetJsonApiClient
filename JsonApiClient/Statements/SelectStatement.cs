@@ -12,12 +12,12 @@ public class SelectStatement<TEntity>(Expression<Func<TEntity,object>> expressio
     {
         ValidateExpression();
         
-        NewExpression newExpression = (expression.Body as NewExpression)!;
+        var newExpression = (expression.Body as NewExpression)!;
 
-        IEnumerable<string> fields =
+        var fields =
             newExpression.Arguments.Select(arg => (arg as MemberExpression)!.Member.Name.Uncapitalize());
 
-        string resourceName = targetResourceName ?? typeof(TEntity).Name.Uncapitalize();
+        var resourceName = targetResourceName ?? typeof(TEntity).Name.Uncapitalize();
         
         return new KeyValuePair<string, string>($"fields[{resourceName}]",$"{string.Join(',', fields)}");
     }
@@ -38,11 +38,11 @@ public class SelectStatement<TEntity>(Expression<Func<TEntity,object>> expressio
 
     private static bool IsValidMemberName(string memberName)
     {
-        IEnumerable<string> validPropertyNames = typeof(TEntity)
+        var validPropertyNames = typeof(TEntity)
             .GetProperties()
             .Where(p =>
-                Attribute.GetCustomAttribute(p, typeof(JsonApiAttributeAttribute)) is not null ||
-                Attribute.GetCustomAttribute(p, typeof(JsonApiRelationshipAttribute)) is not null)
+                Attribute.GetCustomAttribute(p, typeof(JAttrAttribute)) is not null ||
+                Attribute.GetCustomAttribute(p, typeof(JRelAttribute)) is not null)
             .Select(p => p.Name);
         
         return validPropertyNames.Contains(memberName);

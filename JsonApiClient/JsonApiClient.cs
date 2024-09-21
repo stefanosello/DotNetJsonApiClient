@@ -12,9 +12,9 @@ public class JsonApiClient<TEntity>(IHttpClientFactory httpClientFactory, string
 {
     public async Task<TEntity?> GetAsync(CancellationToken cancellationToken = default)
     {
-        using HttpClient httpClient = httpClientFactory.CreateClient(httpClientId);
-        HttpResponseMessage httpResponse = await httpClient.GetAsync(url, cancellationToken);
-        string responseContent = await httpResponse.Content.ReadAsStringAsync(cancellationToken);
+        using var httpClient = httpClientFactory.CreateClient(httpClientId);
+        var httpResponse = await httpClient.GetAsync(url, cancellationToken);
+        var responseContent = await httpResponse.Content.ReadAsStringAsync(cancellationToken);
         List<TEntity>? result =
             JsonConvert.DeserializeObject<List<TEntity>>(responseContent, new JsonApiSerializerSettings());
         return result?.FirstOrDefault();

@@ -13,6 +13,7 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
 
     protected override Expression VisitBinary(BinaryExpression node)
     {
+        // ReSharper disable once SwitchStatementHandlesSomeKnownEnumValuesWithDefault
         switch (node.NodeType)
         {
             case ExpressionType.Equal:
@@ -102,7 +103,7 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
 
     protected override Expression VisitNewArray(NewArrayExpression node)
     {
-        foreach (Expression exp in node.Expressions)
+        foreach (var exp in node.Expressions)
         {
             Visit(exp);
             if (node.Expressions.Last() != exp)
@@ -115,7 +116,7 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
     protected override Expression VisitListInit(ListInitExpression node)
     {
         IReadOnlyCollection<Expression> arguments = node.Initializers.SelectMany(init => init.Arguments).ToArray();
-        foreach (Expression exp in arguments)
+        foreach (var exp in arguments)
         {
             Visit(exp);
             if (arguments.Last() != exp)

@@ -2,16 +2,16 @@ using JsonApiClient.Attributes;
 
 namespace JsonApiClient.Tests.Models;
 
-[JsonApiResource("books")]
+[JRes("books")]
 public class Book
 {
     public int Id { get; set; }
-    [JsonApiAttribute]
+    [JAttr]
     public string Title { get; set; } = null!;
-    [JsonApiAttribute]
+    [JAttr]
     public DateTime? PublishDate { get; set; } = null;
-    [JsonApiAttribute]
+    [JAttr]
     public bool Annullato { get; set; }
-    [JsonApiRelationship]
+    [JRel]
     public virtual Author? Author { get; set; } = null;
 }

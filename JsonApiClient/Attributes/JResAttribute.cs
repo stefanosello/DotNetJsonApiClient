@@ -1,7 +1,7 @@
 namespace JsonApiClient.Attributes;
 
 [AttributeUsage(AttributeTargets.Class, Inherited = false)]
-public class JsonApiResourceAttribute(string apiNamespace, string? resourceNameName = null) : Attribute
+public class JResAttribute(string apiNamespace, string? resourceNameName = null) : Attribute
 {
     public string ApiNamespace { get; } = apiNamespace;
 

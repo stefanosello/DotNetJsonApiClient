@@ -2,16 +2,16 @@ using JsonApiClient.Attributes;
 
 namespace JsonApiClient.Tests.Models;
 
-[JsonApiResource("books")]
+[JRes("books")]
 public class Author
 {
     public int Id { get; set; }
-    [JsonApiAttribute]
+    [JAttr]
     public string FirstName { get; set; }
-    [JsonApiAttribute]
+    [JAttr]
     public string LastName { get; set; }
-    [JsonApiAttribute]
+    [JAttr]
     public DateTime DateOfBirth { get; set; }
-    [JsonApiRelationship]
+    [JRel]
     public virtual ICollection<Book> Books { get; set; } = [];
 }

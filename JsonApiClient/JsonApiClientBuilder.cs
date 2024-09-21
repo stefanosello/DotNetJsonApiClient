@@ -44,10 +44,10 @@ public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientB
     private string BuildUrl()
     {
         UriBuilder urlBuilder = new(baseUrl);
-        string path = GetPath();
+        var path = GetPath();
         urlBuilder.Path = path;
         
-        NameValueCollection queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
+        var queryString = System.Web.HttpUtility.ParseQueryString(string.Empty);
         foreach (var statement in _statements)
         {
             KeyValuePair<string, string> param = statement.Translate();
@@ -60,10 +60,10 @@ public class JsonApiClientBuilder<TRootEntity>(string baseUrl) : IJsonApiClientB
 
     private string GetPath()
     {
-        Type rootType = typeof(TRootEntity);
-        JsonApiResourceAttribute attribute =
-            (JsonApiResourceAttribute?)Attribute.GetCustomAttribute(rootType, typeof(JsonApiResourceAttribute)) ??
-            throw new MissingAttributeException($"The provided root type is not decorated with the {nameof(JsonApiResourceAttribute)} attribute.");
+        var rootType = typeof(TRootEntity);
+        var attribute =
+            (JResAttribute?)Attribute.GetCustomAttribute(rootType, typeof(JResAttribute)) ??
+            throw new MissingAttributeException($"The provided root type is not decorated with the {nameof(JResAttribute)} attribute.");
         return $"/{attribute.ApiNamespace}/{attribute.ResourceName ?? rootType.Name.Uncapitalize()}";
     }
 }

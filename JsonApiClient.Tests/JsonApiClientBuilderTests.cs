@@ -33,7 +33,7 @@ public class JsonApiClientBuilderTests
         var messageHandlerMock = new MockHttpMessageHandler();
         messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title")
             .Respond("application/vnd.api+json", responseData);
-        IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
+        var httpClientFactory = Substitute.For<IHttpClientFactory>();
         httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
 
         sut.SetHttpClient(httpClientFactory, "jsonApiTests");
@@ -73,7 +73,7 @@ public class JsonApiClientBuilderTests
         var messageHandlerMock = new MockHttpMessageHandler();
         messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title&filter=and(equals(title,'Dracula'),not(equals(annullato,'true')))")
             .Respond("application/vnd.api+json", responseData);
-        IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
+        var httpClientFactory = Substitute.For<IHttpClientFactory>();
         httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
 
         sut.SetHttpClient(httpClientFactory, "jsonApiTests");
@@ -115,7 +115,7 @@ public class JsonApiClientBuilderTests
       var messageHandlerMock = new MockHttpMessageHandler();
       messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title&filter=and(equals(title,'Dracula'),equals(annullato,'true'))")
         .Respond("application/vnd.api+json", responseData);
-      IHttpClientFactory httpClientFactory = Substitute.For<IHttpClientFactory>();
+      var httpClientFactory = Substitute.For<IHttpClientFactory>();
       httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
 
       sut.SetHttpClient(httpClientFactory, "jsonApiTests");
