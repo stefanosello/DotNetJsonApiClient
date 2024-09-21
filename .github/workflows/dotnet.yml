@@ -23,13 +23,13 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration Release
     - name: Test
-      run: dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=TestResults/coverage/
+      run: dotnet test --no-restore --configuration Release --logger "trx;LogFileName=test_results.xml" /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./TestResults/coverage/coverage.cobertura.xml  # Path to the coverage report
+        files: ./JsonApiClient.Tests/TestResults/test_results.xml # Path to the coverage report
         flags: unittests
         fail_ci_if_error: true
