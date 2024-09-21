@@ -30,6 +30,6 @@ jobs:
       uses: codecov/codecov-action@v4.0.1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: ./JsonApiClient.Tests/TestResults/test_results.xml # Path to the coverage report
+        files: ./JsonApiClient.Tests/TestResults/coverage.cobertura.xml # Path to the coverage report
         flags: unittests
         fail_ci_if_error: true
