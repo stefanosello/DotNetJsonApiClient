@@ -23,4 +23,6 @@ public class WhereStatement<TEntity>(Expression<Func<TEntity,bool>> expression) 
         var filterPropName = targetResourceName is null ? "filter" : $"filter[{targetResourceName}]";
         return new KeyValuePair<string, string>(filterPropName, visitor.ToString());
     }
+    
+    public void Validate() { }
 }

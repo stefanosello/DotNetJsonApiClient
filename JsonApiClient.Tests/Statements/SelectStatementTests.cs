@@ -27,7 +27,7 @@ public class SelectStatementTests
     {
         SelectStatement<Author> statement = new SelectStatement<Author>(a => a.FirstName);
 
-        Func<KeyValuePair<string,string>> act = () => statement.Translate();
+        var act = () => statement.Validate();
 
         act.Should().Throw<StatementTranslationException>().And.Message.Should().Be("Invalid expression body type. Expected: NewExpression. Found: MemberAccess");
     }
@@ -41,7 +41,7 @@ public class SelectStatementTests
             b = "ciao"
         });
 
-        Func<KeyValuePair<string,string>> act = () => statement.Translate();
+        var act = () => statement.Validate();
 
         act.Should().Throw<StatementTranslationException>().And.Message.Should().Be("Invalid expression body argument type. Expected: MemberExpression. Found: Constant");
     }
@@ -57,7 +57,7 @@ public class SelectStatementTests
             c.prop1
         });
 
-        Func<KeyValuePair<string,string>> act = () => statement.Translate();
+        var act = () => statement.Validate();
 
         act.Should().Throw<StatementTranslationException>().And.Message.Should().Be("Invalid member name: member prop1 is not a valid property name for Author");
     }

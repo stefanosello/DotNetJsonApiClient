@@ -1,4 +1,5 @@
 using System.Linq.Expressions;
+using System.Reflection;
 using JsonApiClient.Attributes;
 using JsonApiClient.Exceptions;
 using JsonApiClient.Extensions;
@@ -10,8 +11,6 @@ public class SelectStatement<TEntity>(Expression<Func<TEntity,object>> expressio
 {
     public KeyValuePair<string,string> Translate(string? targetResourceName = null)
     {
-        ValidateExpression();
-        
         var newExpression = (expression.Body as NewExpression)!;
 
         var fields =
@@ -22,8 +21,11 @@ public class SelectStatement<TEntity>(Expression<Func<TEntity,object>> expressio
         return new KeyValuePair<string, string>($"fields[{resourceName}]",$"{string.Join(',', fields)}");
     }
 
-    private void ValidateExpression()
+    public void Validate()
     {
+        if (typeof(TEntity).GetCustomAttribute(typeof(JResAttribute)) is null)
+            throw new StatementTranslationException($"Invalid entity type. Entity {nameof(TEntity)} is not decorated with the {nameof(JResAttribute)} attribute.");
+        
         if (expression.Body is not NewExpression newExpression)
             throw new StatementTranslationException($"Invalid expression body type. Expected: {nameof(NewExpression)}. Found: {expression.Body.NodeType}");
 

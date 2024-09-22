@@ -6,7 +6,7 @@ public static class StringExtension
     {
         if (string.IsNullOrEmpty(arg)) return arg;
         IEnumerable<string> strings = arg.Split(".");
-        IEnumerable<string> uncapitalizedStrings = strings.Select(s => char.ToLower(s[0]) + s[1..]);
+        var uncapitalizedStrings = strings.Select(s => char.ToLower(s[0]) + s[1..]);
         return string.Join(".", uncapitalizedStrings);
     }
 }

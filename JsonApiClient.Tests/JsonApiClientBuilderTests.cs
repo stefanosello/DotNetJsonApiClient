@@ -11,24 +11,24 @@ public class JsonApiClientBuilderTests
     public async Task Test1()
     {
         const string responseData = """
-          {
-            "links": {
-              "self": "https://example.jsonapi.com/books",
-              "next": "http://https://example.jsonapi.com/books?page[offset]=2",
-              "last": "http://https://example.jsonapi.com/books?page[offset]=10"
-            },
-            "data": [{
-              "type": "book",
-              "id": "1",
-              "attributes": {
-                "title": "Dracula"
-              },
-              "links": {
-                "self": "https://example.jsonapi.com/books/1"
-              }
-            }]
-          }
-        """;
+                                      {
+                                        "links": {
+                                          "self": "https://example.jsonapi.com/books",
+                                          "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+                                          "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+                                        },
+                                        "data": [{
+                                          "type": "book",
+                                          "id": "1",
+                                          "attributes": {
+                                            "title": "Dracula"
+                                          },
+                                          "links": {
+                                            "self": "https://example.jsonapi.com/books/1"
+                                          }
+                                        }]
+                                      }
+                                    """;
         var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
         var messageHandlerMock = new MockHttpMessageHandler();
         messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title")
@@ -50,25 +50,25 @@ public class JsonApiClientBuilderTests
     [Fact]
     public async Task Test2()
     {
-        var responseData = """
-                             {
-                               "links": {
-                                 "self": "https://example.jsonapi.com/books",
-                                 "next": "http://https://example.jsonapi.com/books?page[offset]=2",
-                                 "last": "http://https://example.jsonapi.com/books?page[offset]=10"
-                               },
-                               "data": [{
-                                 "type": "book",
-                                 "id": "1",
-                                 "attributes": {
-                                   "title": "Dracula"
-                                 },
-                                 "links": {
-                                   "self": "https://example.jsonapi.com/books/1"
-                                 }
-                               }]
-                             }
-                           """;
+        const string responseData = """
+                                      {
+                                        "links": {
+                                          "self": "https://example.jsonapi.com/books",
+                                          "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+                                          "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+                                        },
+                                        "data": [{
+                                          "type": "book",
+                                          "id": "1",
+                                          "attributes": {
+                                            "title": "Dracula"
+                                          },
+                                          "links": {
+                                            "self": "https://example.jsonapi.com/books/1"
+                                          }
+                                        }]
+                                      }
+                                    """;
         var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
         var messageHandlerMock = new MockHttpMessageHandler();
         messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title&filter=and(equals(title,'Dracula'),not(equals(annullato,'true')))")
@@ -92,25 +92,25 @@ public class JsonApiClientBuilderTests
     [Fact]
     public async Task Test3()
     {
-      var responseData = """
-                           {
-                             "links": {
-                               "self": "https://example.jsonapi.com/books",
-                               "next": "http://https://example.jsonapi.com/books?page[offset]=2",
-                               "last": "http://https://example.jsonapi.com/books?page[offset]=10"
-                             },
-                             "data": [{
-                               "type": "book",
-                               "id": "1",
-                               "attributes": {
-                                 "title": "Dracula"
-                               },
-                               "links": {
-                                 "self": "https://example.jsonapi.com/books/1"
-                               }
-                             }]
-                           }
-                         """;
+      const string responseData = """
+                                    {
+                                      "links": {
+                                        "self": "https://example.jsonapi.com/books",
+                                        "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+                                        "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+                                      },
+                                      "data": [{
+                                        "type": "book",
+                                        "id": "1",
+                                        "attributes": {
+                                          "title": "Dracula"
+                                        },
+                                        "links": {
+                                          "self": "https://example.jsonapi.com/books/1"
+                                        }
+                                      }]
+                                    }
+                                  """;
       var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
       var messageHandlerMock = new MockHttpMessageHandler();
       messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title&filter=and(equals(title,'Dracula'),equals(annullato,'true'))")
@@ -125,6 +125,52 @@ public class JsonApiClientBuilderTests
           x.Title
         })
         .Where<Book>(x => x.Title == "Dracula" && x.Annullato);
+
+      var jsonApiClient = sut.Build();
+      var response = await jsonApiClient.GetAsync();
+      response.Should().BeEquivalentTo(new Book() { Title = "Dracula", Id = 1 });
+    }
+    
+    [Fact]
+    public async Task Test4()
+    {
+      const string responseData = """
+                                    {
+                                      "links": {
+                                        "self": "https://example.jsonapi.com/books",
+                                        "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+                                        "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+                                      },
+                                      "data": [{
+                                        "type": "book",
+                                        "id": "1",
+                                        "attributes": {
+                                          "title": "Dracula"
+                                        },
+                                        "links": {
+                                          "self": "https://example.jsonapi.com/books/1"
+                                        }
+                                      }]
+                                    }
+                                  """;
+      var sut = new JsonApiClientBuilder<Book>("https://example.jsonapi.com");
+      var messageHandlerMock = new MockHttpMessageHandler();
+      messageHandlerMock.When("https://example.jsonapi.com/books/book?fields[book]=title&filter=and(equals(title%2c%27Dracula%27)%2cequals(annullato%2c%27true%27))&include=author&page[size]=10&page[number]=2&sort=title")
+        .Respond("application/vnd.api+json", responseData);
+      var httpClientFactory = Substitute.For<IHttpClientFactory>();
+      httpClientFactory.CreateClient("jsonApiTests").Returns(new HttpClient(messageHandlerMock));
+
+      sut.SetHttpClient(httpClientFactory, "jsonApiTests");
+      sut
+        .Select(x => new
+        {
+          x.Title
+        })
+        .Where(x => x.Title == "Dracula" && x.Annullato)
+        .Include(x => x.Author!)
+        .PageSize(10)
+        .PageNumber(2)
+        .OrderBy(x => x.Title);
 
       var jsonApiClient = sut.Build();
       var response = await jsonApiClient.GetAsync();
