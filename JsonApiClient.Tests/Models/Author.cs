@@ -1,15 +1,16 @@
 using JsonApiClient.Attributes;
+using JsonApiClient.Interfaces;
+using JsonApiClient.Models;
 
 namespace JsonApiClient.Tests.Models;
 
-[JRes("books")]
-public class Author
+[JRes("api.books", "books")]
+public class Author : JResource<int>
 {
-    public int Id { get; set; }
     [JAttr]
-    public string FirstName { get; set; }
+    public string? FirstName { get; set; }
     [JAttr]
-    public string LastName { get; set; }
+    public string? LastName { get; set; }
     [JAttr]
     public DateTime DateOfBirth { get; set; }
     [JRel]

@@ -7,9 +7,10 @@ using JsonApiClient.Interfaces;
 
 namespace JsonApiClient.Statements;
 
-public class IncludeStatement<TEntity>(Expression<Func<TEntity,object>> expression) : IStatement where TEntity : class
+public class IncludeStatement<TEntity>(Expression<Func<TEntity,object>> expression) : IStatement
+    where TEntity : class, IJsonApiResource
 {
-    public KeyValuePair<string,string> Translate(string? targetResourceName = null)
+    public KeyValuePair<string,string> Translate()
     {
         var member = (expression.Body as MemberExpression)!;
         return new KeyValuePair<string, string>($"include",$"{member.GetRelationshipName()}");

@@ -1,17 +1,17 @@
 using JsonApiClient.Attributes;
+using JsonApiClient.Models;
 
 namespace JsonApiClient.Tests.Models;
 
-[JRes("books")]
-public class Book
+[JRes("api.books", "books")]
+public sealed class Book : JResource<int>
 {
-    public int Id { get; set; }
     [JAttr]
-    public string Title { get; set; } = null!;
+    public string? Title { get; set; }
     [JAttr]
-    public DateTime? PublishDate { get; set; } = null;
+    public DateTime? PublishDate { get; set; }
     [JAttr]
-    public bool Annullato { get; set; }
+    public bool Deleted { get; set; }
     [JRel]
-    public virtual Author? Author { get; set; } = null;
+    public Author? Author { get; set; }
 }

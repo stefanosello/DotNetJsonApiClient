@@ -8,13 +8,17 @@ using JsonApiClient.Interfaces;
 
 namespace JsonApiClient.Statements;
 
-public class SortStatement<TEntity>(Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement where TEntity : class
+public class SortStatement<TEntity,TRoot>(Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement
+    where TEntity : class, IJsonApiResource
+    where TRoot : class, IJsonApiResource
 {
-    public KeyValuePair<string,string> Translate(string? targetResourceName = null)
+    public KeyValuePair<string,string> Translate()
     {
+        var targetResourceName = typeof(TEntity) == typeof(TRoot) ? null : typeof(TEntity).GetResourceName();
         var member = (expression.Body as MemberExpression)!;
         var directionPrefix = direction == SortDirection.Ascending ? "" : "-";
-        return new KeyValuePair<string, string>($"sort",$"{directionPrefix}{member.GetAttributeName()}");
+        var key = targetResourceName == null ? "sort" : $"sort[{targetResourceName}]";
+        return new KeyValuePair<string, string>(key,$"{directionPrefix}{member.GetAttributeName()}");
     }
 
     public void Validate()
