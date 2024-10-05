@@ -1,3 +1,4 @@
+using System.Data;
 using System.Linq.Expressions;
 using System.Reflection;
 using JsonApiClient.Attributes;
@@ -12,8 +13,13 @@ public class IncludeStatement<TEntity>(Expression<Func<TEntity,object>> expressi
 {
     public KeyValuePair<string,string> Translate()
     {
-        var member = (expression.Body as MemberExpression)!;
-        return new KeyValuePair<string, string>($"include",$"{member.GetRelationshipName()}");
+        var value = expression.Body switch
+        {
+            MemberExpression member => member.GetRelationshipName(),
+            MethodCallExpression methodCall => methodCall.GetRelationshipsChain(),
+            _ => throw new InvalidExpressionException($"Expression of type {typeof(MemberExpression)} or {typeof(MethodCallExpression)} expected, but #{expression.GetType().Name} found: {expression}.")
+        };
+        return new KeyValuePair<string, string>($"include",value);
     }
 
     public void Validate()

@@ -14,4 +14,6 @@ public sealed class Book : JResource<int>
     public bool Deleted { get; set; }
     [JRel]
     public Author? Author { get; set; }
+    [JRel]
+    public ICollection<TagsBooks> TagsBooks { get; set; } = [];
 }
