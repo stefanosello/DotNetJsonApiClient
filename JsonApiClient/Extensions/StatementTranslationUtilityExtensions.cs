@@ -32,7 +32,8 @@ public static class StatementTranslationUtilityExtensions
     
     public static string GetRelationshipsChain(this MethodCallExpression expression)
     {
-        if (expression.Method.Name == "Select" && expression.Arguments.Count == 2)
+        string[] allowedMethodNames = ["Select", "SelectMany"];
+        if (allowedMethodNames.Contains(expression.Method.Name) && expression.Arguments.Count == 2)
         {
             var member2Expression = expression.Arguments[1] as LambdaExpression ?? throw new InvalidExpressionException(
                 $"Expression of type {typeof(LambdaExpression)} expected, but #{expression.Arguments[1].GetType().Name} found: {expression.Arguments[1]}.");
@@ -52,7 +53,7 @@ public static class StatementTranslationUtilityExtensions
         }
 
         throw new InvalidExpressionException(
-            $"Expression of type {typeof(MethodCallExpression)} with method name Select expected, but {expression.Method.Name} found: {expression}."); 
+            $"Expression of type {typeof(MethodCallExpression)} with method name between {string.Join(", ", allowedMethodNames)} expected, but {expression.Method.Name} found: {expression}."); 
     }
     
     public static string GetResourceName(this Type type)
