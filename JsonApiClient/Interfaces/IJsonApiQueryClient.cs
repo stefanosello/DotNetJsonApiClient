@@ -29,11 +29,11 @@ public interface IJsonApiQueryClient<TRootEntity> where TRootEntity : class
     
     IJsonApiQueryClient<TRootEntity> OrderByDescending(Expression<Func<TRootEntity, object>> orderByStatement);
 
-    IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit) where TEntity : class, IJsonApiResource;
+    IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource;
 
     IJsonApiQueryClient<TRootEntity> PageSize(int limit);
 
-    IJsonApiQueryClient<TRootEntity> PageNumber<TEntity>(int number) where TEntity : class, IJsonApiResource;
+    IJsonApiQueryClient<TRootEntity> PageNumber<TEntity>(int number, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource;
 
     IJsonApiQueryClient<TRootEntity> PageNumber(int number);
 

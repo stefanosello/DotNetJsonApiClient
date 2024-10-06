@@ -39,4 +39,15 @@ public class PageStatementTests
         result.Key.Should().Be("page[number]");
         result.Value.Should().Be("books.tagsBooks.tag:1");
     }
+    
+    [Fact]
+    public void Parse_ShouldReturnValidPageStatement_WhenSecondaryResourceWithAttributeChain_AndPageSize()
+    {
+        var statement = new PageStatement<Tag,Author>(2, PaginationParameter.PageSize, a => a.Books.SelectMany(b => b.TagsBooks.Select(tb => tb.Tag)));
+
+        var result = statement.Translate();
+
+        result.Key.Should().Be("page[size]");
+        result.Value.Should().Be("books.tagsBooks.tag:2");
+    }
 }

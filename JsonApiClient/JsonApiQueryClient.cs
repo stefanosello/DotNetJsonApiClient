@@ -67,26 +67,24 @@ internal class JsonApiQueryClient<TRootEntity>(IHttpClientFactory httpClientFact
         return OrderByDescending<TRootEntity>(orderByStatement);
     }
     
-    public IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit) where TEntity : class, IJsonApiResource
+    public IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource
     {
-        _urlBuilder.AddPageSizeStatement(new PageStatement<TEntity,TRootEntity>(limit, PaginationParameter.PageSize));
-        return this;
+        return PageSizeInternal(limit, resourceSelector);
     }
     
     public IJsonApiQueryClient<TRootEntity> PageSize(int limit)
     {
-        return PageSize<TRootEntity>(limit);
+        return PageSizeInternal<TRootEntity>(limit);
     }
     
-    public IJsonApiQueryClient<TRootEntity> PageNumber<TEntity>(int number) where TEntity : class, IJsonApiResource
+    public IJsonApiQueryClient<TRootEntity> PageNumber<TEntity>(int number, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource
     {
-        _urlBuilder.AddPageNumberStatement(new PageStatement<TEntity,TRootEntity>(number, PaginationParameter.PageNumber));
-        return this;
+        return PageNumberInternal(number, resourceSelector);
     }
     
     public IJsonApiQueryClient<TRootEntity> PageNumber(int number)
     {
-        return PageNumber<TRootEntity>(number);
+        return PageNumberInternal<TRootEntity>(number);
     }
 
     public async Task<TRootEntity?> FindAsync(object id, CancellationToken cancellationToken = default)
@@ -107,6 +105,18 @@ internal class JsonApiQueryClient<TRootEntity>(IHttpClientFactory httpClientFact
     {
         var responseBody = await MakeCallAsync(GetBasePath(), cancellationToken);
         return JsonConvert.DeserializeObject<List<TRootEntity>>(responseBody, new JsonApiSerializerSettings()) ?? [];
+    }
+    
+    private IJsonApiQueryClient<TRootEntity> PageSizeInternal<TEntity>(int limit, Expression<Func<TRootEntity,IEnumerable<TEntity>>>? resourceSelector = null) where TEntity : class, IJsonApiResource
+    {
+        _urlBuilder.AddPageSizeStatement(new PageStatement<TEntity,TRootEntity>(limit, PaginationParameter.PageSize, resourceSelector));
+        return this;
+    }
+    
+    private IJsonApiQueryClient<TRootEntity> PageNumberInternal<TEntity>(int limit, Expression<Func<TRootEntity,IEnumerable<TEntity>>>? resourceSelector = null) where TEntity : class, IJsonApiResource
+    {
+        _urlBuilder.AddPageNumberStatement(new PageStatement<TEntity,TRootEntity>(limit, PaginationParameter.PageNumber, resourceSelector));
+        return this;
     }
 
     private static string GetBasePath()

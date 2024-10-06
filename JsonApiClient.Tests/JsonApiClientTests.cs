@@ -199,6 +199,49 @@ public class JsonApiClientTests
       var response = await sut.FindAsync(1);
       response.Should().BeEquivalentTo(new Book() { Title = "Dracula", Id = 1 });
     }
+    
+    [Fact]
+    public async Task Test6()
+    {
+      const string responseData = """
+                                    {
+                                      "links": {
+                                        "self": "https://example.jsonapi.com/books",
+                                        "next": "http://https://example.jsonapi.com/books?page[offset]=2",
+                                        "last": "http://https://example.jsonapi.com/books?page[offset]=10"
+                                      },
+                                      "data": [{
+                                        "type": "book",
+                                        "id": "1",
+                                        "attributes": {
+                                          "title": "Dracula"
+                                        },
+                                        "links": {
+                                          "self": "https://example.jsonapi.com/books/1"
+                                        }
+                                      }]
+                                    }
+                                  """;
+      
+      var httpClientFactory = Substitute.For<IHttpClientFactory>();
+      httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book?include=author&include=tagsBooks&fields[book]=title,author&fields[author]=lastName&page[size]=tagsBooks:20&page[number]=tagsBooks:1", responseData));
+      var sut = new JsonApiClient<Book>(httpClientFactory).Query;
+
+      sut
+        .Select(x => new
+        {
+          x.Title,
+          x.Author
+        })
+        .Select<Author>(x => new { x.LastName })
+        .Include(x => x.Author!)
+        .Include(x => x.TagsBooks)
+        .PageSize(20, x => x.TagsBooks)
+        .PageNumber(1, x => x.TagsBooks);
+
+      var response = await sut.ToListAsync();
+      response.First().Should().BeEquivalentTo(new Book() { Title = "Dracula", Id = 1 });
+    }
 
     private static HttpClient GetMockedHttpClient(string baseUrl, string url, string response)
     {
