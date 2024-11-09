@@ -1,6 +1,6 @@
 namespace JsonApiClient.Extensions;
 
-public static class StringExtension
+public static class StringExtensions
 {
     public static string Uncapitalize(this string arg)
     {

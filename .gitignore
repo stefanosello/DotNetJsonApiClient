@@ -7,3 +7,4 @@ riderModule.iml
 *coverage.cobertura.xml
 sqlserver_volumes/data
 docker-compose.generated.override.yml
+.DS_Store

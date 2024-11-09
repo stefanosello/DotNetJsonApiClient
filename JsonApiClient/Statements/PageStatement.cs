@@ -7,13 +7,13 @@ using JsonApiClient.Interfaces;
 
 namespace JsonApiClient.Statements;
 
-public class PageStatement<TEntity,TRoot>(int paramValue, PaginationParameter parameter, Expression<Func<TRoot,IEnumerable<TEntity>>>? resourceSelector = null) : IStatement
+internal class PageStatement<TEntity,TRoot>(int paramValue, PaginationParameter parameter, Expression<Func<TRoot,IEnumerable<TEntity>>>? resourceSelector = null) : IStatement
     where TEntity : class, IJsonApiResource
     where TRoot : class, IJsonApiResource
 {
     public KeyValuePair<string, string> Translate()
     {
-        var targetResourceName = typeof(TEntity) == typeof(TRoot) ? null : EvaluateResourceSelector();
+        var targetResourceName = EvaluateResourceSelector();
         var value = targetResourceName is null ? paramValue.ToString() : $"{targetResourceName}:{paramValue}";
         var key = parameter == PaginationParameter.PageNumber ? "page[number]" : "page[size]";
         return new KeyValuePair<string, string>(key, value);
@@ -26,10 +26,11 @@ public class PageStatement<TEntity,TRoot>(int paramValue, PaginationParameter pa
                 "Can not paginate a related resource without a resourceSelector expression.");
     }
 
-    private string EvaluateResourceSelector()
+    private string? EvaluateResourceSelector()
     {
-        return resourceSelector!.Body switch
+        return resourceSelector?.Body switch
         {
+            null => null,
             MemberExpression member => member.GetRelationshipName(),
             MethodCallExpression methodCall => methodCall.GetRelationshipsChain(),
             _ => throw new InvalidExpressionException(

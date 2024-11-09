@@ -9,7 +9,7 @@ using JsonApiClient.Interfaces;
 
 namespace JsonApiClient.Statements;
 
-public class SortStatement<TEntity,TRoot>(Expression<Func<TRoot,object>>? subresourceSelector, Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement
+internal class SortStatement<TEntity,TRoot>(Expression<Func<TRoot,object>>? subresourceSelector, Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement
     where TEntity : class, IJsonApiResource
     where TRoot : class, IJsonApiResource
 {

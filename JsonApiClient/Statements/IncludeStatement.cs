@@ -8,7 +8,7 @@ using JsonApiClient.Interfaces;
 
 namespace JsonApiClient.Statements;
 
-public class IncludeStatement<TEntity>(Expression<Func<TEntity,object>> expression) : IStatement
+internal class IncludeStatement<TEntity>(Expression<Func<TEntity,object>> expression) : IStatement
     where TEntity : class, IJsonApiResource
 {
     public KeyValuePair<string,string> Translate()
