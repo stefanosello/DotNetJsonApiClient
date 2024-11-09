@@ -45,26 +45,28 @@ internal class JsonApiQueryClient<TRootEntity>(IHttpClientFactory httpClientFact
         return Include<TRootEntity>(includeStatement);
     }
     
-    public IJsonApiQueryClient<TRootEntity> OrderBy<TEntity>(Expression<Func<TEntity, object>> orderByStatement) where TEntity : class, IJsonApiResource
+    public IJsonApiQueryClient<TRootEntity> OrderBy<TEntity>(Expression<Func<TEntity, object>> orderByStatement, Expression<Func<TRootEntity, object>> subresourceSelector) where TEntity : class, IJsonApiResource
     {
-        _urlBuilder.AddOrderByStatement(new SortStatement<TEntity,TRootEntity>(orderByStatement, SortDirection.Ascending));
+        _urlBuilder.AddOrderByStatement(new SortStatement<TEntity,TRootEntity>(subresourceSelector, orderByStatement, SortDirection.Ascending));
         return this;
     }
     
     public IJsonApiQueryClient<TRootEntity> OrderBy(Expression<Func<TRootEntity, object>> orderByStatement)
     {
-        return OrderBy<TRootEntity>(orderByStatement);
+        _urlBuilder.AddOrderByStatement(new SortStatement<TRootEntity,TRootEntity>(null, orderByStatement, SortDirection.Ascending));
+        return this;
     }
     
-    public IJsonApiQueryClient<TRootEntity> OrderByDescending<TEntity>(Expression<Func<TEntity, object>> orderByStatement) where TEntity : class, IJsonApiResource
+    public IJsonApiQueryClient<TRootEntity> OrderByDescending<TEntity>(Expression<Func<TEntity, object>> orderByStatement, Expression<Func<TRootEntity, object>> subresourceSelector) where TEntity : class, IJsonApiResource
     {
-        _urlBuilder.AddOrderByStatement(new SortStatement<TEntity,TRootEntity>(orderByStatement, SortDirection.Descending));
+        _urlBuilder.AddOrderByStatement(new SortStatement<TEntity,TRootEntity>(subresourceSelector, orderByStatement, SortDirection.Descending));
         return this;
     }
     
     public IJsonApiQueryClient<TRootEntity> OrderByDescending(Expression<Func<TRootEntity, object>> orderByStatement)
     {
-        return OrderByDescending<TRootEntity>(orderByStatement);
+        _urlBuilder.AddOrderByStatement(new SortStatement<TRootEntity,TRootEntity>(null, orderByStatement, SortDirection.Descending));
+        return this;
     }
     
     public IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource

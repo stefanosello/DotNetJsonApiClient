@@ -10,7 +10,7 @@ public class SortStatementTests
     [Fact]
     public void Parse_ShouldReturnAscendingSinglePropertySortClause_WhenAscendingRootEntityPropetyGiven()
     {
-        SortStatement<Author,Author> statement = new(a => a.LastName!, SortDirection.Ascending);
+        SortStatement<Author,Author> statement = new(null, a => a.LastName!, SortDirection.Ascending);
 
         var result = statement.Translate();
 
@@ -21,7 +21,7 @@ public class SortStatementTests
     [Fact]
     public void Parse_ShouldReturnDescendingSinglePropertySortClause_WhenDescendingRootEntityPropetyGiven()
     {
-        SortStatement<Author,Author> statement = new(a => a.LastName!, SortDirection.Descending);
+        SortStatement<Author,Author> statement = new(null, a => a.LastName!, SortDirection.Descending);
 
         var result = statement.Translate();
 
@@ -32,7 +32,7 @@ public class SortStatementTests
     [Fact]
     public void Parse_ShouldReturnAscendingNestedPropertySortClause_WhenAscendingNestedEntityPropetyGiven()
     {
-        SortStatement<Book,Author> statement = new(b => b.Title!, SortDirection.Ascending);
+        SortStatement<Book,Author> statement = new(a => a.Books, b => b.Title!, SortDirection.Ascending);
 
         var result = statement.Translate();
 

@@ -19,12 +19,12 @@ public interface IJsonApiQueryClient<TRootEntity> where TRootEntity : class
     
     IJsonApiQueryClient<TRootEntity> Include(Expression<Func<TRootEntity, object>> includeStatement);
 
-    IJsonApiQueryClient<TRootEntity> OrderBy<TEntity>(Expression<Func<TEntity, object>> orderByStatement)
+    IJsonApiQueryClient<TRootEntity> OrderBy<TEntity>(Expression<Func<TEntity, object>> orderByStatement, Expression<Func<TRootEntity, object>> subresourceSelector)
         where TEntity : class, IJsonApiResource;
     
     IJsonApiQueryClient<TRootEntity> OrderBy(Expression<Func<TRootEntity, object>> orderByStatement);
 
-    IJsonApiQueryClient<TRootEntity> OrderByDescending<TEntity>(Expression<Func<TEntity, object>> orderByStatement)
+    IJsonApiQueryClient<TRootEntity> OrderByDescending<TEntity>(Expression<Func<TEntity, object>> orderByStatement, Expression<Func<TRootEntity, object>> subresourceSelector)
         where TEntity : class, IJsonApiResource;
     
     IJsonApiQueryClient<TRootEntity> OrderByDescending(Expression<Func<TRootEntity, object>> orderByStatement);

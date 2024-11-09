@@ -1,3 +1,4 @@
+using System.Data;
 using System.Linq.Expressions;
 using System.Reflection;
 using JsonApiClient.Attributes;
@@ -8,17 +9,23 @@ using JsonApiClient.Interfaces;
 
 namespace JsonApiClient.Statements;
 
-public class SortStatement<TEntity,TRoot>(Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement
+public class SortStatement<TEntity,TRoot>(Expression<Func<TRoot,object>>? subresourceSelector, Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement
     where TEntity : class, IJsonApiResource
     where TRoot : class, IJsonApiResource
 {
     public KeyValuePair<string,string> Translate()
     {
-        var targetResourceName = typeof(TEntity) == typeof(TRoot) ? null : typeof(TEntity).GetResourceName();
-        var member = (expression.Body as MemberExpression)!;
+        var targetResourceName = subresourceSelector?.Body switch
+        {
+            null => null,
+            MemberExpression member => member.GetRelationshipName(),
+            MethodCallExpression methodCall => methodCall.GetRelationshipsChain(),
+            _ => throw new InvalidExpressionException($"Expression of type {typeof(MemberExpression)} or {typeof(MethodCallExpression)} expected, but #{subresourceSelector.GetType().Name} found: {subresourceSelector}.")
+        };
+        var propertySelector = (expression.Body as MemberExpression)!;
         var directionPrefix = direction == SortDirection.Ascending ? "" : "-";
-        var key = targetResourceName == null ? "sort" : $"sort[{targetResourceName}]";
-        return new KeyValuePair<string, string>(key,$"{directionPrefix}{member.GetAttributeName()}");
+        var key = targetResourceName is null ? "sort" : $"sort[{targetResourceName}]";
+        return new KeyValuePair<string, string>(key,$"{directionPrefix}{propertySelector.GetAttributeName()}");
     }
 
     public void Validate()
