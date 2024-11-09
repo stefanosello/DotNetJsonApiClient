@@ -9,5 +9,5 @@ public sealed class Tag : JResource<int>
     [JAttr]
     public string Label { get; set; }
     [JRel]
-    public ICollection<TagsBooks> TagsBooks { get; set; }
+    public ICollection<BooksTags> TagsBooks { get; set; }
 }

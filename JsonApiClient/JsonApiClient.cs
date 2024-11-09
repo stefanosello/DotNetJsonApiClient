@@ -1,7 +1,5 @@
 using System.Runtime.CompilerServices;
 using JsonApiClient.Interfaces;
-using JsonApiSerializer;
-using Newtonsoft.Json;
 
 [assembly: InternalsVisibleTo("JsonApiClient.Tests")]
 

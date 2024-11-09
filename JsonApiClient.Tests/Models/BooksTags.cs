@@ -4,7 +4,7 @@ using JsonApiClient.Models;
 namespace JsonApiClient.Tests.Models;
 
 [JRes("api.books", "tags-books")]
-public sealed class TagsBooks : JResource<int>
+public sealed class BooksTags : JResource<int>
 {
     [JAttr]
     public int BookId { get; set; }

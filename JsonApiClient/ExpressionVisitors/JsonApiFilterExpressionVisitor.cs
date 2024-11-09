@@ -137,37 +137,6 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
         HandleNegation(node);
         return node;
     }
-
-    private void AppendValue(object? value)
-    {
-        switch (value)
-        {
-            case null:
-                _sb.Append("null");
-                break;
-            case string strValue:
-                _sb.Append($"'{strValue}'");
-                break;
-            case bool boolValue:
-                _sb.Append($"'{boolValue.ToString().ToLower()}'");
-                break;
-            case DateTime dateTime:
-                _sb.Append($"'{dateTime:yyyy-MM-dd HH:mm:ss}'");
-                break;
-            case DateTimeOffset dateTimeOffset:
-                _sb.Append($"'{dateTimeOffset:yyyy-MM-dd HH:mm:ss}'");
-                break;
-            case TimeSpan timeSpan:
-                _sb.Append($"'{timeSpan.ToString()}'");
-                break;
-            case IEnumerable<object> enumerable:
-                _sb.Append(string.Join(",", enumerable.Select(v => $"'{v}'")));
-                break;
-            default:
-                _sb.Append(Convert.ToString(value, CultureInfo.InvariantCulture));
-                break;
-        }
-    }
     
     private void HandleEquality(BinaryExpression node)
     {
@@ -240,5 +209,36 @@ internal class JsonApiFilterExpressionVisitor: ExpressionVisitor
                 throw new NotSupportedException("Collection 'Contains' method is not supported when called with more then 2 arguments.");
         }
         _sb.Append(')');
+    }
+    
+    private void AppendValue(object? value)
+    {
+        switch (value)
+        {
+            case null:
+                _sb.Append("null");
+                break;
+            case string strValue:
+                _sb.Append($"'{strValue}'");
+                break;
+            case bool boolValue:
+                _sb.Append($"'{boolValue.ToString().ToLower()}'");
+                break;
+            case DateTime dateTime:
+                _sb.Append($"'{dateTime:yyyy-MM-dd HH:mm:ss}'");
+                break;
+            case DateTimeOffset dateTimeOffset:
+                _sb.Append($"'{dateTimeOffset:yyyy-MM-dd HH:mm:ss}'");
+                break;
+            case TimeSpan timeSpan:
+                _sb.Append($"'{timeSpan.ToString()}'");
+                break;
+            case IEnumerable<object> enumerable:
+                _sb.Append(string.Join(",", enumerable.Select(v => $"'{v}'")));
+                break;
+            default:
+                _sb.Append(Convert.ToString(value, CultureInfo.InvariantCulture));
+                break;
+        }
     }
 }

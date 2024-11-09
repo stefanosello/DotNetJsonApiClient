@@ -15,5 +15,5 @@ public sealed class Book : JResource<int>
     [JRel]
     public Author? Author { get; set; }
     [JRel]
-    public ICollection<TagsBooks> TagsBooks { get; set; } = [];
+    public ICollection<BooksTags> TagsBooks { get; set; } = [];
 }
