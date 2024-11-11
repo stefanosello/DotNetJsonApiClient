@@ -1,10 +1,9 @@
-using System.Data;
 using System.Linq.Expressions;
 using System.Reflection;
 using JsonApiClient.Attributes;
 using JsonApiClient.Exceptions;
-using JsonApiClient.Extensions;
 using JsonApiClient.Interfaces;
+using JsonApiClient.Statements.ExpressionVisitors;
 
 namespace JsonApiClient.Statements;
 
@@ -13,12 +12,7 @@ internal class IncludeStatement<TEntity>(Expression<Func<TEntity,object>> expres
 {
     public KeyValuePair<string,string> Translate()
     {
-        var value = expression.Body switch
-        {
-            MemberExpression member => member.GetRelationshipName(),
-            MethodCallExpression methodCall => methodCall.GetRelationshipsChain(),
-            _ => throw new InvalidExpressionException($"Expression of type {typeof(MemberExpression)} or {typeof(MethodCallExpression)} expected, but #{expression.GetType().Name} found: {expression}.")
-        };
+        var value = SubresourceSelectorExpressionVisitor.VisitExpression(expression.Body);
         return new KeyValuePair<string, string>($"include",value);
     }
 
