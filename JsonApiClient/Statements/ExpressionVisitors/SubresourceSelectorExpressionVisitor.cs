@@ -12,8 +12,11 @@ internal class SubresourceSelectorExpressionVisitor : ExpressionVisitor
     private readonly StringBuilder _sb = new();
     private static readonly IEnumerable<string> AllowedSelectorMethods = ["Select", "SelectMany"];
 
-    public static string VisitExpression(Expression expression)
+    public static string? VisitExpression(Expression? expression)
     {
+        if (expression is null)
+            return null;
+        
         var visitor = new SubresourceSelectorExpressionVisitor();
         visitor.Visit(expression);
         return visitor._sb.ToString();

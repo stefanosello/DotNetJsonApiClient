@@ -27,6 +27,4 @@ internal class WhereStatement<TEntity,TRoot>(Expression<Func<TEntity,bool>> expr
         var filterPropName = targetResourceName is null ? "filter" : $"filter[{targetResourceName}]";
         return new KeyValuePair<string, string>(filterPropName, queryString);
     }
-    
-    public void Validate() { }
 }

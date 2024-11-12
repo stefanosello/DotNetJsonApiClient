@@ -25,9 +25,6 @@ internal class JsonApiUrlBuilder
     {
         List<string> processedStatements = [];
         
-        foreach (var statement in Statements)
-            statement.Validate();
-        
         processedStatements.Add(BuildWithoutKeyAggregation(_includeStatements));
         processedStatements.Add(BuildWithoutKeyAggregation(_whereStatements));
         processedStatements.Add(BuildWithKeyAggregation(_selectStatements));

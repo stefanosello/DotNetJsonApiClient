@@ -1,9 +1,7 @@
-using System.Data;
 using System.Linq.Expressions;
 using JsonApiClient.Enums;
-using JsonApiClient.Exceptions;
-using JsonApiClient.Extensions;
 using JsonApiClient.Interfaces;
+using JsonApiClient.Statements.ExpressionVisitors;
 
 namespace JsonApiClient.Statements;
 
@@ -13,28 +11,9 @@ internal class PageStatement<TEntity,TRoot>(int paramValue, PaginationParameter 
 {
     public KeyValuePair<string, string> Translate()
     {
-        var targetResourceName = EvaluateResourceSelector();
+        var targetResourceName = SubresourceSelectorExpressionVisitor.VisitExpression(resourceSelector?.Body);
         var value = targetResourceName is null ? paramValue.ToString() : $"{targetResourceName}:{paramValue}";
         var key = parameter == PaginationParameter.PageNumber ? "page[number]" : "page[size]";
         return new KeyValuePair<string, string>(key, value);
-    }
-
-    public void Validate()
-    {
-        if (typeof(TEntity) != typeof(TRoot) && resourceSelector is null)
-            throw new StatementTranslationException(
-                "Can not paginate a related resource without a resourceSelector expression.");
-    }
-
-    private string? EvaluateResourceSelector()
-    {
-        return resourceSelector?.Body switch
-        {
-            null => null,
-            MemberExpression member => member.GetRelationshipName(),
-            MethodCallExpression methodCall => methodCall.GetRelationshipsChain(),
-            _ => throw new InvalidExpressionException(
-                $"Expression of type {typeof(MemberExpression)} or {typeof(MethodCallExpression)} expected, but #{resourceSelector.GetType().Name} found: {resourceSelector}.")
-        };
     }
 }
