@@ -1,7 +1,4 @@
 using System.Linq.Expressions;
-using System.Reflection;
-using JsonApiClient.Attributes;
-using JsonApiClient.Exceptions;
 using JsonApiClient.Extensions;
 using JsonApiClient.Interfaces;
 

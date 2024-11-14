@@ -33,7 +33,7 @@ public class JsonApiClientTests
         httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book?fields[book]=title", responseData));
         var sut = new JsonApiClient<Book>(httpClientFactory).Query;
 
-        sut.Select<Book>(x => new
+        sut.Select(x => new
         {
             x.Title
         });

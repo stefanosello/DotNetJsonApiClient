@@ -1,5 +1,4 @@
 using FluentAssertions;
-using JsonApiClient.Exceptions;
 using JsonApiClient.Statements;
 using JsonApiClient.Tests.Models;
 

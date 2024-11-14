@@ -5,19 +5,8 @@ using JsonApiClient.Attributes;
 
 namespace JsonApiClient.Extensions;
 
-public static class StatementTranslationUtilityExtensions
+public static class TypeExtentions
 {
-    public static string GetAttributeName(this MemberExpression expression)
-    {
-        var parent = expression.Expression is MemberExpression parentMember ? GetAttributeName(parentMember) : null;
-        var attribute = (JAttrAttribute?)expression.Member.GetCustomAttribute(typeof(JAttrAttribute));
-        if (attribute is null)
-            throw new InvalidExpressionException(
-                $"Member {expression.Member.Name} is not decorated with attribute ${nameof(JAttrAttribute)}, hence it cannot be interpreted as a json:api attribute.");
-        var attributeName = attribute.AttributeName ?? expression.Member.Name.Uncapitalize();
-        return parent is null ? attributeName : $"{parent}.{attributeName}";
-    }
-    
     public static string GetResourceName(this Type type)
     {
         var attribute = (JResAttribute?)type.GetCustomAttribute(typeof(JResAttribute));

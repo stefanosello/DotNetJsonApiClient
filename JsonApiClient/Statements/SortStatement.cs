@@ -13,9 +13,9 @@ internal class SortStatement<TEntity,TRoot>(Expression<Func<TRoot,object>>? reso
     public KeyValuePair<string,string> Translate()
     {
         var targetResourceName = SubresourceSelectorExpressionVisitor.VisitExpression(resourceSelector?.Body);
-        var propertySelector = (expression.Body as MemberExpression)!;
+        var propertyName = AttributeSelectorExpressionVisitor.VisitExpression(expression.Body);
         var directionPrefix = direction == SortDirection.Ascending ? "" : "-";
         var key = targetResourceName is null ? "sort" : $"sort[{targetResourceName}]";
-        return new KeyValuePair<string, string>(key,$"{directionPrefix}{propertySelector.GetAttributeName()}");
+        return new KeyValuePair<string, string>(key,$"{directionPrefix}{propertyName}");
     }
 }

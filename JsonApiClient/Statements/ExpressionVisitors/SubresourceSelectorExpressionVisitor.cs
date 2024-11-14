@@ -14,12 +14,9 @@ internal class SubresourceSelectorExpressionVisitor : ExpressionVisitor
 
     public static string? VisitExpression(Expression? expression)
     {
-        if (expression is null)
-            return null;
-        
         var visitor = new SubresourceSelectorExpressionVisitor();
-        visitor.Visit(expression);
-        return visitor._sb.ToString();
+        var node = visitor.Visit(expression);
+        return node is null ? null : visitor._sb.ToString();
     }
 
     public override Expression? Visit(Expression? node)
@@ -38,15 +35,14 @@ internal class SubresourceSelectorExpressionVisitor : ExpressionVisitor
     {
         if (AllowedSelectorMethods.Contains(node.Method.Name) && node.Arguments.Count == 2)
         {
-            var member2Expression = node.Arguments[1] as LambdaExpression ?? throw new InvalidExpressionException(
-                $"Expression of type {typeof(LambdaExpression)} expected, but #{node.Arguments[1].GetType().Name} found: {node.Arguments[1]}.");
-            
             if (node.Arguments[0] is not MemberExpression member1)
-                throw new InvalidExpressionException(
-                    $"Expression of type {typeof(MemberExpression)} expected, but #{node.Arguments[0].GetType().Name} found: {node.Arguments[0]}.");
+                throw new InvalidExpressionException($"Expression of type {typeof(MemberExpression)} expected, but #{node.Arguments[0].GetType().Name} found: {node.Arguments[0]}.");
+            
+            if (node.Arguments[1] is not LambdaExpression member2Expression)
+                throw new InvalidExpressionException($"Expression of type {typeof(LambdaExpression)} expected, but #{node.Arguments[1].GetType().Name} found: {node.Arguments[1]}.");
             
             VisitMember(member1);
-            _sb.Append(".");
+            _sb.Append('.');
             
             var _ = member2Expression.Body switch
             {
@@ -71,6 +67,7 @@ internal class SubresourceSelectorExpressionVisitor : ExpressionVisitor
             throw new InvalidExpressionException(
                 $"Member {node.Member.Name} is not decorated with attribute ${nameof(JRelAttribute)}, hence it cannot be interpreted as a json:api relationship.");
         var relName = attribute.RelationshipName ?? node.Member.Name.Uncapitalize();
+        
         if (parent is null)
             _sb.Append(relName);
         else

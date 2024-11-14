@@ -5,14 +5,14 @@ using JsonApiClient.Extensions;
 
 namespace JsonApiClient.Statements.ExpressionVisitors;
 
-internal class WhereExpressionVisitor : ExpressionVisitor
+internal class FilterConditionExpressionVisitor : ExpressionVisitor
 {
     private readonly StringBuilder _sb = new();
     private static readonly IEnumerable<string> StringComparisonMethodNames = ["Contains", "StartsWith", "EndsWith"];
 
     public static string VisitExpression(Expression expression)
     {
-        var visitor = new WhereExpressionVisitor();
+        var visitor = new FilterConditionExpressionVisitor();
         visitor.Visit(expression);
         return visitor._sb.ToString();
     }

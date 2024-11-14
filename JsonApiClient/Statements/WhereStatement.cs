@@ -15,7 +15,7 @@ internal class WhereStatement<TEntity,TRoot>(Expression<Func<TEntity,bool>> expr
         string queryString;
         try
         {
-            queryString = WhereExpressionVisitor.VisitExpression(expression.Body);
+            queryString = FilterConditionExpressionVisitor.VisitExpression(expression.Body);
         }
         catch (Exception e)
         {
