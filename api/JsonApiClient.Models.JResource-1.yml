@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Models.JResource`1
+  commentId: T:JsonApiClient.Models.JResource`1
+  id: JResource`1
+  parent: JsonApiClient.Models
+  children:
+  - JsonApiClient.Models.JResource`1.Id
+  - JsonApiClient.Models.JResource`1.Lid
+  - JsonApiClient.Models.JResource`1.Type
+  langs:
+  - csharp
+  - vb
+  name: JResource<TIdentifier>
+  nameWithType: JResource<TIdentifier>
+  fullName: JsonApiClient.Models.JResource<TIdentifier>
+  type: Class
+  source:
+    remote:
+      path: JsonApiClient/Models/JResource.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: JResource
+    path: JsonApiClient/Models/JResource.cs
+    startLine: 14
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Models
+  summary: >-
+    The base class for all json:api resources.
+
+    It provides with base attributes and methods to properly handle the serialization and deserialization of
+
+    the resources.
+  example: []
+  syntax:
+    content: 'public class JResource<TIdentifier> : IJsonApiResource'
+    typeParameters:
+    - id: TIdentifier
+      description: The type of the identifier attribute (Id).
+    content.vb: Public Class JResource(Of TIdentifier) Implements IJsonApiResource
+  inheritance:
+  - System.Object
+  implements:
+  - JsonApiClient.Interfaces.IJsonApiResource
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: JResource(Of TIdentifier)
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier)
+  name.vb: JResource(Of TIdentifier)
+- uid: JsonApiClient.Models.JResource`1.Id
+  commentId: P:JsonApiClient.Models.JResource`1.Id
+  id: Id
+  parent: JsonApiClient.Models.JResource`1
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: JResource<TIdentifier>.Id
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Id
+  type: Property
+  source:
+    remote:
+      path: JsonApiClient/Models/JResource.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Id
+    path: JsonApiClient/Models/JResource.cs
+    startLine: 19
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Models
+  summary: The identifier of the resource.
+  example: []
+  syntax:
+    content: public TIdentifier? Id { get; set; }
+    parameters: []
+    return:
+      type: '{TIdentifier}'
+    content.vb: Public Property Id As TIdentifier
+  overload: JsonApiClient.Models.JResource`1.Id*
+  nameWithType.vb: JResource(Of TIdentifier).Id
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Id
+- uid: JsonApiClient.Models.JResource`1.Lid
+  commentId: P:JsonApiClient.Models.JResource`1.Lid
+  id: Lid
+  parent: JsonApiClient.Models.JResource`1
+  langs:
+  - csharp
+  - vb
+  name: Lid
+  nameWithType: JResource<TIdentifier>.Lid
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Lid
+  type: Property
+  source:
+    remote:
+      path: JsonApiClient/Models/JResource.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Lid
+    path: JsonApiClient/Models/JResource.cs
+    startLine: 21
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Models
+  summary: The local id of the resource, considered only on new resources since already persisted resources do have an Id.
+  example: []
+  syntax:
+    content: public string? Lid { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Lid As String
+  overload: JsonApiClient.Models.JResource`1.Lid*
+  implements:
+  - JsonApiClient.Interfaces.IJsonApiResource.Lid
+  nameWithType.vb: JResource(Of TIdentifier).Lid
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Lid
+- uid: JsonApiClient.Models.JResource`1.Type
+  commentId: P:JsonApiClient.Models.JResource`1.Type
+  id: Type
+  parent: JsonApiClient.Models.JResource`1
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: JResource<TIdentifier>.Type
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Type
+  type: Property
+  source:
+    remote:
+      path: JsonApiClient/Models/JResource.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Type
+    path: JsonApiClient/Models/JResource.cs
+    startLine: 24
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Models
+  summary: The type (or public name) of the resource.
+  example: []
+  syntax:
+    content: public string Type { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Type As String
+  overload: JsonApiClient.Models.JResource`1.Type*
+  implements:
+  - JsonApiClient.Interfaces.IJsonApiResource.Type
+  nameWithType.vb: JResource(Of TIdentifier).Type
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Type
+references:
+- uid: JsonApiClient.Models
+  commentId: N:JsonApiClient.Models
+  href: JsonApiClient.html
+  name: JsonApiClient.Models
+  nameWithType: JsonApiClient.Models
+  fullName: JsonApiClient.Models
+  spec.csharp:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Models
+    name: Models
+    href: JsonApiClient.Models.html
+  spec.vb:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Models
+    name: Models
+    href: JsonApiClient.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: JsonApiClient.Interfaces.IJsonApiResource
+  commentId: T:JsonApiClient.Interfaces.IJsonApiResource
+  parent: JsonApiClient.Interfaces
+  href: JsonApiClient.Interfaces.IJsonApiResource.html
+  name: IJsonApiResource
+  nameWithType: IJsonApiResource
+  fullName: JsonApiClient.Interfaces.IJsonApiResource
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: JsonApiClient.Interfaces
+  commentId: N:JsonApiClient.Interfaces
+  href: JsonApiClient.html
+  name: JsonApiClient.Interfaces
+  nameWithType: JsonApiClient.Interfaces
+  fullName: JsonApiClient.Interfaces
+  spec.csharp:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Interfaces
+    name: Interfaces
+    href: JsonApiClient.Interfaces.html
+  spec.vb:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Interfaces
+    name: Interfaces
+    href: JsonApiClient.Interfaces.html
+- uid: JsonApiClient.Models.JResource`1.Id*
+  commentId: Overload:JsonApiClient.Models.JResource`1.Id
+  href: JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Id
+  name: Id
+  nameWithType: JResource<TIdentifier>.Id
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Id
+  nameWithType.vb: JResource(Of TIdentifier).Id
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Id
+- uid: '{TIdentifier}'
+  commentId: '!:TIdentifier'
+  definition: TIdentifier
+  name: TIdentifier
+  nameWithType: TIdentifier
+  fullName: TIdentifier
+- uid: TIdentifier
+  commentId: '!:TIdentifier'
+  name: TIdentifier
+  nameWithType: TIdentifier
+  fullName: TIdentifier
+- uid: JsonApiClient.Models.JResource`1.Lid*
+  commentId: Overload:JsonApiClient.Models.JResource`1.Lid
+  href: JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Lid
+  name: Lid
+  nameWithType: JResource<TIdentifier>.Lid
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Lid
+  nameWithType.vb: JResource(Of TIdentifier).Lid
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Lid
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Lid
+  commentId: P:JsonApiClient.Interfaces.IJsonApiResource.Lid
+  parent: JsonApiClient.Interfaces.IJsonApiResource
+  href: JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Lid
+  name: Lid
+  nameWithType: IJsonApiResource.Lid
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Lid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: JsonApiClient.Models.JResource`1.Type*
+  commentId: Overload:JsonApiClient.Models.JResource`1.Type
+  href: JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Type
+  name: Type
+  nameWithType: JResource<TIdentifier>.Type
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Type
+  nameWithType.vb: JResource(Of TIdentifier).Type
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Type
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Type
+  commentId: P:JsonApiClient.Interfaces.IJsonApiResource.Type
+  parent: JsonApiClient.Interfaces.IJsonApiResource
+  href: JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Type
+  name: Type
+  nameWithType: IJsonApiResource.Type
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Type

@@ -1,0 +1,149 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Interfaces.IJsonApiClient`1
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClient`1
+  id: IJsonApiClient`1
+  parent: JsonApiClient.Interfaces
+  children:
+  - JsonApiClient.Interfaces.IJsonApiClient`1.Query
+  langs:
+  - csharp
+  - vb
+  name: IJsonApiClient<TEntity>
+  nameWithType: IJsonApiClient<TEntity>
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TEntity>
+  type: Interface
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClient.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: IJsonApiClient
+    path: JsonApiClient/Interfaces/IJsonApiClient.cs
+    startLine: 2
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'public interface IJsonApiClient<TEntity> where TEntity : class'
+    typeParameters:
+    - id: TEntity
+    content.vb: Public Interface IJsonApiClient(Of TEntity As Class)
+  nameWithType.vb: IJsonApiClient(Of TEntity)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TEntity)
+  name.vb: IJsonApiClient(Of TEntity)
+- uid: JsonApiClient.Interfaces.IJsonApiClient`1.Query
+  commentId: P:JsonApiClient.Interfaces.IJsonApiClient`1.Query
+  id: Query
+  parent: JsonApiClient.Interfaces.IJsonApiClient`1
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: IJsonApiClient<TEntity>.Query
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TEntity>.Query
+  type: Property
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClient.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Query
+    path: JsonApiClient/Interfaces/IJsonApiClient.cs
+    startLine: 4
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiQueryClient<TEntity> Query { get; }
+    parameters: []
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiQueryClient{{TEntity}}
+    content.vb: ReadOnly Property Query As IJsonApiQueryClient(Of TEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClient`1.Query*
+  nameWithType.vb: IJsonApiClient(Of TEntity).Query
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TEntity).Query
+references:
+- uid: JsonApiClient.Interfaces
+  commentId: N:JsonApiClient.Interfaces
+  href: JsonApiClient.html
+  name: JsonApiClient.Interfaces
+  nameWithType: JsonApiClient.Interfaces
+  fullName: JsonApiClient.Interfaces
+  spec.csharp:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Interfaces
+    name: Interfaces
+    href: JsonApiClient.Interfaces.html
+  spec.vb:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Interfaces
+    name: Interfaces
+    href: JsonApiClient.Interfaces.html
+- uid: JsonApiClient.Interfaces.IJsonApiClient`1.Query*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClient`1.Query
+  href: JsonApiClient.Interfaces.IJsonApiClient-1.html#JsonApiClient_Interfaces_IJsonApiClient_1_Query
+  name: Query
+  nameWithType: IJsonApiClient<TEntity>.Query
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TEntity>.Query
+  nameWithType.vb: IJsonApiClient(Of TEntity).Query
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TEntity).Query
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient{{TEntity}}
+  commentId: T:JsonApiClient.Interfaces.IJsonApiQueryClient{`0}
+  parent: JsonApiClient.Interfaces
+  definition: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+  href: JsonApiClient.Interfaces.IJsonApiQueryClient-1.html
+  name: IJsonApiQueryClient<TEntity>
+  nameWithType: IJsonApiQueryClient<TEntity>
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TEntity>
+  nameWithType.vb: IJsonApiQueryClient(Of TEntity)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TEntity)
+  name.vb: IJsonApiQueryClient(Of TEntity)
+  spec.csharp:
+  - uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+    name: IJsonApiQueryClient
+    href: JsonApiClient.Interfaces.IJsonApiQueryClient-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+    name: IJsonApiQueryClient
+    href: JsonApiClient.Interfaces.IJsonApiQueryClient-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+  commentId: T:JsonApiClient.Interfaces.IJsonApiQueryClient`1
+  parent: JsonApiClient.Interfaces
+  href: JsonApiClient.Interfaces.IJsonApiQueryClient-1.html
+  name: IJsonApiQueryClient<TRootEntity>
+  nameWithType: IJsonApiQueryClient<TRootEntity>
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity)
+  name.vb: IJsonApiQueryClient(Of TRootEntity)
+  spec.csharp:
+  - uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+    name: IJsonApiQueryClient
+    href: JsonApiClient.Interfaces.IJsonApiQueryClient-1.html
+  - name: <
+  - name: TRootEntity
+  - name: '>'
+  spec.vb:
+  - uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+    name: IJsonApiQueryClient
+    href: JsonApiClient.Interfaces.IJsonApiQueryClient-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRootEntity
+  - name: )

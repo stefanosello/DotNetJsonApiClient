@@ -5,9 +5,9 @@ using Newtonsoft.Json;
 
 namespace JsonApiClient.Extensions;
 
-public static class TypeExtentions
+internal static class TypeExtentions
 {
-    public static string GetResourceName(this Type type)
+    internal static string GetResourceName(this Type type)
     {
         var attribute = (JResAttribute?)type.GetCustomAttribute(typeof(JResAttribute));
         if (attribute is null)
@@ -17,7 +17,7 @@ public static class TypeExtentions
         return jsonProperty?.PropertyName ?? type.Name.Uncapitalize();
     }
     
-    public static string GetResourceHttpClientId(this Type type)
+    internal static string GetResourceHttpClientId(this Type type)
     {
         var attribute = (JResAttribute?)type.GetCustomAttribute(typeof(JResAttribute));
         if (attribute is null)
@@ -26,7 +26,7 @@ public static class TypeExtentions
         return attribute.ClientId;
     }
     
-    public static string GetResourceNamespace(this Type type)
+    internal static string GetResourceNamespace(this Type type)
     {
         var attribute = (JResAttribute?)type.GetCustomAttribute(typeof(JResAttribute));
         if (attribute is null)

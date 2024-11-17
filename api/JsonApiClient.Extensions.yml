@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Extensions
+  commentId: N:JsonApiClient.Extensions
+  id: JsonApiClient.Extensions
+  children:
+  - JsonApiClient.Extensions.StringExtensions
+  - JsonApiClient.Extensions.TypeExtentions
+  langs:
+  - csharp
+  - vb
+  name: JsonApiClient.Extensions
+  nameWithType: JsonApiClient.Extensions
+  fullName: JsonApiClient.Extensions
+  type: Namespace
+  assemblies:
+  - JsonApiClient
+references:
+- uid: JsonApiClient.Extensions.StringExtensions
+  commentId: T:JsonApiClient.Extensions.StringExtensions
+  href: JsonApiClient.Extensions.StringExtensions.html
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: JsonApiClient.Extensions.StringExtensions
+- uid: JsonApiClient.Extensions.TypeExtentions
+  commentId: T:JsonApiClient.Extensions.TypeExtentions
+  href: JsonApiClient.Extensions.TypeExtentions.html
+  name: TypeExtentions
+  nameWithType: TypeExtentions
+  fullName: JsonApiClient.Extensions.TypeExtentions

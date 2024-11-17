@@ -1,7 +1,7 @@
 namespace JsonApiClient.Attributes;
 
 /// <summary>
-/// Used to decorate models or DTOs representing a json:api resource.
+/// Used to decorate models or DTOs representing a <c>json:api</c> resource.
 /// </summary>
 /// <param name="clientId">The name of the named http client as configured in the application program.cs file</param>
 /// <param name="apiNamespace">The namespace (i.e. the trailing part of the path) of the resource api url</param>
@@ -18,7 +18,7 @@ public class JResAttribute(string clientId, string apiNamespace, string? resourc
     /// </summary>
     public string ApiNamespace { get; } = apiNamespace;
     /// <summary>
-    /// The resource name, if different from the class name
+    /// The resource name, if different from the uncapitalised class name
     /// </summary>
     public string? ResourceName { get; } = resourceName;
     

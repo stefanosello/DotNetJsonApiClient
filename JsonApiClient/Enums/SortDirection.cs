@@ -1,6 +1,6 @@
 namespace JsonApiClient.Enums;
 
-public enum SortDirection
+internal enum SortDirection
 {
     Ascending,
     Descending

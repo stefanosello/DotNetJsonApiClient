@@ -1,0 +1,1137 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  id: IJsonApiClientBuilder`1
+  parent: JsonApiClient.Interfaces
+  children:
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber(System.Int32)
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber``1(System.Int32)
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize(System.Int32)
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize``1(System.Int32)
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient(System.Net.Http.IHttpClientFactory,System.String)
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  - JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  langs:
+  - csharp
+  - vb
+  name: IJsonApiClientBuilder<TRootEntity>
+  nameWithType: IJsonApiClientBuilder<TRootEntity>
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>
+  type: Interface
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: IJsonApiClientBuilder
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 4
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'public interface IJsonApiClientBuilder<TRootEntity> where TRootEntity : class'
+    typeParameters:
+    - id: TRootEntity
+    content.vb: Public Interface IJsonApiClientBuilder(Of TRootEntity As Class)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity)
+  name.vb: IJsonApiClientBuilder(Of TRootEntity)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient(System.Net.Http.IHttpClientFactory,System.String)
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient(System.Net.Http.IHttpClientFactory,System.String)
+  id: SetHttpClient(System.Net.Http.IHttpClientFactory,System.String)
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: SetHttpClient(IHttpClientFactory, string)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.SetHttpClient(IHttpClientFactory, string)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.SetHttpClient(System.Net.Http.IHttpClientFactory, string)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: SetHttpClient
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 6
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> SetHttpClient(IHttpClientFactory httpClientFactory, string httpClientId)
+    parameters:
+    - id: httpClientFactory
+      type: System.Net.Http.IHttpClientFactory
+    - id: httpClientId
+      type: System.String
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function SetHttpClient(httpClientFactory As IHttpClientFactory, httpClientId As String) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).SetHttpClient(IHttpClientFactory, String)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).SetHttpClient(System.Net.Http.IHttpClientFactory, String)
+  name.vb: SetHttpClient(IHttpClientFactory, String)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  id: Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Select<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Select<TEntity>(Expression<Func<TEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Select<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Select
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 8
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'IJsonApiClientBuilder<TRootEntity> Select<TEntity>(Expression<Func<TEntity, object>> selectStatement) where TEntity : class'
+    parameters:
+    - id: selectStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Object}}
+    typeParameters:
+    - id: TEntity
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function [Select](Of TEntity As Class)(selectStatement As Expression(Of Func(Of TEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Select(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Select(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  name.vb: Select(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  id: Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Select(Expression<Func<TRootEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Select(Expression<Func<TRootEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Select(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Select
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 11
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> Select(Expression<Func<TRootEntity, object>> selectStatement)
+    parameters:
+    - id: selectStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Object}}
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function [Select](selectStatement As Expression(Of Func(Of TRootEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Select(Expression(Of Func(Of TRootEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Select(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  name.vb: Select(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  id: Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Where<TEntity>(Expression<Func<TEntity, bool>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Where<TEntity>(Expression<Func<TEntity, bool>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Where<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Where
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 13
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'IJsonApiClientBuilder<TRootEntity> Where<TEntity>(Expression<Func<TEntity, bool>> whereStatement) where TEntity : class'
+    parameters:
+    - id: whereStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+    typeParameters:
+    - id: TEntity
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function Where(Of TEntity As Class)(whereStatement As Expression(Of Func(Of TEntity, Boolean))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Where(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Where(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)))
+  name.vb: Where(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  id: Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Where(Expression<Func<TRootEntity, bool>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Where(Expression<Func<TRootEntity, bool>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Where(System.Linq.Expressions.Expression<System.Func<TRootEntity, bool>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Where
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 16
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> Where(Expression<Func<TRootEntity, bool>> whereStatement)
+    parameters:
+    - id: whereStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Boolean}}
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function Where(whereStatement As Expression(Of Func(Of TRootEntity, Boolean))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Where(Expression(Of Func(Of TRootEntity, Boolean)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Where(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Boolean)))
+  name.vb: Where(Expression(Of Func(Of TRootEntity, Boolean)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  id: Include``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Include<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Include<TEntity>(Expression<Func<TEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Include<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Include
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 18
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'IJsonApiClientBuilder<TRootEntity> Include<TEntity>(Expression<Func<TEntity, object>> includeStatement) where TEntity : class'
+    parameters:
+    - id: includeStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Object}}
+    typeParameters:
+    - id: TEntity
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function Include(Of TEntity As Class)(includeStatement As Expression(Of Func(Of TEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Include(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Include(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  name.vb: Include(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  id: Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Include(Expression<Func<TRootEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Include(Expression<Func<TRootEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Include(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Include
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 21
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> Include(Expression<Func<TRootEntity, object>> includeStatement)
+    parameters:
+    - id: includeStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Object}}
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function Include(includeStatement As Expression(Of Func(Of TRootEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Include(Expression(Of Func(Of TRootEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Include(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  name.vb: Include(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  id: OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: OrderBy<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderBy<TEntity>(Expression<Func<TEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderBy<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: OrderBy
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 23
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'IJsonApiClientBuilder<TRootEntity> OrderBy<TEntity>(Expression<Func<TEntity, object>> orderByStatement) where TEntity : class'
+    parameters:
+    - id: orderByStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Object}}
+    typeParameters:
+    - id: TEntity
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function OrderBy(Of TEntity As Class)(orderByStatement As Expression(Of Func(Of TEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderBy(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderBy(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  name.vb: OrderBy(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  id: OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: OrderBy(Expression<Func<TRootEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderBy(Expression<Func<TRootEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderBy(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: OrderBy
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 26
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> OrderBy(Expression<Func<TRootEntity, object>> orderByStatement)
+    parameters:
+    - id: orderByStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Object}}
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function OrderBy(orderByStatement As Expression(Of Func(Of TRootEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderBy(Expression(Of Func(Of TRootEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderBy(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  name.vb: OrderBy(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  id: OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: OrderByDescending<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderByDescending<TEntity>(Expression<Func<TEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderByDescending<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: OrderByDescending
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 28
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'IJsonApiClientBuilder<TRootEntity> OrderByDescending<TEntity>(Expression<Func<TEntity, object>> orderByStatement) where TEntity : class'
+    parameters:
+    - id: orderByStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Object}}
+    typeParameters:
+    - id: TEntity
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function OrderByDescending(Of TEntity As Class)(orderByStatement As Expression(Of Func(Of TEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  name.vb: OrderByDescending(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  id: OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: OrderByDescending(Expression<Func<TRootEntity, object>>)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderByDescending(Expression<Func<TRootEntity, object>>)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderByDescending(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: OrderByDescending
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 31
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> OrderByDescending(Expression<Func<TRootEntity, object>> orderByStatement)
+    parameters:
+    - id: orderByStatement
+      type: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Object}}
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function OrderByDescending(orderByStatement As Expression(Of Func(Of TRootEntity, Object))) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(Expression(Of Func(Of TRootEntity, Object)))
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  name.vb: OrderByDescending(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize``1(System.Int32)
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize``1(System.Int32)
+  id: PageSize``1(System.Int32)
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: PageSize<TEntity>(int)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageSize<TEntity>(int)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageSize<TEntity>(int)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: PageSize
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 33
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'IJsonApiClientBuilder<TRootEntity> PageSize<TEntity>(int limit) where TEntity : class'
+    parameters:
+    - id: limit
+      type: System.Int32
+    typeParameters:
+    - id: TEntity
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function PageSize(Of TEntity As Class)(limit As Integer) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageSize(Of TEntity)(Integer)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageSize(Of TEntity)(Integer)
+  name.vb: PageSize(Of TEntity)(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize(System.Int32)
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize(System.Int32)
+  id: PageSize(System.Int32)
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: PageSize(int)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageSize(int)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageSize(int)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: PageSize
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 35
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> PageSize(int limit)
+    parameters:
+    - id: limit
+      type: System.Int32
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function PageSize(limit As Integer) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageSize(Integer)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageSize(Integer)
+  name.vb: PageSize(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber``1(System.Int32)
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber``1(System.Int32)
+  id: PageNumber``1(System.Int32)
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: PageNumber<TEntity>(int)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageNumber<TEntity>(int)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageNumber<TEntity>(int)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: PageNumber
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 37
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: 'IJsonApiClientBuilder<TRootEntity> PageNumber<TEntity>(int number) where TEntity : class'
+    parameters:
+    - id: number
+      type: System.Int32
+    typeParameters:
+    - id: TEntity
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function PageNumber(Of TEntity As Class)(number As Integer) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageNumber(Of TEntity)(Integer)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageNumber(Of TEntity)(Integer)
+  name.vb: PageNumber(Of TEntity)(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber(System.Int32)
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber(System.Int32)
+  id: PageNumber(System.Int32)
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: PageNumber(int)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageNumber(int)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageNumber(int)
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: PageNumber
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 39
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClientBuilder<TRootEntity> PageNumber(int number)
+    parameters:
+    - id: number
+      type: System.Int32
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    content.vb: Function PageNumber(number As Integer) As IJsonApiClientBuilder(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageNumber(Integer)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageNumber(Integer)
+  name.vb: PageNumber(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build
+  id: Build
+  parent: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  langs:
+  - csharp
+  - vb
+  name: Build()
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Build()
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Build()
+  type: Method
+  source:
+    remote:
+      path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: Build
+    path: JsonApiClient/Interfaces/IJsonApiClientBuilder.cs
+    startLine: 41
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Interfaces
+  syntax:
+    content: IJsonApiClient<TRootEntity> Build()
+    return:
+      type: JsonApiClient.Interfaces.IJsonApiClient{{TRootEntity}}
+    content.vb: Function Build() As IJsonApiClient(Of TRootEntity)
+  overload: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build*
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Build()
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Build()
+references:
+- uid: JsonApiClient.Interfaces
+  commentId: N:JsonApiClient.Interfaces
+  href: JsonApiClient.html
+  name: JsonApiClient.Interfaces
+  nameWithType: JsonApiClient.Interfaces
+  fullName: JsonApiClient.Interfaces
+  spec.csharp:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Interfaces
+    name: Interfaces
+    href: JsonApiClient.Interfaces.html
+  spec.vb:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Interfaces
+    name: Interfaces
+    href: JsonApiClient.Interfaces.html
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_SetHttpClient_System_Net_Http_IHttpClientFactory_System_String_
+  name: SetHttpClient
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.SetHttpClient
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.SetHttpClient
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).SetHttpClient
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).SetHttpClient
+- uid: System.Net.Http.IHttpClientFactory
+  commentId: T:System.Net.Http.IHttpClientFactory
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory
+  name: IHttpClientFactory
+  nameWithType: IHttpClientFactory
+  fullName: System.Net.Http.IHttpClientFactory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  parent: JsonApiClient.Interfaces
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html
+  name: IJsonApiClientBuilder<TRootEntity>
+  nameWithType: IJsonApiClientBuilder<TRootEntity>
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity)
+  name.vb: IJsonApiClientBuilder(Of TRootEntity)
+  spec.csharp:
+  - uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    name: IJsonApiClientBuilder
+    href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html
+  - name: <
+  - name: TRootEntity
+  - name: '>'
+  spec.vb:
+  - uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+    name: IJsonApiClientBuilder
+    href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRootEntity
+  - name: )
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Select__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  name: Select
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Select
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Select
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Select
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Select
+- uid: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Object}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{``0,System.Object}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<TEntity, object>>
+  nameWithType: Expression<Func<TEntity, object>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TEntity, object>>
+  nameWithType.vb: Expression(Of Func(Of TEntity, Object))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object))
+  name.vb: Expression(Of Func(Of TEntity, Object))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullName.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - name: TDelegate
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TDelegate
+  - name: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Linq
+    name: Linq
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq
+  - name: .
+  - uid: System.Linq.Expressions
+    name: Expressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions
+- uid: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Object}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Object}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<TRootEntity, object>>
+  nameWithType: Expression<Func<TRootEntity, object>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>
+  nameWithType.vb: Expression(Of Func(Of TRootEntity, Object))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object))
+  name.vb: Expression(Of Func(Of TRootEntity, Object))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TRootEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRootEntity
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Where__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  name: Where
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Where
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Where
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Where
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Where
+- uid: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<TEntity, bool>>
+  nameWithType: Expression<Func<TEntity, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TEntity, bool>>
+  nameWithType.vb: Expression(Of Func(Of TEntity, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean))
+  name.vb: Expression(Of Func(Of TEntity, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  name: Expression<Func<TRootEntity, bool>>
+  nameWithType: Expression<Func<TRootEntity, bool>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TRootEntity, bool>>
+  nameWithType.vb: Expression(Of Func(Of TRootEntity, Boolean))
+  fullName.vb: System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Boolean))
+  name.vb: Expression(Of Func(Of TRootEntity, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: <
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: TRootEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRootEntity
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  - name: )
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Include__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  name: Include
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Include
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Include
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Include
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Include
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderBy__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  name: OrderBy
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderBy
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderBy
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderBy
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderBy
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderByDescending__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  name: OrderByDescending
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderByDescending
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderByDescending
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderByDescending
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderByDescending
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageSize__1_System_Int32_
+  name: PageSize
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageSize
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageSize
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageSize
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageSize
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageNumber__1_System_Int32_
+  name: PageNumber
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageNumber
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageNumber
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageNumber
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageNumber
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build*
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build
+  href: JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Build
+  name: Build
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Build
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Build
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Build
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Build
+- uid: JsonApiClient.Interfaces.IJsonApiClient{{TRootEntity}}
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClient{`0}
+  parent: JsonApiClient.Interfaces
+  definition: JsonApiClient.Interfaces.IJsonApiClient`1
+  href: JsonApiClient.Interfaces.IJsonApiClient-1.html
+  name: IJsonApiClient<TRootEntity>
+  nameWithType: IJsonApiClient<TRootEntity>
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TRootEntity>
+  nameWithType.vb: IJsonApiClient(Of TRootEntity)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TRootEntity)
+  name.vb: IJsonApiClient(Of TRootEntity)
+  spec.csharp:
+  - uid: JsonApiClient.Interfaces.IJsonApiClient`1
+    name: IJsonApiClient
+    href: JsonApiClient.Interfaces.IJsonApiClient-1.html
+  - name: <
+  - name: TRootEntity
+  - name: '>'
+  spec.vb:
+  - uid: JsonApiClient.Interfaces.IJsonApiClient`1
+    name: IJsonApiClient
+    href: JsonApiClient.Interfaces.IJsonApiClient-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRootEntity
+  - name: )
+- uid: JsonApiClient.Interfaces.IJsonApiClient`1
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClient`1
+  href: JsonApiClient.Interfaces.IJsonApiClient-1.html
+  name: IJsonApiClient<TEntity>
+  nameWithType: IJsonApiClient<TEntity>
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TEntity>
+  nameWithType.vb: IJsonApiClient(Of TEntity)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TEntity)
+  name.vb: IJsonApiClient(Of TEntity)
+  spec.csharp:
+  - uid: JsonApiClient.Interfaces.IJsonApiClient`1
+    name: IJsonApiClient
+    href: JsonApiClient.Interfaces.IJsonApiClient-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: JsonApiClient.Interfaces.IJsonApiClient`1
+    name: IJsonApiClient
+    href: JsonApiClient.Interfaces.IJsonApiClient-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )

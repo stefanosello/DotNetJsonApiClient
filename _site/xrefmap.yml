@@ -1,0 +1,1053 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: JsonApiClient
+  name: JsonApiClient
+  href: api/JsonApiClient.html
+  commentId: N:JsonApiClient
+  fullName: JsonApiClient
+  nameWithType: JsonApiClient
+- uid: JsonApiClient.Attributes
+  name: JsonApiClient.Attributes
+  href: api/JsonApiClient.Attributes.html
+  commentId: N:JsonApiClient.Attributes
+  fullName: JsonApiClient.Attributes
+  nameWithType: JsonApiClient.Attributes
+- uid: JsonApiClient.Attributes.JAttrAttribute
+  name: JAttrAttribute
+  href: api/JsonApiClient.Attributes.JAttrAttribute.html
+  commentId: T:JsonApiClient.Attributes.JAttrAttribute
+  fullName: JsonApiClient.Attributes.JAttrAttribute
+  nameWithType: JAttrAttribute
+- uid: JsonApiClient.Attributes.JRelAttribute
+  name: JRelAttribute
+  href: api/JsonApiClient.Attributes.JRelAttribute.html
+  commentId: T:JsonApiClient.Attributes.JRelAttribute
+  fullName: JsonApiClient.Attributes.JRelAttribute
+  nameWithType: JRelAttribute
+- uid: JsonApiClient.Attributes.JResAttribute
+  name: JResAttribute
+  href: api/JsonApiClient.Attributes.JResAttribute.html
+  commentId: T:JsonApiClient.Attributes.JResAttribute
+  fullName: JsonApiClient.Attributes.JResAttribute
+  nameWithType: JResAttribute
+- uid: JsonApiClient.Attributes.JResAttribute.#ctor(System.String,System.String,System.String)
+  name: JResAttribute(string, string, string?)
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute__ctor_System_String_System_String_System_String_
+  commentId: M:JsonApiClient.Attributes.JResAttribute.#ctor(System.String,System.String,System.String)
+  name.vb: New(String, String, String)
+  fullName: JsonApiClient.Attributes.JResAttribute.JResAttribute(string, string, string?)
+  fullName.vb: JsonApiClient.Attributes.JResAttribute.New(String, String, String)
+  nameWithType: JResAttribute.JResAttribute(string, string, string?)
+  nameWithType.vb: JResAttribute.New(String, String, String)
+- uid: JsonApiClient.Attributes.JResAttribute.#ctor*
+  name: JResAttribute
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute__ctor_
+  commentId: Overload:JsonApiClient.Attributes.JResAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: JsonApiClient.Attributes.JResAttribute.JResAttribute
+  fullName.vb: JsonApiClient.Attributes.JResAttribute.New
+  nameWithType: JResAttribute.JResAttribute
+  nameWithType.vb: JResAttribute.New
+- uid: JsonApiClient.Attributes.JResAttribute.ApiNamespace
+  name: ApiNamespace
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute_ApiNamespace
+  commentId: P:JsonApiClient.Attributes.JResAttribute.ApiNamespace
+  fullName: JsonApiClient.Attributes.JResAttribute.ApiNamespace
+  nameWithType: JResAttribute.ApiNamespace
+- uid: JsonApiClient.Attributes.JResAttribute.ApiNamespace*
+  name: ApiNamespace
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute_ApiNamespace_
+  commentId: Overload:JsonApiClient.Attributes.JResAttribute.ApiNamespace
+  isSpec: "True"
+  fullName: JsonApiClient.Attributes.JResAttribute.ApiNamespace
+  nameWithType: JResAttribute.ApiNamespace
+- uid: JsonApiClient.Attributes.JResAttribute.ClientId
+  name: ClientId
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute_ClientId
+  commentId: P:JsonApiClient.Attributes.JResAttribute.ClientId
+  fullName: JsonApiClient.Attributes.JResAttribute.ClientId
+  nameWithType: JResAttribute.ClientId
+- uid: JsonApiClient.Attributes.JResAttribute.ClientId*
+  name: ClientId
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute_ClientId_
+  commentId: Overload:JsonApiClient.Attributes.JResAttribute.ClientId
+  isSpec: "True"
+  fullName: JsonApiClient.Attributes.JResAttribute.ClientId
+  nameWithType: JResAttribute.ClientId
+- uid: JsonApiClient.Attributes.JResAttribute.ResourceName
+  name: ResourceName
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute_ResourceName
+  commentId: P:JsonApiClient.Attributes.JResAttribute.ResourceName
+  fullName: JsonApiClient.Attributes.JResAttribute.ResourceName
+  nameWithType: JResAttribute.ResourceName
+- uid: JsonApiClient.Attributes.JResAttribute.ResourceName*
+  name: ResourceName
+  href: api/JsonApiClient.Attributes.JResAttribute.html#JsonApiClient_Attributes_JResAttribute_ResourceName_
+  commentId: Overload:JsonApiClient.Attributes.JResAttribute.ResourceName
+  isSpec: "True"
+  fullName: JsonApiClient.Attributes.JResAttribute.ResourceName
+  nameWithType: JResAttribute.ResourceName
+- uid: JsonApiClient.Enums
+  name: JsonApiClient.Enums
+  href: api/JsonApiClient.Enums.html
+  commentId: N:JsonApiClient.Enums
+  fullName: JsonApiClient.Enums
+  nameWithType: JsonApiClient.Enums
+- uid: JsonApiClient.Enums.PaginationParameter
+  name: PaginationParameter
+  href: api/JsonApiClient.Enums.PaginationParameter.html
+  commentId: T:JsonApiClient.Enums.PaginationParameter
+  fullName: JsonApiClient.Enums.PaginationParameter
+  nameWithType: PaginationParameter
+- uid: JsonApiClient.Enums.PaginationParameter.PageNumber
+  name: PageNumber
+  href: api/JsonApiClient.Enums.PaginationParameter.html#JsonApiClient_Enums_PaginationParameter_PageNumber
+  commentId: F:JsonApiClient.Enums.PaginationParameter.PageNumber
+  fullName: JsonApiClient.Enums.PaginationParameter.PageNumber
+  nameWithType: PaginationParameter.PageNumber
+- uid: JsonApiClient.Enums.PaginationParameter.PageSize
+  name: PageSize
+  href: api/JsonApiClient.Enums.PaginationParameter.html#JsonApiClient_Enums_PaginationParameter_PageSize
+  commentId: F:JsonApiClient.Enums.PaginationParameter.PageSize
+  fullName: JsonApiClient.Enums.PaginationParameter.PageSize
+  nameWithType: PaginationParameter.PageSize
+- uid: JsonApiClient.Enums.SortDirection
+  name: SortDirection
+  href: api/JsonApiClient.Enums.SortDirection.html
+  commentId: T:JsonApiClient.Enums.SortDirection
+  fullName: JsonApiClient.Enums.SortDirection
+  nameWithType: SortDirection
+- uid: JsonApiClient.Enums.SortDirection.Ascending
+  name: Ascending
+  href: api/JsonApiClient.Enums.SortDirection.html#JsonApiClient_Enums_SortDirection_Ascending
+  commentId: F:JsonApiClient.Enums.SortDirection.Ascending
+  fullName: JsonApiClient.Enums.SortDirection.Ascending
+  nameWithType: SortDirection.Ascending
+- uid: JsonApiClient.Enums.SortDirection.Descending
+  name: Descending
+  href: api/JsonApiClient.Enums.SortDirection.html#JsonApiClient_Enums_SortDirection_Descending
+  commentId: F:JsonApiClient.Enums.SortDirection.Descending
+  fullName: JsonApiClient.Enums.SortDirection.Descending
+  nameWithType: SortDirection.Descending
+- uid: JsonApiClient.Exceptions
+  name: JsonApiClient.Exceptions
+  href: api/JsonApiClient.Exceptions.html
+  commentId: N:JsonApiClient.Exceptions
+  fullName: JsonApiClient.Exceptions
+  nameWithType: JsonApiClient.Exceptions
+- uid: JsonApiClient.Exceptions.MissingAttributeException
+  name: MissingAttributeException
+  href: api/JsonApiClient.Exceptions.MissingAttributeException.html
+  commentId: T:JsonApiClient.Exceptions.MissingAttributeException
+  fullName: JsonApiClient.Exceptions.MissingAttributeException
+  nameWithType: MissingAttributeException
+- uid: JsonApiClient.Exceptions.MissingAttributeException.#ctor(System.Type,System.Type)
+  name: MissingAttributeException(Type, Type)
+  href: api/JsonApiClient.Exceptions.MissingAttributeException.html#JsonApiClient_Exceptions_MissingAttributeException__ctor_System_Type_System_Type_
+  commentId: M:JsonApiClient.Exceptions.MissingAttributeException.#ctor(System.Type,System.Type)
+  name.vb: New(Type, Type)
+  fullName: JsonApiClient.Exceptions.MissingAttributeException.MissingAttributeException(System.Type, System.Type)
+  fullName.vb: JsonApiClient.Exceptions.MissingAttributeException.New(System.Type, System.Type)
+  nameWithType: MissingAttributeException.MissingAttributeException(Type, Type)
+  nameWithType.vb: MissingAttributeException.New(Type, Type)
+- uid: JsonApiClient.Exceptions.MissingAttributeException.#ctor*
+  name: MissingAttributeException
+  href: api/JsonApiClient.Exceptions.MissingAttributeException.html#JsonApiClient_Exceptions_MissingAttributeException__ctor_
+  commentId: Overload:JsonApiClient.Exceptions.MissingAttributeException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: JsonApiClient.Exceptions.MissingAttributeException.MissingAttributeException
+  fullName.vb: JsonApiClient.Exceptions.MissingAttributeException.New
+  nameWithType: MissingAttributeException.MissingAttributeException
+  nameWithType.vb: MissingAttributeException.New
+- uid: JsonApiClient.Exceptions.StatementTranslationException
+  name: StatementTranslationException
+  href: api/JsonApiClient.Exceptions.StatementTranslationException.html
+  commentId: T:JsonApiClient.Exceptions.StatementTranslationException
+  fullName: JsonApiClient.Exceptions.StatementTranslationException
+  nameWithType: StatementTranslationException
+- uid: JsonApiClient.Exceptions.StatementTranslationException.#ctor(System.String)
+  name: StatementTranslationException(string)
+  href: api/JsonApiClient.Exceptions.StatementTranslationException.html#JsonApiClient_Exceptions_StatementTranslationException__ctor_System_String_
+  commentId: M:JsonApiClient.Exceptions.StatementTranslationException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: JsonApiClient.Exceptions.StatementTranslationException.StatementTranslationException(string)
+  fullName.vb: JsonApiClient.Exceptions.StatementTranslationException.New(String)
+  nameWithType: StatementTranslationException.StatementTranslationException(string)
+  nameWithType.vb: StatementTranslationException.New(String)
+- uid: JsonApiClient.Exceptions.StatementTranslationException.#ctor(System.String,System.Exception)
+  name: StatementTranslationException(string, Exception)
+  href: api/JsonApiClient.Exceptions.StatementTranslationException.html#JsonApiClient_Exceptions_StatementTranslationException__ctor_System_String_System_Exception_
+  commentId: M:JsonApiClient.Exceptions.StatementTranslationException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: JsonApiClient.Exceptions.StatementTranslationException.StatementTranslationException(string, System.Exception)
+  fullName.vb: JsonApiClient.Exceptions.StatementTranslationException.New(String, System.Exception)
+  nameWithType: StatementTranslationException.StatementTranslationException(string, Exception)
+  nameWithType.vb: StatementTranslationException.New(String, Exception)
+- uid: JsonApiClient.Exceptions.StatementTranslationException.#ctor*
+  name: StatementTranslationException
+  href: api/JsonApiClient.Exceptions.StatementTranslationException.html#JsonApiClient_Exceptions_StatementTranslationException__ctor_
+  commentId: Overload:JsonApiClient.Exceptions.StatementTranslationException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: JsonApiClient.Exceptions.StatementTranslationException.StatementTranslationException
+  fullName.vb: JsonApiClient.Exceptions.StatementTranslationException.New
+  nameWithType: StatementTranslationException.StatementTranslationException
+  nameWithType.vb: StatementTranslationException.New
+- uid: JsonApiClient.Extensions
+  name: JsonApiClient.Extensions
+  href: api/JsonApiClient.Extensions.html
+  commentId: N:JsonApiClient.Extensions
+  fullName: JsonApiClient.Extensions
+  nameWithType: JsonApiClient.Extensions
+- uid: JsonApiClient.Extensions.StringExtensions
+  name: StringExtensions
+  href: api/JsonApiClient.Extensions.StringExtensions.html
+  commentId: T:JsonApiClient.Extensions.StringExtensions
+  fullName: JsonApiClient.Extensions.StringExtensions
+  nameWithType: StringExtensions
+- uid: JsonApiClient.Extensions.StringExtensions.Uncapitalize(System.String)
+  name: Uncapitalize(string)
+  href: api/JsonApiClient.Extensions.StringExtensions.html#JsonApiClient_Extensions_StringExtensions_Uncapitalize_System_String_
+  commentId: M:JsonApiClient.Extensions.StringExtensions.Uncapitalize(System.String)
+  name.vb: Uncapitalize(String)
+  fullName: JsonApiClient.Extensions.StringExtensions.Uncapitalize(string)
+  fullName.vb: JsonApiClient.Extensions.StringExtensions.Uncapitalize(String)
+  nameWithType: StringExtensions.Uncapitalize(string)
+  nameWithType.vb: StringExtensions.Uncapitalize(String)
+- uid: JsonApiClient.Extensions.StringExtensions.Uncapitalize*
+  name: Uncapitalize
+  href: api/JsonApiClient.Extensions.StringExtensions.html#JsonApiClient_Extensions_StringExtensions_Uncapitalize_
+  commentId: Overload:JsonApiClient.Extensions.StringExtensions.Uncapitalize
+  isSpec: "True"
+  fullName: JsonApiClient.Extensions.StringExtensions.Uncapitalize
+  nameWithType: StringExtensions.Uncapitalize
+- uid: JsonApiClient.Extensions.TypeExtentions
+  name: TypeExtentions
+  href: api/JsonApiClient.Extensions.TypeExtentions.html
+  commentId: T:JsonApiClient.Extensions.TypeExtentions
+  fullName: JsonApiClient.Extensions.TypeExtentions
+  nameWithType: TypeExtentions
+- uid: JsonApiClient.Extensions.TypeExtentions.GetResourceHttpClientId(System.Type)
+  name: GetResourceHttpClientId(Type)
+  href: api/JsonApiClient.Extensions.TypeExtentions.html#JsonApiClient_Extensions_TypeExtentions_GetResourceHttpClientId_System_Type_
+  commentId: M:JsonApiClient.Extensions.TypeExtentions.GetResourceHttpClientId(System.Type)
+  fullName: JsonApiClient.Extensions.TypeExtentions.GetResourceHttpClientId(System.Type)
+  nameWithType: TypeExtentions.GetResourceHttpClientId(Type)
+- uid: JsonApiClient.Extensions.TypeExtentions.GetResourceHttpClientId*
+  name: GetResourceHttpClientId
+  href: api/JsonApiClient.Extensions.TypeExtentions.html#JsonApiClient_Extensions_TypeExtentions_GetResourceHttpClientId_
+  commentId: Overload:JsonApiClient.Extensions.TypeExtentions.GetResourceHttpClientId
+  isSpec: "True"
+  fullName: JsonApiClient.Extensions.TypeExtentions.GetResourceHttpClientId
+  nameWithType: TypeExtentions.GetResourceHttpClientId
+- uid: JsonApiClient.Extensions.TypeExtentions.GetResourceName(System.Type)
+  name: GetResourceName(Type)
+  href: api/JsonApiClient.Extensions.TypeExtentions.html#JsonApiClient_Extensions_TypeExtentions_GetResourceName_System_Type_
+  commentId: M:JsonApiClient.Extensions.TypeExtentions.GetResourceName(System.Type)
+  fullName: JsonApiClient.Extensions.TypeExtentions.GetResourceName(System.Type)
+  nameWithType: TypeExtentions.GetResourceName(Type)
+- uid: JsonApiClient.Extensions.TypeExtentions.GetResourceName*
+  name: GetResourceName
+  href: api/JsonApiClient.Extensions.TypeExtentions.html#JsonApiClient_Extensions_TypeExtentions_GetResourceName_
+  commentId: Overload:JsonApiClient.Extensions.TypeExtentions.GetResourceName
+  isSpec: "True"
+  fullName: JsonApiClient.Extensions.TypeExtentions.GetResourceName
+  nameWithType: TypeExtentions.GetResourceName
+- uid: JsonApiClient.Extensions.TypeExtentions.GetResourceNamespace(System.Type)
+  name: GetResourceNamespace(Type)
+  href: api/JsonApiClient.Extensions.TypeExtentions.html#JsonApiClient_Extensions_TypeExtentions_GetResourceNamespace_System_Type_
+  commentId: M:JsonApiClient.Extensions.TypeExtentions.GetResourceNamespace(System.Type)
+  fullName: JsonApiClient.Extensions.TypeExtentions.GetResourceNamespace(System.Type)
+  nameWithType: TypeExtentions.GetResourceNamespace(Type)
+- uid: JsonApiClient.Extensions.TypeExtentions.GetResourceNamespace*
+  name: GetResourceNamespace
+  href: api/JsonApiClient.Extensions.TypeExtentions.html#JsonApiClient_Extensions_TypeExtentions_GetResourceNamespace_
+  commentId: Overload:JsonApiClient.Extensions.TypeExtentions.GetResourceNamespace
+  isSpec: "True"
+  fullName: JsonApiClient.Extensions.TypeExtentions.GetResourceNamespace
+  nameWithType: TypeExtentions.GetResourceNamespace
+- uid: JsonApiClient.Interfaces
+  name: JsonApiClient.Interfaces
+  href: api/JsonApiClient.Interfaces.html
+  commentId: N:JsonApiClient.Interfaces
+  fullName: JsonApiClient.Interfaces
+  nameWithType: JsonApiClient.Interfaces
+- uid: JsonApiClient.Interfaces.IJsonApiClient
+  name: IJsonApiClient
+  href: api/JsonApiClient.Interfaces.IJsonApiClient.html
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClient
+  fullName: JsonApiClient.Interfaces.IJsonApiClient
+  nameWithType: IJsonApiClient
+- uid: JsonApiClient.Interfaces.IJsonApiClient.Query*
+  name: Query
+  href: api/JsonApiClient.Interfaces.IJsonApiClient.html#JsonApiClient_Interfaces_IJsonApiClient_Query_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClient.Query
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClient.Query
+  nameWithType: IJsonApiClient.Query
+- uid: JsonApiClient.Interfaces.IJsonApiClient.Query``1
+  name: Query<TEntity>()
+  href: api/JsonApiClient.Interfaces.IJsonApiClient.html#JsonApiClient_Interfaces_IJsonApiClient_Query__1
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClient.Query``1
+  name.vb: Query(Of TEntity)()
+  fullName: JsonApiClient.Interfaces.IJsonApiClient.Query<TEntity>()
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient.Query(Of TEntity)()
+  nameWithType: IJsonApiClient.Query<TEntity>()
+  nameWithType.vb: IJsonApiClient.Query(Of TEntity)()
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  name: IJsonApiClientBuilder<TRootEntity>
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClientBuilder`1
+  name.vb: IJsonApiClientBuilder(Of TRootEntity)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build
+  name: Build()
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Build
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Build()
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Build()
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Build()
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Build()
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build*
+  name: Build
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Build_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Build
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Build
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Build
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Build
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Build
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: Include(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Include_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: Include(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Include(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Include(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Include(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Include(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include*
+  name: Include
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Include_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Include
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Include
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Include
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Include
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name: Include<TEntity>(Expression<Func<TEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Include__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Include``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name.vb: Include(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Include<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Include(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Include<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Include(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: OrderBy(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderBy_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: OrderBy(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderBy(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderBy(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderBy(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderBy(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy*
+  name: OrderBy
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderBy_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderBy
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderBy
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderBy
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderBy
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: OrderByDescending(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderByDescending_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: OrderByDescending(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderByDescending(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderByDescending(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending*
+  name: OrderByDescending
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderByDescending_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderByDescending
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderByDescending
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderByDescending
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderByDescending
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name: OrderByDescending<TEntity>(Expression<Func<TEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderByDescending__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name.vb: OrderByDescending(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderByDescending<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderByDescending<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderByDescending(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name: OrderBy<TEntity>(Expression<Func<TEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_OrderBy__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name.vb: OrderBy(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.OrderBy<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).OrderBy(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.OrderBy<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).OrderBy(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber(System.Int32)
+  name: PageNumber(int)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageNumber_System_Int32_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber(System.Int32)
+  name.vb: PageNumber(Integer)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageNumber(int)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageNumber(Integer)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageNumber(int)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageNumber(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber*
+  name: PageNumber
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageNumber_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageNumber
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageNumber
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageNumber
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageNumber
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber``1(System.Int32)
+  name: PageNumber<TEntity>(int)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageNumber__1_System_Int32_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageNumber``1(System.Int32)
+  name.vb: PageNumber(Of TEntity)(Integer)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageNumber<TEntity>(int)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageNumber(Of TEntity)(Integer)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageNumber<TEntity>(int)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageNumber(Of TEntity)(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize(System.Int32)
+  name: PageSize(int)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageSize_System_Int32_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize(System.Int32)
+  name.vb: PageSize(Integer)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageSize(int)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageSize(Integer)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageSize(int)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageSize(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize*
+  name: PageSize
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageSize_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageSize
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageSize
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageSize
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageSize
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize``1(System.Int32)
+  name: PageSize<TEntity>(int)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_PageSize__1_System_Int32_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.PageSize``1(System.Int32)
+  name.vb: PageSize(Of TEntity)(Integer)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.PageSize<TEntity>(int)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).PageSize(Of TEntity)(Integer)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.PageSize<TEntity>(int)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).PageSize(Of TEntity)(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: Select(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Select_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: Select(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Select(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Select(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Select(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Select(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select*
+  name: Select
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Select_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Select
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Select
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Select
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Select
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name: Select<TEntity>(Expression<Func<TEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Select__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name.vb: Select(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Select<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Select(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Select<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Select(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient(System.Net.Http.IHttpClientFactory,System.String)
+  name: SetHttpClient(IHttpClientFactory, string)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_SetHttpClient_System_Net_Http_IHttpClientFactory_System_String_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient(System.Net.Http.IHttpClientFactory,System.String)
+  name.vb: SetHttpClient(IHttpClientFactory, String)
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.SetHttpClient(System.Net.Http.IHttpClientFactory, string)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).SetHttpClient(System.Net.Http.IHttpClientFactory, String)
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.SetHttpClient(IHttpClientFactory, string)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).SetHttpClient(IHttpClientFactory, String)
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient*
+  name: SetHttpClient
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_SetHttpClient_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.SetHttpClient
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.SetHttpClient
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).SetHttpClient
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.SetHttpClient
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).SetHttpClient
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  name: Where(Expression<Func<TRootEntity, bool>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Where_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  name.vb: Where(Expression(Of Func(Of TRootEntity, Boolean)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Where(System.Linq.Expressions.Expression<System.Func<TRootEntity, bool>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Where(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Boolean)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Where(Expression<Func<TRootEntity, bool>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Where(Expression(Of Func(Of TRootEntity, Boolean)))
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where*
+  name: Where
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Where_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Where
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Where
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Where
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Where
+- uid: JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: Where<TEntity>(Expression<Func<TEntity, bool>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html#JsonApiClient_Interfaces_IJsonApiClientBuilder_1_Where__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiClientBuilder`1.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: Where(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)))
+  fullName: JsonApiClient.Interfaces.IJsonApiClientBuilder<TRootEntity>.Where<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClientBuilder(Of TRootEntity).Where(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)))
+  nameWithType: IJsonApiClientBuilder<TRootEntity>.Where<TEntity>(Expression<Func<TEntity, bool>>)
+  nameWithType.vb: IJsonApiClientBuilder(Of TRootEntity).Where(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)))
+- uid: JsonApiClient.Interfaces.IJsonApiClient`1
+  name: IJsonApiClient<TEntity>
+  href: api/JsonApiClient.Interfaces.IJsonApiClient-1.html
+  commentId: T:JsonApiClient.Interfaces.IJsonApiClient`1
+  name.vb: IJsonApiClient(Of TEntity)
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TEntity>
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TEntity)
+  nameWithType: IJsonApiClient<TEntity>
+  nameWithType.vb: IJsonApiClient(Of TEntity)
+- uid: JsonApiClient.Interfaces.IJsonApiClient`1.Query
+  name: Query
+  href: api/JsonApiClient.Interfaces.IJsonApiClient-1.html#JsonApiClient_Interfaces_IJsonApiClient_1_Query
+  commentId: P:JsonApiClient.Interfaces.IJsonApiClient`1.Query
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TEntity>.Query
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TEntity).Query
+  nameWithType: IJsonApiClient<TEntity>.Query
+  nameWithType.vb: IJsonApiClient(Of TEntity).Query
+- uid: JsonApiClient.Interfaces.IJsonApiClient`1.Query*
+  name: Query
+  href: api/JsonApiClient.Interfaces.IJsonApiClient-1.html#JsonApiClient_Interfaces_IJsonApiClient_1_Query_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiClient`1.Query
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiClient<TEntity>.Query
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiClient(Of TEntity).Query
+  nameWithType: IJsonApiClient<TEntity>.Query
+  nameWithType.vb: IJsonApiClient(Of TEntity).Query
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+  name: IJsonApiQueryClient<TRootEntity>
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html
+  commentId: T:JsonApiClient.Interfaces.IJsonApiQueryClient`1
+  name.vb: IJsonApiQueryClient(Of TRootEntity)
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity)
+  nameWithType: IJsonApiQueryClient<TRootEntity>
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity)
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.FindAsync(System.Object,System.Threading.CancellationToken)
+  name: FindAsync(object, CancellationToken)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_FindAsync_System_Object_System_Threading_CancellationToken_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.FindAsync(System.Object,System.Threading.CancellationToken)
+  name.vb: FindAsync(Object, CancellationToken)
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.FindAsync(object, System.Threading.CancellationToken)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).FindAsync(Object, System.Threading.CancellationToken)
+  nameWithType: IJsonApiQueryClient<TRootEntity>.FindAsync(object, CancellationToken)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).FindAsync(Object, CancellationToken)
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.FindAsync*
+  name: FindAsync
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_FindAsync_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.FindAsync
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.FindAsync
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).FindAsync
+  nameWithType: IJsonApiQueryClient<TRootEntity>.FindAsync
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).FindAsync
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.FirstOrDefaultAsync(System.Threading.CancellationToken)
+  name: FirstOrDefaultAsync(CancellationToken)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_FirstOrDefaultAsync_System_Threading_CancellationToken_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.FirstOrDefaultAsync(System.Threading.CancellationToken)
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.FirstOrDefaultAsync(System.Threading.CancellationToken)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).FirstOrDefaultAsync(System.Threading.CancellationToken)
+  nameWithType: IJsonApiQueryClient<TRootEntity>.FirstOrDefaultAsync(CancellationToken)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).FirstOrDefaultAsync(CancellationToken)
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.FirstOrDefaultAsync*
+  name: FirstOrDefaultAsync
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_FirstOrDefaultAsync_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.FirstOrDefaultAsync
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.FirstOrDefaultAsync
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).FirstOrDefaultAsync
+  nameWithType: IJsonApiQueryClient<TRootEntity>.FirstOrDefaultAsync
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).FirstOrDefaultAsync
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: Include(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Include_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Include(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: Include(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Include(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Include(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Include(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Include(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Include*
+  name: Include
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Include_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Include
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Include
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Include
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Include
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Include
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: OrderBy(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_OrderBy_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderBy(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: OrderBy(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.OrderBy(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).OrderBy(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.OrderBy(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).OrderBy(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderBy*
+  name: OrderBy
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_OrderBy_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderBy
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.OrderBy
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).OrderBy
+  nameWithType: IJsonApiQueryClient<TRootEntity>.OrderBy
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).OrderBy
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: OrderByDescending(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_OrderByDescending_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderByDescending(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: OrderByDescending(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.OrderByDescending(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).OrderByDescending(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.OrderByDescending(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).OrderByDescending(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderByDescending*
+  name: OrderByDescending
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_OrderByDescending_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderByDescending
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.OrderByDescending
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).OrderByDescending
+  nameWithType: IJsonApiQueryClient<TRootEntity>.OrderByDescending
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).OrderByDescending
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name: OrderByDescending<TEntity>(Expression<Func<TEntity, object>>, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_OrderByDescending__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderByDescending``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name.vb: OrderByDescending(Of TEntity)(Expression(Of Func(Of TEntity, Object)), Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.OrderByDescending<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>, System.Linq.Expressions.Expression<System.Func<TRootEntity, System.Collections.Generic.IEnumerable<TEntity>>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).OrderByDescending(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)), System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, System.Collections.Generic.IEnumerable(Of TEntity))))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.OrderByDescending<TEntity>(Expression<Func<TEntity, object>>, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).OrderByDescending(Of TEntity)(Expression(Of Func(Of TEntity, Object)), Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name: OrderBy<TEntity>(Expression<Func<TEntity, object>>, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_OrderBy__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.OrderBy``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name.vb: OrderBy(Of TEntity)(Expression(Of Func(Of TEntity, Object)), Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.OrderBy<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>, System.Linq.Expressions.Expression<System.Func<TRootEntity, System.Collections.Generic.IEnumerable<TEntity>>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).OrderBy(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)), System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, System.Collections.Generic.IEnumerable(Of TEntity))))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.OrderBy<TEntity>(Expression<Func<TEntity, object>>, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).OrderBy(Of TEntity)(Expression(Of Func(Of TEntity, Object)), Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber(System.Int32)
+  name: PageNumber(int)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageNumber_System_Int32_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber(System.Int32)
+  name.vb: PageNumber(Integer)
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.PageNumber(int)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).PageNumber(Integer)
+  nameWithType: IJsonApiQueryClient<TRootEntity>.PageNumber(int)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageNumber(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber*
+  name: PageNumber
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageNumber_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.PageNumber
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).PageNumber
+  nameWithType: IJsonApiQueryClient<TRootEntity>.PageNumber
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageNumber
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber``1(System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name: PageNumber<TEntity>(int, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageNumber__1_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber``1(System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name.vb: PageNumber(Of TEntity)(Integer, Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.PageNumber<TEntity>(int, System.Linq.Expressions.Expression<System.Func<TRootEntity, System.Collections.Generic.IEnumerable<TEntity>>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).PageNumber(Of TEntity)(Integer, System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, System.Collections.Generic.IEnumerable(Of TEntity))))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.PageNumber<TEntity>(int, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageNumber(Of TEntity)(Integer, Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize(System.Int32)
+  name: PageSize(int)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageSize_System_Int32_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize(System.Int32)
+  name.vb: PageSize(Integer)
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.PageSize(int)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).PageSize(Integer)
+  nameWithType: IJsonApiQueryClient<TRootEntity>.PageSize(int)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageSize(Integer)
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize*
+  name: PageSize
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageSize_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.PageSize
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).PageSize
+  nameWithType: IJsonApiQueryClient<TRootEntity>.PageSize
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageSize
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize``1(System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name: PageSize<TEntity>(int, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageSize__1_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize``1(System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})
+  name.vb: PageSize(Of TEntity)(Integer, Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.PageSize<TEntity>(int, System.Linq.Expressions.Expression<System.Func<TRootEntity, System.Collections.Generic.IEnumerable<TEntity>>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).PageSize(Of TEntity)(Integer, System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, System.Collections.Generic.IEnumerable(Of TEntity))))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.PageSize<TEntity>(int, Expression<Func<TRootEntity, IEnumerable<TEntity>>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageSize(Of TEntity)(Integer, Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name: Select(Expression<Func<TRootEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Select_System_Linq_Expressions_Expression_System_Func__0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Select(System.Linq.Expressions.Expression{System.Func{`0,System.Object}})
+  name.vb: Select(Expression(Of Func(Of TRootEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Select(System.Linq.Expressions.Expression<System.Func<TRootEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Select(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Object)))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Select(Expression<Func<TRootEntity, object>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Select(Expression(Of Func(Of TRootEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Select*
+  name: Select
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Select_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Select
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Select
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Select
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Select
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Select
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name: Select<TEntity>(Expression<Func<TEntity, object>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Select__1_System_Linq_Expressions_Expression_System_Func___0_System_Object___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Select``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}})
+  name.vb: Select(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Select<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, object>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Select(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Object)))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Select<TEntity>(Expression<Func<TEntity, object>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Select(Of TEntity)(Expression(Of Func(Of TEntity, Object)))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.ToListAsync(System.Threading.CancellationToken)
+  name: ToListAsync(CancellationToken)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_ToListAsync_System_Threading_CancellationToken_
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.ToListAsync(System.Threading.CancellationToken)
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.ToListAsync(System.Threading.CancellationToken)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).ToListAsync(System.Threading.CancellationToken)
+  nameWithType: IJsonApiQueryClient<TRootEntity>.ToListAsync(CancellationToken)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).ToListAsync(CancellationToken)
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.ToListAsync*
+  name: ToListAsync
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_ToListAsync_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.ToListAsync
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.ToListAsync
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).ToListAsync
+  nameWithType: IJsonApiQueryClient<TRootEntity>.ToListAsync
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).ToListAsync
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  name: Where(Expression<Func<TRootEntity, bool>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Where_System_Linq_Expressions_Expression_System_Func__0_System_Boolean___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  name.vb: Where(Expression(Of Func(Of TRootEntity, Boolean)))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Where(System.Linq.Expressions.Expression<System.Func<TRootEntity, bool>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Where(System.Linq.Expressions.Expression(Of System.Func(Of TRootEntity, Boolean)))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Where(Expression<Func<TRootEntity, bool>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Where(Expression(Of Func(Of TRootEntity, Boolean)))
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Where*
+  name: Where
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Where_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Where
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Where
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Where
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Where
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Where
+- uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name: Where<TEntity>(Expression<Func<TEntity, bool>>)
+  href: api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html#JsonApiClient_Interfaces_IJsonApiQueryClient_1_Where__1_System_Linq_Expressions_Expression_System_Func___0_System_Boolean___
+  commentId: M:JsonApiClient.Interfaces.IJsonApiQueryClient`1.Where``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})
+  name.vb: Where(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)))
+  fullName: JsonApiClient.Interfaces.IJsonApiQueryClient<TRootEntity>.Where<TEntity>(System.Linq.Expressions.Expression<System.Func<TEntity, bool>>)
+  fullName.vb: JsonApiClient.Interfaces.IJsonApiQueryClient(Of TRootEntity).Where(Of TEntity)(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)))
+  nameWithType: IJsonApiQueryClient<TRootEntity>.Where<TEntity>(Expression<Func<TEntity, bool>>)
+  nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).Where(Of TEntity)(Expression(Of Func(Of TEntity, Boolean)))
+- uid: JsonApiClient.Interfaces.IJsonApiResource
+  name: IJsonApiResource
+  href: api/JsonApiClient.Interfaces.IJsonApiResource.html
+  commentId: T:JsonApiClient.Interfaces.IJsonApiResource
+  fullName: JsonApiClient.Interfaces.IJsonApiResource
+  nameWithType: IJsonApiResource
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Id
+  name: Id
+  href: api/JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Id
+  commentId: P:JsonApiClient.Interfaces.IJsonApiResource.Id
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Id
+  nameWithType: IJsonApiResource.Id
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Id*
+  name: Id
+  href: api/JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Id_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiResource.Id
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Id
+  nameWithType: IJsonApiResource.Id
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Lid
+  name: Lid
+  href: api/JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Lid
+  commentId: P:JsonApiClient.Interfaces.IJsonApiResource.Lid
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Lid
+  nameWithType: IJsonApiResource.Lid
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Lid*
+  name: Lid
+  href: api/JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Lid_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiResource.Lid
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Lid
+  nameWithType: IJsonApiResource.Lid
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Type
+  name: Type
+  href: api/JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Type
+  commentId: P:JsonApiClient.Interfaces.IJsonApiResource.Type
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Type
+  nameWithType: IJsonApiResource.Type
+- uid: JsonApiClient.Interfaces.IJsonApiResource.Type*
+  name: Type
+  href: api/JsonApiClient.Interfaces.IJsonApiResource.html#JsonApiClient_Interfaces_IJsonApiResource_Type_
+  commentId: Overload:JsonApiClient.Interfaces.IJsonApiResource.Type
+  isSpec: "True"
+  fullName: JsonApiClient.Interfaces.IJsonApiResource.Type
+  nameWithType: IJsonApiResource.Type
+- uid: JsonApiClient.JsonApiClient
+  name: JsonApiClient
+  href: api/JsonApiClient.JsonApiClient.html
+  commentId: T:JsonApiClient.JsonApiClient
+  fullName: JsonApiClient.JsonApiClient
+  nameWithType: JsonApiClient
+- uid: JsonApiClient.JsonApiClient.#ctor(System.Net.Http.IHttpClientFactory)
+  name: JsonApiClient(IHttpClientFactory)
+  href: api/JsonApiClient.JsonApiClient.html#JsonApiClient_JsonApiClient__ctor_System_Net_Http_IHttpClientFactory_
+  commentId: M:JsonApiClient.JsonApiClient.#ctor(System.Net.Http.IHttpClientFactory)
+  name.vb: New(IHttpClientFactory)
+  fullName: JsonApiClient.JsonApiClient.JsonApiClient(System.Net.Http.IHttpClientFactory)
+  fullName.vb: JsonApiClient.JsonApiClient.New(System.Net.Http.IHttpClientFactory)
+  nameWithType: JsonApiClient.JsonApiClient(IHttpClientFactory)
+  nameWithType.vb: JsonApiClient.New(IHttpClientFactory)
+- uid: JsonApiClient.JsonApiClient.#ctor*
+  name: JsonApiClient
+  href: api/JsonApiClient.JsonApiClient.html#JsonApiClient_JsonApiClient__ctor_
+  commentId: Overload:JsonApiClient.JsonApiClient.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: JsonApiClient.JsonApiClient.JsonApiClient
+  fullName.vb: JsonApiClient.JsonApiClient.New
+  nameWithType: JsonApiClient.JsonApiClient
+  nameWithType.vb: JsonApiClient.New
+- uid: JsonApiClient.JsonApiClient.Query*
+  name: Query
+  href: api/JsonApiClient.JsonApiClient.html#JsonApiClient_JsonApiClient_Query_
+  commentId: Overload:JsonApiClient.JsonApiClient.Query
+  isSpec: "True"
+  fullName: JsonApiClient.JsonApiClient.Query
+  nameWithType: JsonApiClient.Query
+- uid: JsonApiClient.JsonApiClient.Query``1
+  name: Query<TEntity>()
+  href: api/JsonApiClient.JsonApiClient.html#JsonApiClient_JsonApiClient_Query__1
+  commentId: M:JsonApiClient.JsonApiClient.Query``1
+  name.vb: Query(Of TEntity)()
+  fullName: JsonApiClient.JsonApiClient.Query<TEntity>()
+  fullName.vb: JsonApiClient.JsonApiClient.Query(Of TEntity)()
+  nameWithType: JsonApiClient.Query<TEntity>()
+  nameWithType.vb: JsonApiClient.Query(Of TEntity)()
+- uid: JsonApiClient.JsonApiClient`1
+  name: JsonApiClient<TEntity>
+  href: api/JsonApiClient.JsonApiClient-1.html
+  commentId: T:JsonApiClient.JsonApiClient`1
+  name.vb: JsonApiClient(Of TEntity)
+  fullName: JsonApiClient.JsonApiClient<TEntity>
+  fullName.vb: JsonApiClient.JsonApiClient(Of TEntity)
+  nameWithType: JsonApiClient<TEntity>
+  nameWithType.vb: JsonApiClient(Of TEntity)
+- uid: JsonApiClient.JsonApiClient`1.#ctor(System.Net.Http.IHttpClientFactory)
+  name: JsonApiClient(IHttpClientFactory)
+  href: api/JsonApiClient.JsonApiClient-1.html#JsonApiClient_JsonApiClient_1__ctor_System_Net_Http_IHttpClientFactory_
+  commentId: M:JsonApiClient.JsonApiClient`1.#ctor(System.Net.Http.IHttpClientFactory)
+  name.vb: New(IHttpClientFactory)
+  fullName: JsonApiClient.JsonApiClient<TEntity>.JsonApiClient(System.Net.Http.IHttpClientFactory)
+  fullName.vb: JsonApiClient.JsonApiClient(Of TEntity).New(System.Net.Http.IHttpClientFactory)
+  nameWithType: JsonApiClient<TEntity>.JsonApiClient(IHttpClientFactory)
+  nameWithType.vb: JsonApiClient(Of TEntity).New(IHttpClientFactory)
+- uid: JsonApiClient.JsonApiClient`1.#ctor*
+  name: JsonApiClient
+  href: api/JsonApiClient.JsonApiClient-1.html#JsonApiClient_JsonApiClient_1__ctor_
+  commentId: Overload:JsonApiClient.JsonApiClient`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: JsonApiClient.JsonApiClient<TEntity>.JsonApiClient
+  fullName.vb: JsonApiClient.JsonApiClient(Of TEntity).New
+  nameWithType: JsonApiClient<TEntity>.JsonApiClient
+  nameWithType.vb: JsonApiClient(Of TEntity).New
+- uid: JsonApiClient.JsonApiClient`1.Query
+  name: Query
+  href: api/JsonApiClient.JsonApiClient-1.html#JsonApiClient_JsonApiClient_1_Query
+  commentId: P:JsonApiClient.JsonApiClient`1.Query
+  fullName: JsonApiClient.JsonApiClient<TEntity>.Query
+  fullName.vb: JsonApiClient.JsonApiClient(Of TEntity).Query
+  nameWithType: JsonApiClient<TEntity>.Query
+  nameWithType.vb: JsonApiClient(Of TEntity).Query
+- uid: JsonApiClient.JsonApiClient`1.Query*
+  name: Query
+  href: api/JsonApiClient.JsonApiClient-1.html#JsonApiClient_JsonApiClient_1_Query_
+  commentId: Overload:JsonApiClient.JsonApiClient`1.Query
+  isSpec: "True"
+  fullName: JsonApiClient.JsonApiClient<TEntity>.Query
+  fullName.vb: JsonApiClient.JsonApiClient(Of TEntity).Query
+  nameWithType: JsonApiClient<TEntity>.Query
+  nameWithType.vb: JsonApiClient(Of TEntity).Query
+- uid: JsonApiClient.Models
+  name: JsonApiClient.Models
+  href: api/JsonApiClient.Models.html
+  commentId: N:JsonApiClient.Models
+  fullName: JsonApiClient.Models
+  nameWithType: JsonApiClient.Models
+- uid: JsonApiClient.Models.JResource`1
+  name: JResource<TIdentifier>
+  href: api/JsonApiClient.Models.JResource-1.html
+  commentId: T:JsonApiClient.Models.JResource`1
+  name.vb: JResource(Of TIdentifier)
+  fullName: JsonApiClient.Models.JResource<TIdentifier>
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier)
+  nameWithType: JResource<TIdentifier>
+  nameWithType.vb: JResource(Of TIdentifier)
+- uid: JsonApiClient.Models.JResource`1.Id
+  name: Id
+  href: api/JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Id
+  commentId: P:JsonApiClient.Models.JResource`1.Id
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Id
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Id
+  nameWithType: JResource<TIdentifier>.Id
+  nameWithType.vb: JResource(Of TIdentifier).Id
+- uid: JsonApiClient.Models.JResource`1.Id*
+  name: Id
+  href: api/JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Id_
+  commentId: Overload:JsonApiClient.Models.JResource`1.Id
+  isSpec: "True"
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Id
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Id
+  nameWithType: JResource<TIdentifier>.Id
+  nameWithType.vb: JResource(Of TIdentifier).Id
+- uid: JsonApiClient.Models.JResource`1.Lid
+  name: Lid
+  href: api/JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Lid
+  commentId: P:JsonApiClient.Models.JResource`1.Lid
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Lid
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Lid
+  nameWithType: JResource<TIdentifier>.Lid
+  nameWithType.vb: JResource(Of TIdentifier).Lid
+- uid: JsonApiClient.Models.JResource`1.Lid*
+  name: Lid
+  href: api/JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Lid_
+  commentId: Overload:JsonApiClient.Models.JResource`1.Lid
+  isSpec: "True"
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Lid
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Lid
+  nameWithType: JResource<TIdentifier>.Lid
+  nameWithType.vb: JResource(Of TIdentifier).Lid
+- uid: JsonApiClient.Models.JResource`1.Type
+  name: Type
+  href: api/JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Type
+  commentId: P:JsonApiClient.Models.JResource`1.Type
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Type
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Type
+  nameWithType: JResource<TIdentifier>.Type
+  nameWithType.vb: JResource(Of TIdentifier).Type
+- uid: JsonApiClient.Models.JResource`1.Type*
+  name: Type
+  href: api/JsonApiClient.Models.JResource-1.html#JsonApiClient_Models_JResource_1_Type_
+  commentId: Overload:JsonApiClient.Models.JResource`1.Type
+  isSpec: "True"
+  fullName: JsonApiClient.Models.JResource<TIdentifier>.Type
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier).Type
+  nameWithType: JResource<TIdentifier>.Type
+  nameWithType.vb: JResource(Of TIdentifier).Type
+- uid: JsonApiClient.Statements.ExpressionVisitors
+  name: JsonApiClient.Statements.ExpressionVisitors
+  href: api/JsonApiClient.Statements.ExpressionVisitors.html
+  commentId: N:JsonApiClient.Statements.ExpressionVisitors
+  fullName: JsonApiClient.Statements.ExpressionVisitors
+  nameWithType: JsonApiClient.Statements.ExpressionVisitors
+- uid: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor
+  name: AttributeSelectorExpressionVisitor
+  href: api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html
+  commentId: T:JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor
+  fullName: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor
+  nameWithType: AttributeSelectorExpressionVisitor
+- uid: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.Visit(System.Linq.Expressions.Expression)
+  name: Visit(Expression?)
+  href: api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html#JsonApiClient_Statements_ExpressionVisitors_AttributeSelectorExpressionVisitor_Visit_System_Linq_Expressions_Expression_
+  commentId: M:JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.Visit(System.Linq.Expressions.Expression)
+  name.vb: Visit(Expression)
+  fullName: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.Visit(System.Linq.Expressions.Expression?)
+  fullName.vb: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.Visit(System.Linq.Expressions.Expression)
+  nameWithType: AttributeSelectorExpressionVisitor.Visit(Expression?)
+  nameWithType.vb: AttributeSelectorExpressionVisitor.Visit(Expression)
+- uid: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.Visit*
+  name: Visit
+  href: api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html#JsonApiClient_Statements_ExpressionVisitors_AttributeSelectorExpressionVisitor_Visit_
+  commentId: Overload:JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.Visit
+  isSpec: "True"
+  fullName: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.Visit
+  nameWithType: AttributeSelectorExpressionVisitor.Visit
+- uid: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitExpression(System.Linq.Expressions.Expression)
+  name: VisitExpression(Expression?)
+  href: api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html#JsonApiClient_Statements_ExpressionVisitors_AttributeSelectorExpressionVisitor_VisitExpression_System_Linq_Expressions_Expression_
+  commentId: M:JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitExpression(System.Linq.Expressions.Expression)
+  name.vb: VisitExpression(Expression)
+  fullName: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitExpression(System.Linq.Expressions.Expression?)
+  fullName.vb: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitExpression(System.Linq.Expressions.Expression)
+  nameWithType: AttributeSelectorExpressionVisitor.VisitExpression(Expression?)
+  nameWithType.vb: AttributeSelectorExpressionVisitor.VisitExpression(Expression)
+- uid: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitExpression*
+  name: VisitExpression
+  href: api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html#JsonApiClient_Statements_ExpressionVisitors_AttributeSelectorExpressionVisitor_VisitExpression_
+  commentId: Overload:JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitExpression
+  isSpec: "True"
+  fullName: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitExpression
+  nameWithType: AttributeSelectorExpressionVisitor.VisitExpression
+- uid: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitMember(System.Linq.Expressions.MemberExpression)
+  name: VisitMember(MemberExpression)
+  href: api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html#JsonApiClient_Statements_ExpressionVisitors_AttributeSelectorExpressionVisitor_VisitMember_System_Linq_Expressions_MemberExpression_
+  commentId: M:JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitMember(System.Linq.Expressions.MemberExpression)
+  fullName: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitMember(System.Linq.Expressions.MemberExpression)
+  nameWithType: AttributeSelectorExpressionVisitor.VisitMember(MemberExpression)
+- uid: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitMember*
+  name: VisitMember
+  href: api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html#JsonApiClient_Statements_ExpressionVisitors_AttributeSelectorExpressionVisitor_VisitMember_
+  commentId: Overload:JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitMember
+  isSpec: "True"
+  fullName: JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.VisitMember
+  nameWithType: AttributeSelectorExpressionVisitor.VisitMember

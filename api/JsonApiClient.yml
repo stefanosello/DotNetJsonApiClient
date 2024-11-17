@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient
+  commentId: N:JsonApiClient
+  id: JsonApiClient
+  children:
+  - JsonApiClient.JsonApiClient
+  langs:
+  - csharp
+  - vb
+  name: JsonApiClient
+  nameWithType: JsonApiClient
+  fullName: JsonApiClient
+  type: Namespace
+  assemblies:
+  - JsonApiClient
+references:
+- uid: JsonApiClient.JsonApiClient
+  commentId: T:JsonApiClient.JsonApiClient
+  href: JsonApiClient.JsonApiClient.html
+  name: JsonApiClient
+  nameWithType: JsonApiClient
+  fullName: JsonApiClient.JsonApiClient

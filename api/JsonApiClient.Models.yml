@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Models
+  commentId: N:JsonApiClient.Models
+  id: JsonApiClient.Models
+  children:
+  - JsonApiClient.Models.JResource`1
+  langs:
+  - csharp
+  - vb
+  name: JsonApiClient.Models
+  nameWithType: JsonApiClient.Models
+  fullName: JsonApiClient.Models
+  type: Namespace
+  assemblies:
+  - JsonApiClient
+references:
+- uid: JsonApiClient.Models.JResource`1
+  commentId: T:JsonApiClient.Models.JResource`1
+  href: JsonApiClient.Models.JResource-1.html
+  name: JResource<TIdentifier>
+  nameWithType: JResource<TIdentifier>
+  fullName: JsonApiClient.Models.JResource<TIdentifier>
+  nameWithType.vb: JResource(Of TIdentifier)
+  fullName.vb: JsonApiClient.Models.JResource(Of TIdentifier)
+  name.vb: JResource(Of TIdentifier)
+  spec.csharp:
+  - uid: JsonApiClient.Models.JResource`1
+    name: JResource
+    href: JsonApiClient.Models.JResource-1.html
+  - name: <
+  - name: TIdentifier
+  - name: '>'
+  spec.vb:
+  - uid: JsonApiClient.Models.JResource`1
+    name: JResource
+    href: JsonApiClient.Models.JResource-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TIdentifier
+  - name: )

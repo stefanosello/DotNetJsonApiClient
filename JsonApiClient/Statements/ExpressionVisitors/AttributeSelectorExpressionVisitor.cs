@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace JsonApiClient.Statements.ExpressionVisitors;
 
-public class AttributeSelectorExpressionVisitor : ExpressionVisitor
+internal class AttributeSelectorExpressionVisitor : ExpressionVisitor
 {
     private readonly StringBuilder _sb = new();
 

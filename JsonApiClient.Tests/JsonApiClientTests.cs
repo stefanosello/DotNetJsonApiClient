@@ -31,7 +31,7 @@ public class JsonApiClientTests
                                   """;
         var httpClientFactory = Substitute.For<IHttpClientFactory>();
         httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book?fields[book]=title", responseData));
-        var sut = new JsonApiClient<Book>(httpClientFactory).Query;
+        var sut = new JsonApiClient(httpClientFactory).Query<Book>();
 
         sut.Select(x => new
         {
@@ -67,7 +67,7 @@ public class JsonApiClientTests
         
         var httpClientFactory = Substitute.For<IHttpClientFactory>();
         httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book?fields[book]=title&filter=and(equals(title,'Dracula'),not(equals(deleted,'true')))", responseData));
-        var sut = new JsonApiClient<Book>(httpClientFactory).Query;
+        var sut = new JsonApiClient(httpClientFactory).Query<Book>();
 
         sut
           .Select<Book>(x => new
@@ -105,7 +105,7 @@ public class JsonApiClientTests
       
       var httpClientFactory = Substitute.For<IHttpClientFactory>();
       httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book?filter=and(equals(title,'Dracula'),equals(deleted,'true'))&fields[book]=title", responseData));
-      var sut = new JsonApiClient<Book>(httpClientFactory).Query;
+      var sut = new JsonApiClient(httpClientFactory).Query<Book>();
 
       sut
         .Select<Book>(x => new
@@ -143,7 +143,7 @@ public class JsonApiClientTests
       
       var httpClientFactory = Substitute.For<IHttpClientFactory>();
       httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book?include=author&filter=and(equals(title,'Dracula'),equals(deleted,'true'))&fields[book]=title&sort=title&page[size]=10&page[number]=2", responseData));
-      var sut = new JsonApiClient<Book>(httpClientFactory).Query;
+      var sut = new JsonApiClient(httpClientFactory).Query<Book>();
 
       sut
         .Select(x => new
@@ -185,7 +185,7 @@ public class JsonApiClientTests
       
       var httpClientFactory = Substitute.For<IHttpClientFactory>();
       httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book/1?include=author&fields[book]=title,author&fields[author]=lastName", responseData));
-      var sut = new JsonApiClient<Book>(httpClientFactory).Query;
+      var sut = new JsonApiClient(httpClientFactory).Query<Book>();
 
       sut
         .Select(x => new
@@ -225,7 +225,7 @@ public class JsonApiClientTests
       
       var httpClientFactory = Substitute.For<IHttpClientFactory>();
       httpClientFactory.CreateClient("api.books").Returns(GetMockedHttpClient("https://example.jsonapi.com", "/books/book?include=author&include=tagsBooks&fields[book]=title,author&fields[author]=lastName&page[size]=tagsBooks:20&page[number]=tagsBooks:1", responseData));
-      var sut = new JsonApiClient<Book>(httpClientFactory).Query;
+      var sut = new JsonApiClient(httpClientFactory).Query<Book>();
 
       sut
         .Select(x => new

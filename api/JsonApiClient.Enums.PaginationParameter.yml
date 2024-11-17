@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Enums.PaginationParameter
+  commentId: T:JsonApiClient.Enums.PaginationParameter
+  id: PaginationParameter
+  parent: JsonApiClient.Enums
+  children:
+  - JsonApiClient.Enums.PaginationParameter.PageNumber
+  - JsonApiClient.Enums.PaginationParameter.PageSize
+  langs:
+  - csharp
+  - vb
+  name: PaginationParameter
+  nameWithType: PaginationParameter
+  fullName: JsonApiClient.Enums.PaginationParameter
+  type: Enum
+  source:
+    remote:
+      path: JsonApiClient/Enums/PaginationParameter.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: PaginationParameter
+    path: JsonApiClient/Enums/PaginationParameter.cs
+    startLine: 2
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Enums
+  syntax:
+    content: public enum PaginationParameter
+    content.vb: Public Enum PaginationParameter
+- uid: JsonApiClient.Enums.PaginationParameter.PageSize
+  commentId: F:JsonApiClient.Enums.PaginationParameter.PageSize
+  id: PageSize
+  parent: JsonApiClient.Enums.PaginationParameter
+  langs:
+  - csharp
+  - vb
+  name: PageSize
+  nameWithType: PaginationParameter.PageSize
+  fullName: JsonApiClient.Enums.PaginationParameter.PageSize
+  type: Field
+  source:
+    remote:
+      path: JsonApiClient/Enums/PaginationParameter.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: PageSize
+    path: JsonApiClient/Enums/PaginationParameter.cs
+    startLine: 4
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Enums
+  syntax:
+    content: PageSize = 0
+    return:
+      type: JsonApiClient.Enums.PaginationParameter
+- uid: JsonApiClient.Enums.PaginationParameter.PageNumber
+  commentId: F:JsonApiClient.Enums.PaginationParameter.PageNumber
+  id: PageNumber
+  parent: JsonApiClient.Enums.PaginationParameter
+  langs:
+  - csharp
+  - vb
+  name: PageNumber
+  nameWithType: PaginationParameter.PageNumber
+  fullName: JsonApiClient.Enums.PaginationParameter.PageNumber
+  type: Field
+  source:
+    remote:
+      path: JsonApiClient/Enums/PaginationParameter.cs
+      branch: main
+      repo: git@github.com:stefanosello/DotNetJsonApiClient.git
+    id: PageNumber
+    path: JsonApiClient/Enums/PaginationParameter.cs
+    startLine: 5
+  assemblies:
+  - JsonApiClient
+  namespace: JsonApiClient.Enums
+  syntax:
+    content: PageNumber = 1
+    return:
+      type: JsonApiClient.Enums.PaginationParameter
+references:
+- uid: JsonApiClient.Enums
+  commentId: N:JsonApiClient.Enums
+  href: JsonApiClient.html
+  name: JsonApiClient.Enums
+  nameWithType: JsonApiClient.Enums
+  fullName: JsonApiClient.Enums
+  spec.csharp:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Enums
+    name: Enums
+    href: JsonApiClient.Enums.html
+  spec.vb:
+  - uid: JsonApiClient
+    name: JsonApiClient
+    href: JsonApiClient.html
+  - name: .
+  - uid: JsonApiClient.Enums
+    name: Enums
+    href: JsonApiClient.Enums.html
+- uid: JsonApiClient.Enums.PaginationParameter
+  commentId: T:JsonApiClient.Enums.PaginationParameter
+  parent: JsonApiClient.Enums
+  href: JsonApiClient.Enums.PaginationParameter.html
+  name: PaginationParameter
+  nameWithType: PaginationParameter
+  fullName: JsonApiClient.Enums.PaginationParameter

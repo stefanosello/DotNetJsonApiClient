@@ -6,7 +6,7 @@ using JsonApiClient.Statements.ExpressionVisitors;
 
 namespace JsonApiClient.Statements;
 
-internal class SortStatement<TEntity,TRoot>(Expression<Func<TRoot,object>>? resourceSelector, Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement
+internal class SortStatement<TEntity,TRoot>(Expression<Func<TRoot,IEnumerable<TEntity>>>? resourceSelector, Expression<Func<TEntity,object>> expression, SortDirection direction) : IStatement
     where TEntity : class, IJsonApiResource
     where TRoot : class, IJsonApiResource
 {

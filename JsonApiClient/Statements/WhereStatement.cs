@@ -12,17 +12,7 @@ internal class WhereStatement<TEntity,TRoot>(Expression<Func<TEntity,bool>> expr
 {
     public KeyValuePair<string, string> Translate()
     {
-        string queryString;
-        try
-        {
-            queryString = FilterConditionExpressionVisitor.VisitExpression(expression.Body);
-        }
-        catch (Exception e)
-        {
-            throw new StatementTranslationException(
-                $"Unable to translate expression {expression} to 'filter' query parameter.", e);
-        }
-        
+        var queryString = FilterConditionExpressionVisitor.VisitExpression(expression.Body);
         var targetResourceName = typeof(TEntity) == typeof(TRoot) ? null : typeof(TEntity).GetResourceName();
         var filterPropName = targetResourceName is null ? "filter" : $"filter[{targetResourceName}]";
         return new KeyValuePair<string, string>(filterPropName, queryString);

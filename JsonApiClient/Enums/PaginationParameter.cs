@@ -1,6 +1,6 @@
 namespace JsonApiClient.Enums;
 
-public enum PaginationParameter
+internal enum PaginationParameter
 {
     PageSize,
     PageNumber

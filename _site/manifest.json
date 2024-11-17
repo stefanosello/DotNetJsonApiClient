@@ -1,0 +1,358 @@
+{
+  "source_base_path": "/Users/stefano/Desktop/JsonApiClient",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Attributes.JAttrAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Attributes.JAttrAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Attributes.JRelAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Attributes.JRelAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Attributes.JResAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Attributes.JResAttribute.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Attributes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Enums.PaginationParameter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Enums.PaginationParameter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Enums.SortDirection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Enums.SortDirection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Enums.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Exceptions.MissingAttributeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Exceptions.MissingAttributeException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Exceptions.StatementTranslationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Exceptions.StatementTranslationException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Extensions.StringExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Extensions.TypeExtentions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Extensions.TypeExtentions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Interfaces.IJsonApiClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Interfaces.IJsonApiClient-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Interfaces.IJsonApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Interfaces.IJsonApiClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Interfaces.IJsonApiClientBuilder-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Interfaces.IJsonApiQueryClient-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Interfaces.IJsonApiResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Interfaces.IJsonApiResource.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Interfaces.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.JsonApiClient-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.JsonApiClient-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.JsonApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.JsonApiClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Models.JResource-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Models.JResource-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Models.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Statements.ExpressionVisitors.AttributeSelectorExpressionVisitor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.Statements.ExpressionVisitors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.Statements.ExpressionVisitors.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JsonApiClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JsonApiClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

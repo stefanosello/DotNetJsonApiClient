@@ -1,8 +1,8 @@
 namespace JsonApiClient.Extensions;
 
-public static class StringExtensions
+internal static class StringExtensions
 {
-    public static string Uncapitalize(this string arg)
+    internal static string Uncapitalize(this string arg)
     {
         if (string.IsNullOrEmpty(arg)) return arg;
         IEnumerable<string> strings = arg.Split(".");

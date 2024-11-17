@@ -1,0 +1,36 @@
+### YamlMime:TableOfContent
+items:
+- uid: JsonApiClient
+  name: JsonApiClient
+  items:
+  - uid: JsonApiClient.JsonApiClient
+    name: JsonApiClient
+- uid: JsonApiClient.Attributes
+  name: JsonApiClient.Attributes
+  items:
+  - uid: JsonApiClient.Attributes.JAttrAttribute
+    name: JAttrAttribute
+  - uid: JsonApiClient.Attributes.JRelAttribute
+    name: JRelAttribute
+  - uid: JsonApiClient.Attributes.JResAttribute
+    name: JResAttribute
+- uid: JsonApiClient.Exceptions
+  name: JsonApiClient.Exceptions
+  items:
+  - uid: JsonApiClient.Exceptions.MissingAttributeException
+    name: MissingAttributeException
+- uid: JsonApiClient.Interfaces
+  name: JsonApiClient.Interfaces
+  items:
+  - uid: JsonApiClient.Interfaces.IJsonApiClient
+    name: IJsonApiClient
+  - uid: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+    name: IJsonApiQueryClient<TRootEntity>
+  - uid: JsonApiClient.Interfaces.IJsonApiResource
+    name: IJsonApiResource
+- uid: JsonApiClient.Models
+  name: JsonApiClient.Models
+  items:
+  - uid: JsonApiClient.Models.JResource`1
+    name: JResource<TIdentifier>
+memberLayout: SamePage

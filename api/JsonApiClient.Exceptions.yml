@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Exceptions
+  commentId: N:JsonApiClient.Exceptions
+  id: JsonApiClient.Exceptions
+  children:
+  - JsonApiClient.Exceptions.MissingAttributeException
+  langs:
+  - csharp
+  - vb
+  name: JsonApiClient.Exceptions
+  nameWithType: JsonApiClient.Exceptions
+  fullName: JsonApiClient.Exceptions
+  type: Namespace
+  assemblies:
+  - JsonApiClient
+references:
+- uid: JsonApiClient.Exceptions.MissingAttributeException
+  commentId: T:JsonApiClient.Exceptions.MissingAttributeException
+  href: JsonApiClient.Exceptions.MissingAttributeException.html
+  name: MissingAttributeException
+  nameWithType: MissingAttributeException
+  fullName: JsonApiClient.Exceptions.MissingAttributeException

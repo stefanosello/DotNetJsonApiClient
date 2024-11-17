@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: JsonApiClient.Attributes
+  commentId: N:JsonApiClient.Attributes
+  id: JsonApiClient.Attributes
+  children:
+  - JsonApiClient.Attributes.JAttrAttribute
+  - JsonApiClient.Attributes.JRelAttribute
+  - JsonApiClient.Attributes.JResAttribute
+  langs:
+  - csharp
+  - vb
+  name: JsonApiClient.Attributes
+  nameWithType: JsonApiClient.Attributes
+  fullName: JsonApiClient.Attributes
+  type: Namespace
+  assemblies:
+  - JsonApiClient
+references:
+- uid: JsonApiClient.Attributes.JAttrAttribute
+  commentId: T:JsonApiClient.Attributes.JAttrAttribute
+  href: JsonApiClient.Attributes.JAttrAttribute.html
+  name: JAttrAttribute
+  nameWithType: JAttrAttribute
+  fullName: JsonApiClient.Attributes.JAttrAttribute
+- uid: JsonApiClient.Attributes.JRelAttribute
+  commentId: T:JsonApiClient.Attributes.JRelAttribute
+  href: JsonApiClient.Attributes.JRelAttribute.html
+  name: JRelAttribute
+  nameWithType: JRelAttribute
+  fullName: JsonApiClient.Attributes.JRelAttribute
+- uid: JsonApiClient.Attributes.JResAttribute
+  commentId: T:JsonApiClient.Attributes.JResAttribute
+  href: JsonApiClient.Attributes.JResAttribute.html
+  name: JResAttribute
+  nameWithType: JResAttribute
+  fullName: JsonApiClient.Attributes.JResAttribute

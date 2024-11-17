@@ -28,8 +28,7 @@ public class JResource<TIdentifier> : IJsonApiResource
 
     private string GetResourceType()
     {
-        var jres = GetType().GetCustomAttribute<JResAttribute>(false) ?? throw new MissingAttributeException(
-            $"Model {GetType()} is not decorated with the {nameof(JResAttribute)}, hence it can not be used as a json:api resource.");
+        var jres = GetType().GetCustomAttribute<JResAttribute>(false) ?? throw new MissingAttributeException(typeof(JResAttribute), GetType());
         return jres.ResourceName ?? GetType().Name.Uncapitalize();
     }
 }
