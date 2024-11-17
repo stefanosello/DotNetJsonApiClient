@@ -1,4 +1,5 @@
 using FluentAssertions;
+using JsonApiClient.Attributes;
 using JsonApiClient.Models;
 using JsonApiClient.Statements;
 
@@ -8,13 +9,21 @@ public class WhereStatementTests
 {
     private class TestModel : JResource<int>
     {
+        [JAttr]
         public string? LastName { get; set; }
+        [JAttr]
         public int Age { get; set; }
+        [JAttr]
         public string? Description { get; set; }
+        [JAttr]
         public string? Chapter { get; set; }
+        [JAttr]
         public DateTime LastModified { get; set; }
+        [JAttr]
         public TimeSpan Duration { get; set; }
+        [JAttr]
         public double Percentage { get; set; }
+        [JAttr]
         public bool Active { get; set; }
     }
 

@@ -1,7 +1,7 @@
 using System.Data;
-using System.Linq.Expressions;
 using System.Reflection;
 using JsonApiClient.Attributes;
+using Newtonsoft.Json;
 
 namespace JsonApiClient.Extensions;
 
@@ -13,7 +13,8 @@ public static class TypeExtentions
         if (attribute is null)
             throw new InvalidExpressionException(
                 $"Type {nameof(type)} is not decorated with attribute ${nameof(JResAttribute)}, hence it cannot be interpreted as a json:api resource.");
-        return attribute.ResourceName ?? type.Name.Uncapitalize();
+        var jsonProperty = (JsonPropertyAttribute?)type.GetCustomAttribute(typeof(JsonPropertyAttribute));
+        return jsonProperty?.PropertyName ?? type.Name.Uncapitalize();
     }
     
     public static string GetResourceHttpClientId(this Type type)

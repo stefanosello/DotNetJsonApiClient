@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Text;
 using JsonApiClient.Attributes;
 using JsonApiClient.Extensions;
+using Newtonsoft.Json;
 
 namespace JsonApiClient.Statements.ExpressionVisitors;
 
@@ -66,7 +67,8 @@ internal class SubresourceSelectorExpressionVisitor : ExpressionVisitor
         if (attribute is null)
             throw new InvalidExpressionException(
                 $"Member {node.Member.Name} is not decorated with attribute ${nameof(JRelAttribute)}, hence it cannot be interpreted as a json:api relationship.");
-        var relName = attribute.RelationshipName ?? node.Member.Name.Uncapitalize();
+        var jsonProperty = (JsonPropertyAttribute?)node.Member.GetCustomAttribute(typeof(JsonPropertyAttribute));
+        var relName = jsonProperty?.PropertyName ?? node.Member.Name.Uncapitalize();
         
         if (parent is null)
             _sb.Append(relName);

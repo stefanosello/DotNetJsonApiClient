@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Text;
 using JsonApiClient.Attributes;
 using JsonApiClient.Extensions;
+using Newtonsoft.Json;
 
 namespace JsonApiClient.Statements.ExpressionVisitors;
 
@@ -36,7 +37,8 @@ public class AttributeSelectorExpressionVisitor : ExpressionVisitor
         if (property is null)
             throw new InvalidExpressionException(
                 $"Member {node.Member.Name} is not decorated with attribute ${nameof(JAttrAttribute)}, hence it cannot be interpreted as a json:api attribute.");
-        var propertyName = property.AttributeName ?? node.Member.Name.Uncapitalize();
+        var jsonProperty = (JsonPropertyAttribute?)node.Member.GetCustomAttribute(typeof(JsonPropertyAttribute));
+        var propertyName = jsonProperty?.PropertyName ?? node.Member.Name.Uncapitalize();
         if (parent is null)
             _sb.Append(propertyName);
         else

@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using JsonApiClient.Example.Server.Models;
 using Microsoft.EntityFrameworkCore;
 

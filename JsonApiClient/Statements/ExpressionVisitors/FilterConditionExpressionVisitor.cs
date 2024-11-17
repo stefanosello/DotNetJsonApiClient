@@ -70,8 +70,11 @@ internal class FilterConditionExpressionVisitor : ExpressionVisitor
         else if (node.Type == typeof(bool))
             _sb.Append($"equals({node.Member.Name.Uncapitalize()},'true')");
         else
-            _sb.Append(node.Member.Name.Uncapitalize());
-
+        {
+            var attributeName = AttributeSelectorExpressionVisitor.VisitExpression(node);
+            _sb.Append(attributeName);
+        }   
+        
         return node;
     }
 
