@@ -133,10 +133,12 @@ to send the request to the server through an HTTP client.</p>
 
   <h3 id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_FindAsync_System_Object_System_Threading_CancellationToken_" data-uid="JsonApiClient.Interfaces.IJsonApiQueryClient`1.FindAsync(System.Object,System.Threading.CancellationToken)">
   FindAsync(object, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L350"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Executes the query built so far and makes the HTTP call to the <code>/:resource-type/:id</code><code>json:api</code>
+endpoint returning the resource with the specified <code class="paramref">id</code> if found, or <code>null</code> otherwise.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -146,21 +148,44 @@ to send the request to the server through an HTTP client.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
-    <dd></dd>
+    <dd><p>The <code>id</code> of the requested resource.</p>
+</dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>A request cancellation token for the async http call.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TRootEntity&gt;</dt>
-    <dd></dd>
+    <dd><p>A task that results in the requested <code class="typeparamref">TRootEntity</code>, if found.</p>
+</dd>
   </dl>
 
 
 
 
 
+
+  <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_FindAsync_System_Object_System_Threading_CancellationToken__examples">Examples</h4>
+  <p>Consider the following class:</p>
+<pre><code class="lang-csharp">[JRes("api.books", "api", "author")]
+public class Author : JResource{int}
+{
+    [JAttr]
+    public string? FirstName { get; set; }
+    [JAttr]
+    public string? LastName { get; set; }
+    [JAttr]
+    public DateTime DateOfBirth { get; set; }
+    [JRel]
+    public virtual ICollection{Book} Books { get; set; } = [];
+}</code></pre>
+<p>The following code snippet:</p>
+<pre><code class="lang-csharp">jsonApiClient.Query{Author}().FindAsync(1);</code></pre>
+<p>will call the following endpoint:</p>
+<pre><code class="lang-csharp">http://api.com/api/author/1</code></pre>
+<p>and return the <code>Author</code> instance with <code>id</code> equal to 1.</p>
 
 
 
@@ -171,10 +196,12 @@ to send the request to the server through an HTTP client.</p>
 
   <h3 id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_FirstOrDefaultAsync_System_Threading_CancellationToken_" data-uid="JsonApiClient.Interfaces.IJsonApiQueryClient`1.FirstOrDefaultAsync(System.Threading.CancellationToken)">
   FirstOrDefaultAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L385"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Executes the query built so far and makes the HTTP call to the <code>/:resource-type</code><code>json:api</code>
+endpoint returning the first element that satisfies the built query string constraints.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -184,19 +211,42 @@ to send the request to the server through an HTTP client.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>A request cancellation token for the async http call.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;TRootEntity&gt;</dt>
-    <dd></dd>
+    <dd><p>A task that results in an instance of <code class="typeparamref">TRootEntity</code> which satisfies the
+constraints, if any is found.</p>
+</dd>
   </dl>
 
 
 
 
 
+
+  <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_FirstOrDefaultAsync_System_Threading_CancellationToken__examples">Examples</h4>
+  <p>Consider the following class:</p>
+<pre><code class="lang-csharp">[JRes("api.books", "api", "author")]
+public class Author : JResource{int}
+{
+    [JAttr]
+    public string? FirstName { get; set; }
+    [JAttr]
+    public string? LastName { get; set; }
+    [JAttr]
+    public DateTime DateOfBirth { get; set; }
+    [JRel]
+    public virtual ICollection{Book} Books { get; set; } = [];
+}</code></pre>
+<p>The following code snippet:</p>
+<pre><code class="lang-csharp">jsonApiClient.Query{Author}().Where(a =&gt; a.FirstName == "J.R.R.").ToListAsync();</code></pre>
+<p>will call the following endpoint</p>
+<pre><code class="lang-csharp">http://api.com/api/author?filter=Equals(firstName,'J.R.R.')</code></pre>
+<p>and return the first <code>Author</code> instance with <code>Name</code> equal to 'J.R.R.'.</p>
 
 
 
@@ -346,9 +396,9 @@ the given subresource set.</p>
   <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_OrderByDescending_System_Linq_Expressions_Expression_System_Func__0_System_Object____examples">Examples</h4>
   <p>Consider an <code>Author</code> class with resource type <code>authors</code> and the <code>Name</code> field.
 The following code snippet:</p>
-<pre><code class="lang-csharp">queryClient.OrderBy(a =&gt; a.Name);</code></pre>
+<pre><code class="lang-csharp">queryClient.OrderByDescending(a =&gt; a.Name);</code></pre>
 <p>will render the following query string:</p>
-<pre><code class="lang-csharp">?orderBy=name</code></pre>
+<pre><code class="lang-csharp">?orderBy=-name</code></pre>
 <p>considering that <code>Author</code> is the main resource type.</p>
 
 
@@ -407,9 +457,9 @@ and returning an enumerable of <code class="typeparamref">TEntity</code>, repres
   <p>Consider an <code>Author</code> class with resource type <code>authors</code> and a relationship <code>Books</code> with an entity
 type <code>books</code>. Each book also has the field <code>Title</code>.
 The following code snippet:</p>
-<pre><code class="lang-csharp">queryClient.OrderBy(b =&gt; b.Title, a =&gt; a.Books);</code></pre>
+<pre><code class="lang-csharp">queryClient.OrderByDescending(b =&gt; b.Title, a =&gt; a.Books);</code></pre>
 <p>will render the following query string:</p>
-<pre><code class="lang-csharp">?orderBy[books]=title</code></pre>
+<pre><code class="lang-csharp">?orderBy[books]=-title</code></pre>
 <p>considering that <code>Author</code> is the main resource type.</p>
 
 
@@ -482,10 +532,12 @@ The following code snippet:</p>
 
   <h3 id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageNumber_System_Int32_" data-uid="JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber(System.Int32)">
   PageNumber(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L315"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Builds the <code>page[size]</code> part of the query string. It can be used to specify which page of given size and of
+<code class="typeparamref">TRootEntity</code> resources should be returned by the server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -495,19 +547,29 @@ The following code snippet:</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>number</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The page number that indicates which page of results should be returned.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient</a>&lt;TRootEntity&gt;</dt>
-    <dd></dd>
+    <dd><p>This <a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient&lt;TRootEntity&gt;</a> instance.</p>
+</dd>
   </dl>
 
 
 
 
 
+
+  <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageNumber_System_Int32__examples">Examples</h4>
+  <p>Consider an <code>Author</code> class with resource type <code>authors</code>.
+The following code snippet:</p>
+<pre><code class="lang-csharp">queryClient.PageNumber(2);</code></pre>
+<p>will render the following query string:</p>
+<pre><code class="lang-csharp">?page[number]=2</code></pre>
+<p>considering that <code>Author</code> is the main resource type.</p>
 
 
 
@@ -518,10 +580,13 @@ The following code snippet:</p>
 
   <h3 id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageNumber__1_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____" data-uid="JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber``1(System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})">
   PageNumber&lt;TEntity&gt;(int, Expression&lt;Func&lt;TRootEntity, IEnumerable&lt;TEntity&gt;&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L231"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L295"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Builds the <code>page[number]</code> part of the query string. It can be used to specify which page of given size
+and of <code class="typeparamref">TEntity</code> subresources should be returned by the server for each main resource
+of type <code class="typeparamref">TRootEntity</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -531,15 +596,20 @@ The following code snippet:</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>number</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The page number that indicates which page of results should be returned for each main resource.</p>
+</dd>
     <dt><code>resourceSelector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TRootEntity, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TEntity&gt;&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A lambda function accepting a <code class="typeparamref">TRootEntity</code> as parameter
+and returning an enumerable of <code class="typeparamref">TEntity</code> resources, representing the set of subresources to
+paginate.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient</a>&lt;TRootEntity&gt;</dt>
-    <dd></dd>
+    <dd><p>This <a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient&lt;TRootEntity&gt;</a> instance.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
@@ -551,6 +621,15 @@ The following code snippet:</p>
 
 
 
+
+  <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageNumber__1_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0_____examples">Examples</h4>
+  <p>Consider an <code>Author</code> class with resource type <code>authors</code> a relationship <code>Books</code> with an entity
+type <code>books</code>.
+The following code snippet:</p>
+<pre><code class="lang-csharp">queryClient.PageNumber(2, a =&gt; a.Books);</code></pre>
+<p>will render the following query string:</p>
+<pre><code class="lang-csharp">?page[number]=books:2</code></pre>
+<p>considering that <code>Author</code> is the main resource type.</p>
 
 
 
@@ -561,10 +640,12 @@ The following code snippet:</p>
 
   <h3 id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageSize_System_Int32_" data-uid="JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize(System.Int32)">
   PageSize(int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L270"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Builds the <code>page[size]</code> part of the query string. It can be used to specify the number of
+<code class="typeparamref">TRootEntity</code> resources to be returned by the server.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -574,19 +655,29 @@ The following code snippet:</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The number of elements to be returned.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient</a>&lt;TRootEntity&gt;</dt>
-    <dd></dd>
+    <dd><p>This <a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient&lt;TRootEntity&gt;</a> instance.</p>
+</dd>
   </dl>
 
 
 
 
 
+
+  <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageSize_System_Int32__examples">Examples</h4>
+  <p>Consider an <code>Author</code> class with resource type <code>authors</code>.
+The following code snippet:</p>
+<pre><code class="lang-csharp">queryClient.PageSize(5);</code></pre>
+<p>will render the following query string:</p>
+<pre><code class="lang-csharp">?page[size]=5</code></pre>
+<p>considering that <code>Author</code> is the main resource type.</p>
 
 
 
@@ -597,10 +688,13 @@ The following code snippet:</p>
 
   <h3 id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageSize__1_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0____" data-uid="JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize``1(System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Collections.Generic.IEnumerable{``0}}})">
   PageSize&lt;TEntity&gt;(int, Expression&lt;Func&lt;TRootEntity, IEnumerable&lt;TEntity&gt;&gt;&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L250"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Builds the <code>page[size]</code> part of the query string. It can be used to specify the number of
+<code class="typeparamref">TEntity</code> subresources to be returned by the server for each main resource
+of type <code class="typeparamref">TRootEntity</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -610,15 +704,20 @@ The following code snippet:</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>limit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The number of elements to be returned for each main resource.</p>
+</dd>
     <dt><code>resourceSelector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.linq.expressions.expression-1">Expression</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;TRootEntity, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;TEntity&gt;&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A lambda function accepting a <code class="typeparamref">TRootEntity</code> as parameter
+and returning an enumerable of <code class="typeparamref">TEntity</code> resources, representing the set of subresources to
+paginate.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient</a>&lt;TRootEntity&gt;</dt>
-    <dd></dd>
+    <dd><p>This <a class="xref" href="JsonApiClient.Interfaces.IJsonApiQueryClient-1.html">IJsonApiQueryClient&lt;TRootEntity&gt;</a> instance.</p>
+</dd>
   </dl>
 
   <h4 class="section">Type Parameters</h4>
@@ -630,6 +729,15 @@ The following code snippet:</p>
 
 
 
+
+  <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_PageSize__1_System_Int32_System_Linq_Expressions_Expression_System_Func__0_System_Collections_Generic_IEnumerable___0_____examples">Examples</h4>
+  <p>Consider an <code>Author</code> class with resource type <code>authors</code> a relationship <code>Books</code> with an entity
+type <code>books</code>.
+The following code snippet:</p>
+<pre><code class="lang-csharp">queryClient.PageSize(5, a =&gt; a.Books);</code></pre>
+<p>will render the following query string:</p>
+<pre><code class="lang-csharp">?page[size]=books:5</code></pre>
+<p>considering that <code>Author</code> is the main resource type.</p>
 
 
 
@@ -743,10 +851,12 @@ The following code snippet:</p>
 
   <h3 id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_ToListAsync_System_Threading_CancellationToken_" data-uid="JsonApiClient.Interfaces.IJsonApiQueryClient`1.ToListAsync(System.Threading.CancellationToken)">
   ToListAsync(CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/stefanosello/DotNetJsonApiClient/blob/main/JsonApiClient/Interfaces/IJsonApiQueryClient.cs/#L419"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Executes the query built so far and makes the HTTP call to the <code>/:resource-type</code><code>json:api</code>
+endpoint returning a list of resources satisfying the built query string constraints.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -756,19 +866,41 @@ The following code snippet:</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
-    <dd></dd>
+    <dd><p>A request cancellation token for the async http call.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;TRootEntity&gt;&gt;</dt>
-    <dd></dd>
+    <dd><p>A task that results in the requested enumerable of <code class="typeparamref">TRootEntity</code>.</p>
+</dd>
   </dl>
 
 
 
 
 
+
+  <h4 class="section" id="JsonApiClient_Interfaces_IJsonApiQueryClient_1_ToListAsync_System_Threading_CancellationToken__examples">Examples</h4>
+  <p>Consider the following class:</p>
+<pre><code class="lang-csharp">[JRes("api.books", "api", "author")]
+public class Author : JResource{int}
+{
+    [JAttr]
+    public string? FirstName { get; set; }
+    [JAttr]
+    public string? LastName { get; set; }
+    [JAttr]
+    public DateTime DateOfBirth { get; set; }
+    [JRel]
+    public virtual ICollection{Book} Books { get; set; } = [];
+}</code></pre>
+<p>The following code snippet:</p>
+<pre><code class="lang-csharp">jsonApiClient.Query{Author}().Where(a =&gt; a.FirstName == "J.R.R.").ToListAsync();</code></pre>
+<p>will call the following endpoint</p>
+<pre><code class="lang-csharp">http://api.com/api/author?filter=Equals(firstName,'J.R.R.')</code></pre>
+<p>and return a list of <code>Author</code> instances with <code>Name</code> equal to 'J.R.R.'.</p>
 
 
 

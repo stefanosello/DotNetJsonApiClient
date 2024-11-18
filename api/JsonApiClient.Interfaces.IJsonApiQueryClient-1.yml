@@ -506,11 +506,11 @@ items:
 
     The following code snippet:
 
-    <pre><code class="lang-csharp">queryClient.OrderBy(b =&gt; b.Title, a =&gt; a.Books);</code></pre>
+    <pre><code class="lang-csharp">queryClient.OrderByDescending(b =&gt; b.Title, a =&gt; a.Books);</code></pre>
 
     will render the following query string:
 
-    <pre><code class="lang-csharp">?orderBy[books]=title</code></pre>
+    <pre><code class="lang-csharp">?orderBy[books]=-title</code></pre>
 
     considering that <code>Author</code> is the main resource type.
   syntax:
@@ -571,11 +571,11 @@ items:
 
     The following code snippet:
 
-    <pre><code class="lang-csharp">queryClient.OrderBy(a =&gt; a.Name);</code></pre>
+    <pre><code class="lang-csharp">queryClient.OrderByDescending(a =&gt; a.Name);</code></pre>
 
     will render the following query string:
 
-    <pre><code class="lang-csharp">?orderBy=name</code></pre>
+    <pre><code class="lang-csharp">?orderBy=-name</code></pre>
 
     considering that <code>Author</code> is the main resource type.
   syntax:
@@ -613,21 +613,48 @@ items:
       repo: git@github.com:stefanosello/DotNetJsonApiClient.git
     id: PageSize
     path: JsonApiClient/Interfaces/IJsonApiQueryClient.cs
-    startLine: 226
+    startLine: 249
   assemblies:
   - JsonApiClient
   namespace: JsonApiClient.Interfaces
+  summary: >-
+    Builds the <code>page[size]</code> part of the query string. It can be used to specify the number of
+
+    <code class="typeparamref">TEntity</code> subresources to be returned by the server for each main resource
+
+    of type <code class="typeparamref">TRootEntity</code>.
+  example:
+  - >-
+    Consider an <code>Author</code> class with resource type <code>authors</code> a relationship <code>Books</code> with an entity
+
+    type <code>books</code>.
+
+    The following code snippet:
+
+    <pre><code class="lang-csharp">queryClient.PageSize(5, a =&gt; a.Books);</code></pre>
+
+    will render the following query string:
+
+    <pre><code class="lang-csharp">?page[size]=books:5</code></pre>
+
+    considering that <code>Author</code> is the main resource type.
   syntax:
     content: 'IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit, Expression<Func<TRootEntity, IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource'
     parameters:
     - id: limit
       type: System.Int32
+      description: The number of elements to be returned for each main resource.
     - id: resourceSelector
       type: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Collections.Generic.IEnumerable{{TEntity}}}}
+      description: >-
+        A lambda function accepting a <code class="typeparamref">TRootEntity</code> as parameter
+            and returning an enumerable of <code class="typeparamref">TEntity</code> resources, representing the set of subresources to
+            paginate.
     typeParameters:
     - id: TEntity
     return:
       type: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+      description: This <xref href="JsonApiClient.Interfaces.IJsonApiQueryClient%601" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Function PageSize(Of TEntity As {Class, IJsonApiResource})(limit As Integer, resourceSelector As Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity)))) As IJsonApiQueryClient(Of TRootEntity)
   overload: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize*
   nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageSize(Of TEntity)(Integer, Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
@@ -651,17 +678,36 @@ items:
       repo: git@github.com:stefanosello/DotNetJsonApiClient.git
     id: PageSize
     path: JsonApiClient/Interfaces/IJsonApiQueryClient.cs
-    startLine: 228
+    startLine: 269
   assemblies:
   - JsonApiClient
   namespace: JsonApiClient.Interfaces
+  summary: >-
+    Builds the <code>page[size]</code> part of the query string. It can be used to specify the number of
+
+    <code class="typeparamref">TRootEntity</code> resources to be returned by the server.
+  example:
+  - >-
+    Consider an <code>Author</code> class with resource type <code>authors</code>.
+
+    The following code snippet:
+
+    <pre><code class="lang-csharp">queryClient.PageSize(5);</code></pre>
+
+    will render the following query string:
+
+    <pre><code class="lang-csharp">?page[size]=5</code></pre>
+
+    considering that <code>Author</code> is the main resource type.
   syntax:
     content: IJsonApiQueryClient<TRootEntity> PageSize(int limit)
     parameters:
     - id: limit
       type: System.Int32
+      description: The number of elements to be returned.
     return:
       type: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+      description: This <xref href="JsonApiClient.Interfaces.IJsonApiQueryClient%601" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Function PageSize(limit As Integer) As IJsonApiQueryClient(Of TRootEntity)
   overload: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageSize*
   nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageSize(Integer)
@@ -685,21 +731,48 @@ items:
       repo: git@github.com:stefanosello/DotNetJsonApiClient.git
     id: PageNumber
     path: JsonApiClient/Interfaces/IJsonApiQueryClient.cs
-    startLine: 230
+    startLine: 294
   assemblies:
   - JsonApiClient
   namespace: JsonApiClient.Interfaces
+  summary: >-
+    Builds the <code>page[number]</code> part of the query string. It can be used to specify which page of given size
+
+    and of <code class="typeparamref">TEntity</code> subresources should be returned by the server for each main resource
+
+    of type <code class="typeparamref">TRootEntity</code>.
+  example:
+  - >-
+    Consider an <code>Author</code> class with resource type <code>authors</code> a relationship <code>Books</code> with an entity
+
+    type <code>books</code>.
+
+    The following code snippet:
+
+    <pre><code class="lang-csharp">queryClient.PageNumber(2, a =&gt; a.Books);</code></pre>
+
+    will render the following query string:
+
+    <pre><code class="lang-csharp">?page[number]=books:2</code></pre>
+
+    considering that <code>Author</code> is the main resource type.
   syntax:
     content: 'IJsonApiQueryClient<TRootEntity> PageNumber<TEntity>(int number, Expression<Func<TRootEntity, IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource'
     parameters:
     - id: number
       type: System.Int32
+      description: The page number that indicates which page of results should be returned for each main resource.
     - id: resourceSelector
       type: System.Linq.Expressions.Expression{System.Func{{TRootEntity},System.Collections.Generic.IEnumerable{{TEntity}}}}
+      description: >-
+        A lambda function accepting a <code class="typeparamref">TRootEntity</code> as parameter
+            and returning an enumerable of <code class="typeparamref">TEntity</code> resources, representing the set of subresources to
+            paginate.
     typeParameters:
     - id: TEntity
     return:
       type: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+      description: This <xref href="JsonApiClient.Interfaces.IJsonApiQueryClient%601" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Function PageNumber(Of TEntity As {Class, IJsonApiResource})(number As Integer, resourceSelector As Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity)))) As IJsonApiQueryClient(Of TRootEntity)
   overload: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber*
   nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageNumber(Of TEntity)(Integer, Expression(Of Func(Of TRootEntity, IEnumerable(Of TEntity))))
@@ -723,17 +796,36 @@ items:
       repo: git@github.com:stefanosello/DotNetJsonApiClient.git
     id: PageNumber
     path: JsonApiClient/Interfaces/IJsonApiQueryClient.cs
-    startLine: 232
+    startLine: 314
   assemblies:
   - JsonApiClient
   namespace: JsonApiClient.Interfaces
+  summary: >-
+    Builds the <code>page[size]</code> part of the query string. It can be used to specify which page of given size and of
+
+    <code class="typeparamref">TRootEntity</code> resources should be returned by the server.
+  example:
+  - >-
+    Consider an <code>Author</code> class with resource type <code>authors</code>.
+
+    The following code snippet:
+
+    <pre><code class="lang-csharp">queryClient.PageNumber(2);</code></pre>
+
+    will render the following query string:
+
+    <pre><code class="lang-csharp">?page[number]=2</code></pre>
+
+    considering that <code>Author</code> is the main resource type.
   syntax:
     content: IJsonApiQueryClient<TRootEntity> PageNumber(int number)
     parameters:
     - id: number
       type: System.Int32
+      description: The page number that indicates which page of results should be returned.
     return:
       type: JsonApiClient.Interfaces.IJsonApiQueryClient`1
+      description: This <xref href="JsonApiClient.Interfaces.IJsonApiQueryClient%601" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Function PageNumber(number As Integer) As IJsonApiQueryClient(Of TRootEntity)
   overload: JsonApiClient.Interfaces.IJsonApiQueryClient`1.PageNumber*
   nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).PageNumber(Integer)
@@ -757,19 +849,54 @@ items:
       repo: git@github.com:stefanosello/DotNetJsonApiClient.git
     id: FindAsync
     path: JsonApiClient/Interfaces/IJsonApiQueryClient.cs
-    startLine: 234
+    startLine: 349
   assemblies:
   - JsonApiClient
   namespace: JsonApiClient.Interfaces
+  summary: >-
+    Executes the query built so far and makes the HTTP call to the <code>/:resource-type/:id</code><code>json:api</code>
+
+    endpoint returning the resource with the specified <code class="paramref">id</code> if found, or <code>null</code> otherwise.
+  example:
+  - >-
+    Consider the following class:
+
+    <pre><code class="lang-csharp">[JRes("api.books", "api", "author")]
+
+    public class Author : JResource{int}
+
+    {
+        [JAttr]
+        public string? FirstName { get; set; }
+        [JAttr]
+        public string? LastName { get; set; }
+        [JAttr]
+        public DateTime DateOfBirth { get; set; }
+        [JRel]
+        public virtual ICollection{Book} Books { get; set; } = [];
+    }</code></pre>
+
+    The following code snippet:
+
+    <pre><code class="lang-csharp">jsonApiClient.Query{Author}().FindAsync(1);</code></pre>
+
+    will call the following endpoint:
+
+    <pre><code class="lang-csharp">http://api.com/api/author/1</code></pre>
+
+    and return the <code>Author</code> instance with <code>id</code> equal to 1.
   syntax:
     content: Task<TRootEntity?> FindAsync(object id, CancellationToken cancellationToken = default)
     parameters:
     - id: id
       type: System.Object
+      description: The <code>id</code> of the requested resource.
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A request cancellation token for the async http call.
     return:
       type: System.Threading.Tasks.Task{{TRootEntity}}
+      description: A task that results in the requested <code class="typeparamref">TRootEntity</code>, if found.
     content.vb: Function FindAsync(id As Object, cancellationToken As CancellationToken = Nothing) As Task(Of TRootEntity)
   overload: JsonApiClient.Interfaces.IJsonApiQueryClient`1.FindAsync*
   nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).FindAsync(Object, CancellationToken)
@@ -793,17 +920,53 @@ items:
       repo: git@github.com:stefanosello/DotNetJsonApiClient.git
     id: FirstOrDefaultAsync
     path: JsonApiClient/Interfaces/IJsonApiQueryClient.cs
-    startLine: 236
+    startLine: 384
   assemblies:
   - JsonApiClient
   namespace: JsonApiClient.Interfaces
+  summary: >-
+    Executes the query built so far and makes the HTTP call to the <code>/:resource-type</code><code>json:api</code>
+
+    endpoint returning the first element that satisfies the built query string constraints.
+  example:
+  - >-
+    Consider the following class:
+
+    <pre><code class="lang-csharp">[JRes("api.books", "api", "author")]
+
+    public class Author : JResource{int}
+
+    {
+        [JAttr]
+        public string? FirstName { get; set; }
+        [JAttr]
+        public string? LastName { get; set; }
+        [JAttr]
+        public DateTime DateOfBirth { get; set; }
+        [JRel]
+        public virtual ICollection{Book} Books { get; set; } = [];
+    }</code></pre>
+
+    The following code snippet:
+
+    <pre><code class="lang-csharp">jsonApiClient.Query{Author}().Where(a =&gt; a.FirstName == "J.R.R.").ToListAsync();</code></pre>
+
+    will call the following endpoint
+
+    <pre><code class="lang-csharp">http://api.com/api/author?filter=Equals(firstName,'J.R.R.')</code></pre>
+
+    and return the first <code>Author</code> instance with <code>Name</code> equal to 'J.R.R.'.
   syntax:
     content: Task<TRootEntity?> FirstOrDefaultAsync(CancellationToken cancellationToken = default)
     parameters:
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A request cancellation token for the async http call.
     return:
       type: System.Threading.Tasks.Task{{TRootEntity}}
+      description: >-
+        A task that results in an instance of <code class="typeparamref">TRootEntity</code> which satisfies the
+            constraints, if any is found.
     content.vb: Function FirstOrDefaultAsync(cancellationToken As CancellationToken = Nothing) As Task(Of TRootEntity)
   overload: JsonApiClient.Interfaces.IJsonApiQueryClient`1.FirstOrDefaultAsync*
   nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).FirstOrDefaultAsync(CancellationToken)
@@ -826,17 +989,51 @@ items:
       repo: git@github.com:stefanosello/DotNetJsonApiClient.git
     id: ToListAsync
     path: JsonApiClient/Interfaces/IJsonApiQueryClient.cs
-    startLine: 238
+    startLine: 418
   assemblies:
   - JsonApiClient
   namespace: JsonApiClient.Interfaces
+  summary: >-
+    Executes the query built so far and makes the HTTP call to the <code>/:resource-type</code><code>json:api</code>
+
+    endpoint returning a list of resources satisfying the built query string constraints.
+  example:
+  - >-
+    Consider the following class:
+
+    <pre><code class="lang-csharp">[JRes("api.books", "api", "author")]
+
+    public class Author : JResource{int}
+
+    {
+        [JAttr]
+        public string? FirstName { get; set; }
+        [JAttr]
+        public string? LastName { get; set; }
+        [JAttr]
+        public DateTime DateOfBirth { get; set; }
+        [JRel]
+        public virtual ICollection{Book} Books { get; set; } = [];
+    }</code></pre>
+
+    The following code snippet:
+
+    <pre><code class="lang-csharp">jsonApiClient.Query{Author}().Where(a =&gt; a.FirstName == "J.R.R.").ToListAsync();</code></pre>
+
+    will call the following endpoint
+
+    <pre><code class="lang-csharp">http://api.com/api/author?filter=Equals(firstName,'J.R.R.')</code></pre>
+
+    and return a list of <code>Author</code> instances with <code>Name</code> equal to 'J.R.R.'.
   syntax:
     content: Task<List<TRootEntity>> ToListAsync(CancellationToken cancellationToken = default)
     parameters:
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A request cancellation token for the async http call.
     return:
       type: System.Threading.Tasks.Task{System.Collections.Generic.List{{TRootEntity}}}
+      description: A task that results in the requested enumerable of <code class="typeparamref">TRootEntity</code>.
     content.vb: Function ToListAsync(cancellationToken As CancellationToken = Nothing) As Task(Of List(Of TRootEntity))
   overload: JsonApiClient.Interfaces.IJsonApiQueryClient`1.ToListAsync*
   nameWithType.vb: IJsonApiQueryClient(Of TRootEntity).ToListAsync(CancellationToken)

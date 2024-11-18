@@ -4,7 +4,7 @@ using JsonApiClient.Models;
 
 namespace JsonApiClient.Tests.Models;
 
-[JRes("api.books", "books")]
+[JRes("api.books", "books", "author")]
 public class Author : JResource<int>
 {
     [JAttr]

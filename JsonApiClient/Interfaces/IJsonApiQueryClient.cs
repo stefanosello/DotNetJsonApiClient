@@ -224,17 +224,197 @@ public interface IJsonApiQueryClient<TRootEntity> where TRootEntity : class
     /// </example>
     IJsonApiQueryClient<TRootEntity> OrderByDescending(Expression<Func<TRootEntity, object>> orderByStatement);
     
+    /// <summary>
+    /// Builds the <c>page[size]</c> part of the query string. It can be used to specify the number of
+    /// <typeparamref name="TEntity"/> subresources to be returned by the server for each main resource
+    /// of type <typeparamref name="TRootEntity"/>.
+    /// </summary>
+    /// <param name="limit">The number of elements to be returned for each main resource.</param>
+    /// <param name="resourceSelector">A lambda function accepting a <typeparamref name="TRootEntity"/> as parameter
+    /// and returning an enumerable of <typeparamref name="TEntity"/> resources, representing the set of subresources to
+    /// paginate.</param>
+    /// <returns>This <see cref="IJsonApiQueryClient{TRootEntity}"/> instance.</returns>
+    /// <example>
+    /// Consider an <c>Author</c> class with resource type <c>authors</c> a relationship <c>Books</c> with an entity
+    /// type <c>books</c>.
+    /// The following code snippet:
+    /// <code>
+    /// queryClient.PageSize(5, a => a.Books);
+    /// </code>
+    /// will render the following query string:
+    /// <code>
+    /// ?page[size]=books:5
+    /// </code>
+    /// considering that <c>Author</c> is the main resource type.
+    /// </example>
     IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource;
-
+    
+    /// <summary>
+    /// Builds the <c>page[size]</c> part of the query string. It can be used to specify the number of
+    /// <typeparamref name="TRootEntity"/> resources to be returned by the server.
+    /// </summary>
+    /// <param name="limit">The number of elements to be returned.</param>
+    /// <returns>This <see cref="IJsonApiQueryClient{TRootEntity}"/> instance.</returns>
+    /// <example>
+    /// Consider an <c>Author</c> class with resource type <c>authors</c>.
+    /// The following code snippet:
+    /// <code>
+    /// queryClient.PageSize(5);
+    /// </code>
+    /// will render the following query string:
+    /// <code>
+    /// ?page[size]=5
+    /// </code>
+    /// considering that <c>Author</c> is the main resource type.
+    /// </example>
     IJsonApiQueryClient<TRootEntity> PageSize(int limit);
-
+    
+    /// <summary>
+    /// Builds the <c>page[number]</c> part of the query string. It can be used to specify which page of given size
+    /// and of <typeparamref name="TEntity"/> subresources should be returned by the server for each main resource
+    /// of type <typeparamref name="TRootEntity"/>.
+    /// </summary>
+    /// <param name="number">The page number that indicates which page of results should be returned for each main resource.</param>
+    /// <param name="resourceSelector">A lambda function accepting a <typeparamref name="TRootEntity"/> as parameter
+    /// and returning an enumerable of <typeparamref name="TEntity"/> resources, representing the set of subresources to
+    /// paginate.</param>
+    /// <returns>This <see cref="IJsonApiQueryClient{TRootEntity}"/> instance.</returns>
+    /// <example>
+    /// Consider an <c>Author</c> class with resource type <c>authors</c> a relationship <c>Books</c> with an entity
+    /// type <c>books</c>.
+    /// The following code snippet:
+    /// <code>
+    /// queryClient.PageNumber(2, a => a.Books);
+    /// </code>
+    /// will render the following query string:
+    /// <code>
+    /// ?page[number]=books:2
+    /// </code>
+    /// considering that <c>Author</c> is the main resource type.
+    /// </example>
     IJsonApiQueryClient<TRootEntity> PageNumber<TEntity>(int number, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource;
-
+    
+    /// <summary>
+    /// Builds the <c>page[size]</c> part of the query string. It can be used to specify which page of given size and of
+    /// <typeparamref name="TRootEntity"/> resources should be returned by the server.
+    /// </summary>
+    /// <param name="number">The page number that indicates which page of results should be returned.</param>
+    /// <returns>This <see cref="IJsonApiQueryClient{TRootEntity}"/> instance.</returns>
+    /// <example>
+    /// Consider an <c>Author</c> class with resource type <c>authors</c>.
+    /// The following code snippet:
+    /// <code>
+    /// queryClient.PageNumber(2);
+    /// </code>
+    /// will render the following query string:
+    /// <code>
+    /// ?page[number]=2
+    /// </code>
+    /// considering that <c>Author</c> is the main resource type.
+    /// </example>
     IJsonApiQueryClient<TRootEntity> PageNumber(int number);
-
+    
+    /// <summary>
+    /// Executes the query built so far and makes the HTTP call to the <c>/:resource-type/:id</c> <c>json:api</c>
+    /// endpoint returning the resource with the specified <paramref name="id"/> if found, or <c>null</c> otherwise.
+    /// </summary>
+    /// <param name="id">The <c>id</c> of the requested resource.</param>
+    /// <param name="cancellationToken">A request cancellation token for the async http call.</param>
+    /// <returns>A task that results in the requested <typeparamref name="TRootEntity"/>, if found.</returns>
+    /// <example>
+    /// Consider the following class:
+    /// <code>
+    /// [JRes("api.books", "api", "author")]
+    /// public class Author : JResource{int}
+    /// {
+    ///     [JAttr]
+    ///     public string? FirstName { get; set; }
+    ///     [JAttr]
+    ///     public string? LastName { get; set; }
+    ///     [JAttr]
+    ///     public DateTime DateOfBirth { get; set; }
+    ///     [JRel]
+    ///     public virtual ICollection{Book} Books { get; set; } = [];
+    /// }
+    /// </code>
+    /// The following code snippet:
+    /// <code>
+    /// jsonApiClient.Query{Author}().FindAsync(1);
+    /// </code>
+    /// will call the following endpoint:
+    /// <code>
+    /// http://api.com/api/author/1
+    /// </code>
+    /// and return the <c>Author</c> instance with <c>id</c> equal to 1.
+    /// </example>
     Task<TRootEntity?> FindAsync(object id, CancellationToken cancellationToken = default);
     
+    /// <summary>
+    /// Executes the query built so far and makes the HTTP call to the <c>/:resource-type</c> <c>json:api</c>
+    /// endpoint returning the first element that satisfies the built query string constraints.
+    /// </summary>
+    /// <param name="cancellationToken">A request cancellation token for the async http call.</param>
+    /// <returns>A task that results in an instance of <typeparamref name="TRootEntity"/> which satisfies the
+    /// constraints, if any is found.</returns>
+    /// <example>
+    /// Consider the following class:
+    /// <code>
+    /// [JRes("api.books", "api", "author")]
+    /// public class Author : JResource{int}
+    /// {
+    ///     [JAttr]
+    ///     public string? FirstName { get; set; }
+    ///     [JAttr]
+    ///     public string? LastName { get; set; }
+    ///     [JAttr]
+    ///     public DateTime DateOfBirth { get; set; }
+    ///     [JRel]
+    ///     public virtual ICollection{Book} Books { get; set; } = [];
+    /// }
+    /// </code>
+    /// The following code snippet:
+    /// <code>
+    /// jsonApiClient.Query{Author}().Where(a => a.FirstName == "J.R.R.").ToListAsync();
+    /// </code>
+    /// will call the following endpoint
+    /// <code>
+    /// http://api.com/api/author?filter=Equals(firstName,'J.R.R.')
+    /// </code>
+    /// and return the first <c>Author</c> instance with <c>Name</c> equal to 'J.R.R.'.
+    /// </example>
     Task<TRootEntity?> FirstOrDefaultAsync(CancellationToken cancellationToken = default);
-
+    
+    /// <summary>
+    /// Executes the query built so far and makes the HTTP call to the <c>/:resource-type</c> <c>json:api</c>
+    /// endpoint returning a list of resources satisfying the built query string constraints.
+    /// </summary>
+    /// <param name="cancellationToken">A request cancellation token for the async http call.</param>
+    /// <returns>A task that results in the requested enumerable of <typeparamref name="TRootEntity"/>.</returns>
+    /// <example>
+    /// Consider the following class:
+    /// <code>
+    /// [JRes("api.books", "api", "author")]
+    /// public class Author : JResource{int}
+    /// {
+    ///     [JAttr]
+    ///     public string? FirstName { get; set; }
+    ///     [JAttr]
+    ///     public string? LastName { get; set; }
+    ///     [JAttr]
+    ///     public DateTime DateOfBirth { get; set; }
+    ///     [JRel]
+    ///     public virtual ICollection{Book} Books { get; set; } = [];
+    /// }
+    /// </code>
+    /// The following code snippet:
+    /// <code>
+    /// jsonApiClient.Query{Author}().Where(a => a.FirstName == "J.R.R.").ToListAsync();
+    /// </code>
+    /// will call the following endpoint
+    /// <code>
+    /// http://api.com/api/author?filter=Equals(firstName,'J.R.R.')
+    /// </code>
+    /// and return a list of <c>Author</c> instances with <c>Name</c> equal to 'J.R.R.'.
+    /// </example>
     Task<List<TRootEntity>> ToListAsync(CancellationToken cancellationToken = default);
 }
