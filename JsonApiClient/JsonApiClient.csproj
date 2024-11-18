@@ -5,7 +5,6 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>12.0</LangVersion>
-        <PackageVersion>0.0.1</PackageVersion>
         <Title>DotNetJsonApiClient</Title>
         <Authors>Stefano Sello</Authors>
         <Description>Provides a simple interface to execute json:api-compliant http calls.</Description>
@@ -16,6 +15,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <IsPackable>true</IsPackable>
+        <PackageId>DotNetJsonApiClient</PackageId>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
