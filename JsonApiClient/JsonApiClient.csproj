@@ -15,6 +15,7 @@
         <RepositoryUrl>https://github.com/stefanosello/DotNetJsonApiClient</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <IsPackable>true</IsPackable>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

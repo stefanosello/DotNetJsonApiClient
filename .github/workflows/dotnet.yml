@@ -39,8 +39,9 @@ jobs:
         files: ./JsonApiClient.Tests/TestResults/coverage.cobertura.xml # Path to the coverage report
         flags: unittests
         fail_ci_if_error: true
-    - name: Publish
-      run: dotnet publish --no-restore --configuration Release --output ./publish /p:Version=$VERSION
+    - name: pack nuget packages
+      if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
+      run: dotnet pack JsonApiClient/JsonApiClient.csproj --output nupkgs --no-restore --no-build /p:PackageVersion=$VERSION
     - name: upload nuget package
       if: github.ref_type == 'tag' && startsWith(github.ref, 'refs/tags/v')
       run: dotnet nuget push nupkgs/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
