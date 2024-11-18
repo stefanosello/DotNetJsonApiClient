@@ -4,6 +4,17 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>12.0</LangVersion>
+        <PackageVersion>0.0.1</PackageVersion>
+        <Title>DotNetJsonApiClient</Title>
+        <Authors>Stefano Sello</Authors>
+        <Description>Provides a simple interface to execute json:api-compliant http calls.</Description>
+        <Copyright>Stefano Sello</Copyright>
+        <PackageProjectUrl>https://github.com/stefanosello/DotNetJsonApiClient</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/stefanosello/DotNetJsonApiClient</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
