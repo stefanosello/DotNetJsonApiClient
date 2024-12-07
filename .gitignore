@@ -8,3 +8,4 @@ riderModule.iml
 sqlserver_volumes/data
 docker-compose.generated.override.yml
 .DS_Store
+nupkgs/
