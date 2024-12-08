@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "src": "JsonApiClient/",
+          "src": "../src/JsonApiClient/",
           "files": ["JsonApiClient.csproj"]
         }
       ],
@@ -19,7 +19,6 @@
         ],
         "exclude": [
           "_site/**",
-          "docker-compose.yml",
           "**/runtimes"
         ]
       },

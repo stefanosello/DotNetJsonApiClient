@@ -1,13 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonApiClient", "JsonApiClient\JsonApiClient.csproj", "{4467DEFF-7F50-4953-B192-C581CEB7D55A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonApiClient", "src\JsonApiClient\JsonApiClient.csproj", "{4467DEFF-7F50-4953-B192-C581CEB7D55A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonApiClient.Tests", "JsonApiClient.Tests\JsonApiClient.Tests.csproj", "{E7C8433B-7592-4FA3-BE90-39BBA98DE478}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonApiClient.Tests", "src\JsonApiClient.Tests\JsonApiClient.Tests.csproj", "{E7C8433B-7592-4FA3-BE90-39BBA98DE478}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B6C93027-FECC-42C9-B3D1-9B2B707091EF}"
-	ProjectSection(SolutionItems) = preProject
-		docker-compose.yml = docker-compose.yml
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
