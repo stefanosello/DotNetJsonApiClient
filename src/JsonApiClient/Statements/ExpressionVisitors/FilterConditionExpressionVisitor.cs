@@ -7,12 +7,18 @@ namespace JsonApiClient.Statements.ExpressionVisitors;
 
 internal class FilterConditionExpressionVisitor : ExpressionVisitor
 {
+    private readonly string? _memberPrefix;
     private readonly StringBuilder _sb = new();
     private static readonly IEnumerable<string> StringComparisonMethodNames = ["Contains", "StartsWith", "EndsWith"];
-
-    public static string VisitExpression(Expression expression)
+    
+    private FilterConditionExpressionVisitor(string? memberPrefix = null)
     {
-        var visitor = new FilterConditionExpressionVisitor();
+        _memberPrefix = memberPrefix;
+    }
+
+    public static string VisitExpression(Expression expression, string? memberPrefix = null)
+    {
+        var visitor = new FilterConditionExpressionVisitor(memberPrefix);
         visitor.Visit(expression);
         return visitor._sb.ToString();
     }
@@ -47,20 +53,33 @@ internal class FilterConditionExpressionVisitor : ExpressionVisitor
         {
             case true when StringComparisonMethodNames.Contains(methodName):
                 _sb.Append($"{methodName.Uncapitalize()}(");
+                VisitStringOrCollectionMethodCall(node, true);
+                _sb.Append(')');
                 break;
             case false when methodName == "Contains" && node.Arguments.Count > 0:
                 _sb.Append("any(");
+                VisitStringOrCollectionMethodCall(node, false);
+                _sb.Append(')');
+                break;
+            case false when methodName == "Any" && node.Arguments is [MemberExpression propertyExpression]:
+                _sb.Append($"has({SubresourceSelectorExpressionVisitor.VisitExpression(propertyExpression)})");
+                break;
+            case false when methodName == "Any" && node.Arguments is [MemberExpression propertyExpression, LambdaExpression lambdaExpression]:
+                _sb.Append(VisitExpression(lambdaExpression,GetFullMemberName(SubresourceSelectorExpressionVisitor.VisitExpression(propertyExpression))));
                 break;
             default:
                 throw new NotSupportedException($"The method '{methodName}' is not supported");
         }
         
+        return node;
+    }
+    
+    private void VisitStringOrCollectionMethodCall(MethodCallExpression node, bool isStringMethod)
+    {
         var isExtensionMethod = node.Arguments.Count > 1;
         Visit(isExtensionMethod ? node.Arguments[1] : isStringMethod ? node.Object : node.Arguments[0]);
         _sb.Append(',');
         Visit(isExtensionMethod || isStringMethod ? node.Arguments[0] : node.Object);
-        _sb.Append(')');
-        return node;
     }
 
     protected override Expression VisitMember(MemberExpression node)
@@ -68,10 +87,10 @@ internal class FilterConditionExpressionVisitor : ExpressionVisitor
         if (node.Expression is ConstantExpression)
             AppendValue(Expression.Lambda(node).Compile().DynamicInvoke());
         else if (node.Type == typeof(bool))
-            _sb.Append($"equals({node.Member.Name.Uncapitalize()},'true')");
+            _sb.Append($"equals({GetFullMemberName(AttributeSelectorExpressionVisitor.VisitExpression(node))},'true')");
         else
         {
-            var attributeName = AttributeSelectorExpressionVisitor.VisitExpression(node);
+            var attributeName = GetFullMemberName(AttributeSelectorExpressionVisitor.VisitExpression(node));
             _sb.Append(attributeName);
         }   
         
@@ -133,4 +152,6 @@ internal class FilterConditionExpressionVisitor : ExpressionVisitor
             _ => Convert.ToString(value, CultureInfo.InvariantCulture) ?? string.Empty
         });
     }
+
+    private string? GetFullMemberName(string? memberName) => memberName is null ? null : _memberPrefix is null ? memberName : $"{_memberPrefix}.{memberName}";
 }

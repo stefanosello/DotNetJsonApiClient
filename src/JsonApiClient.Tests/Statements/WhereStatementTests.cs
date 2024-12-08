@@ -2,6 +2,7 @@ using FluentAssertions;
 using JsonApiClient.Attributes;
 using JsonApiClient.Models;
 using JsonApiClient.Statements;
+using JsonApiClient.Tests.Models;
 
 namespace JsonApiClient.Tests.Statements;
 
@@ -25,6 +26,8 @@ public class WhereStatementTests
         public double Percentage { get; set; }
         [JAttr]
         public bool Active { get; set; }
+        [JRel]
+        public ICollection<Author> Authors { get; set; }
     }
 
     [Fact]
@@ -217,5 +220,50 @@ public class WhereStatementTests
 
         result.Key.Should().Be("filter");
         result.Value.Should().Be("and(any(chapter,'Intro','Summary','Conclusion'),or(not(contains(description,'ciao')),lessOrEqual(lastModified,'2022-05-12 00:00:00')))");
+    }
+    
+    [Fact]
+    public void Parse_StringEndsWith_ShouldReturnCorrectFilter()
+    {
+        var result = new WhereStatement<TestModel,TestModel>(m => m.Description!.EndsWith("ciao")).Translate();
+
+        result.Key.Should().Be("filter");
+        result.Value.Should().Be("endsWith(description,'ciao')");
+    }
+    
+    [Fact]
+    public void Parse_StringStartsWith_ShouldReturnCorrectFilter()
+    {
+        var result = new WhereStatement<TestModel,TestModel>(m => m.Description!.StartsWith("ciao")).Translate();
+
+        result.Key.Should().Be("filter");
+        result.Value.Should().Be("startsWith(description,'ciao')");
+    }
+    
+    [Fact]
+    public void Parse_HasRelatedResources_ShouldReturnCorrectFilter()
+    {
+        var result = new WhereStatement<TestModel,TestModel>(m => m.Authors.Any()).Translate();
+
+        result.Key.Should().Be("filter");
+        result.Value.Should().Be("has(authors)");
+    }
+    
+    [Fact]
+    public void Parse_ConditionOnSubresource_ShouldReturnCorrectFilter()
+    {
+        var result = new WhereStatement<TestModel,TestModel>(m => m.Authors.Any(a => a.FirstName == "Tesla") ).Translate();
+
+        result.Key.Should().Be("filter");
+        result.Value.Should().Be("equals(authors.firstName,'Tesla')");
+    }
+    
+    [Fact]
+    public void Parse_BooleanConditionOnSubresource_ShouldReturnCorrectFilter()
+    {
+        var result = new WhereStatement<TestModel,TestModel>(m => m.Authors.Any(a => a.Books.Any(b => !b.Deleted)) ).Translate();
+
+        result.Key.Should().Be("filter");
+        result.Value.Should().Be("not(equals(authors.books.deleted,'true'))");
     }
 }
