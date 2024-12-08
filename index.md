@@ -1,3 +1,8 @@
+---
+title: Home
+description: Documentation for the DotNetJsonApiClient library.
+---
+
 ![logo.svg](https://raw.githubusercontent.com/stefanosello/DotNetJsonApiClient/refs/heads/main/logo.svg)
 
 [![codecov](https://codecov.io/gh/stefanosello/DotNetJsonApiClient/graph/badge.svg?token=VGZAWJNI5X)](https://codecov.io/gh/stefanosello/DotNetJsonApiClient)

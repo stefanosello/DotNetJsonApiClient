@@ -15,10 +15,11 @@
       {
         "files": [
           "toc.yml",
-          "**/*.{md,yml,svg}"
+          "**/*.{md,yml}"
         ],
         "exclude": [
           "_site/**",
+          "docker-compose.yml",
           "**/runtimes"
         ]
       },
@@ -34,11 +35,17 @@
       "default",
       "modern"
     ],
+    "resource": [
+      { "files": ["logo_d.svg"] }
+    ],
     "globalMetadata": {
       "_appName": "DotNet Json:Api Client",
       "_appTitle": "DotNet Json:Api Client",
       "_enableSearch": true,
-      "pdf": false
-    }
+      "pdf": false,
+      "_appLogoPath": "logo_d.svg",
+      "_appFaviconPath": "logo_d.svg"
+    },
+    "theme": "docfx-theme"
   }
 }

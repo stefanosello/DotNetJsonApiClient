@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    version="1.0"
-   width="218px"
-   height="218px"
+   width="34pt"
+   height="34pt"
    viewBox="0 0 218 218"
    preserveAspectRatio="xMidYMid meet"
    id="svg2"
@@ -33,7 +33,7 @@
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2" />
   <g
-     fill="#fefefe"
+     fill="none"
      id="g1"
      transform="translate(-0.2160555,-0.432111)">
     <path
