@@ -14,12 +14,19 @@
     "content": [
       {
         "files": [
-          "**/*.{md,yml}"
+          "toc.yml",
+          "**/*.{md,yml,svg}"
         ],
         "exclude": [
           "_site/**",
           "**/runtimes"
         ]
+      },
+      {
+        "files": [
+          "api/**.yml"
+        ],
+        "dest": "api"
       }
     ],
     "output": "_site",
@@ -28,10 +35,10 @@
       "modern"
     ],
     "globalMetadata": {
-      "_appName": "JsonApiClient",
-      "_appTitle": "DotNetJsonApiClient",
+      "_appName": "DotNet Json:Api Client",
+      "_appTitle": "DotNet Json:Api Client",
       "_enableSearch": true,
-      "pdf": true
+      "pdf": false
     }
   }
 }
