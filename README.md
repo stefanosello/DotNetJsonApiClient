@@ -1,4 +1,4 @@
-![logo.png](https://raw.githubusercontent.com/stefanosello/DotNetJsonApiClient/refs/heads/main/logo.png)
+![logo.svg](https://raw.githubusercontent.com/stefanosello/DotNetJsonApiClient/refs/heads/main/logo.svg)
 
 [![codecov](https://codecov.io/gh/stefanosello/DotNetJsonApiClient/graph/badge.svg?token=VGZAWJNI5X)](https://codecov.io/gh/stefanosello/DotNetJsonApiClient)
 [![Build](https://github.com/stefanosello/DotNetJsonApiClient/actions/workflows/dotnet.yml/badge.svg)](https://github.com/stefanosello/DotNetJsonApiClient/actions/workflows/dotnet.yml)
