@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using JsonApiClient.Builders;
 using JsonApiClient.Enums;
+using JsonApiClient.Exceptions;
 using JsonApiClient.Extensions;
 using JsonApiClient.Interfaces;
 using JsonApiClient.Statements;
@@ -9,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace JsonApiClient.Clients;
 
-internal class JsonApiQueryClient<TRootEntity>(IHttpClientFactory httpClientFactory) : IJsonApiQueryClient<TRootEntity> where TRootEntity : class, IJsonApiResource
+internal class JsonApiQueryClient<TRootEntity>(IHttpClientFactory httpClientFactory, JsonApiClientOptions options) : IJsonApiQueryClient<TRootEntity> where TRootEntity : class, IJsonApiResource
 {
     private readonly JsonApiUrlBuilder _urlBuilder = new();   
     public IJsonApiQueryClient<TRootEntity> Select<TEntity>(Expression<Func<TEntity, object>> selectStatement) where TEntity : class, IJsonApiResource
@@ -71,21 +72,25 @@ internal class JsonApiQueryClient<TRootEntity>(IHttpClientFactory httpClientFact
     
     public IJsonApiQueryClient<TRootEntity> PageSize<TEntity>(int limit, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource
     {
+        if (limit <= 0) throw new ArgumentException("Page size must be greater than 0", nameof(limit));
         return PageSizeInternal(limit, resourceSelector);
     }
     
     public IJsonApiQueryClient<TRootEntity> PageSize(int limit)
     {
+        if (limit <= 0) throw new ArgumentException("Page size must be greater than 0", nameof(limit));
         return PageSizeInternal<TRootEntity>(limit);
     }
     
     public IJsonApiQueryClient<TRootEntity> PageNumber<TEntity>(int number, Expression<Func<TRootEntity,IEnumerable<TEntity>>> resourceSelector) where TEntity : class, IJsonApiResource
     {
+        if (number <= 0) throw new ArgumentException("Page number must be greater than 0", nameof(number));
         return PageNumberInternal(number, resourceSelector);
     }
     
     public IJsonApiQueryClient<TRootEntity> PageNumber(int number)
     {
+        if (number <= 0) throw new ArgumentException("Page number must be greater than 0", nameof(number));
         return PageNumberInternal<TRootEntity>(number);
     }
 
@@ -131,7 +136,68 @@ internal class JsonApiQueryClient<TRootEntity>(IHttpClientFactory httpClientFact
     {
         var url = _urlBuilder.Build(path);
         using var httpClient = httpClientFactory.CreateClient(typeof(TRootEntity).GetResourceHttpClientId());
+        
+        if (options.EnableRetry)
+        {
+            return await MakeCallWithRetryAsync(httpClient, url, cancellationToken);
+        }
+        
         var httpResponse = await httpClient.GetAsync(url, cancellationToken);
+        if (!httpResponse.IsSuccessStatusCode)
+        {
+            var content = await httpResponse.Content.ReadAsStringAsync(cancellationToken);
+            throw new JsonApiHttpException((int)httpResponse.StatusCode, 
+                $"HTTP request failed with status code {httpResponse.StatusCode}", content);
+        }
         return await httpResponse.Content.ReadAsStringAsync(cancellationToken);
+    }
+    
+    private async Task<string> MakeCallWithRetryAsync(HttpClient httpClient, string url, CancellationToken cancellationToken)
+    {
+        var attempt = 0;
+        while (true)
+        {
+            try
+            {
+                var httpResponse = await httpClient.GetAsync(url, cancellationToken);
+                
+                if (httpResponse.IsSuccessStatusCode)
+                {
+                    return await httpResponse.Content.ReadAsStringAsync(cancellationToken);
+                }
+                
+                var statusCode = (int)httpResponse.StatusCode;
+                var content = await httpResponse.Content.ReadAsStringAsync(cancellationToken);
+                
+                // If not retryable or max retries reached, throw our custom exception
+                if (!options.RetryableStatusCodes.Contains(statusCode) || 
+                    attempt >= options.MaxRetries)
+                {
+                    throw new JsonApiHttpException(statusCode, 
+                        $"HTTP request failed with status code {httpResponse.StatusCode}", content);
+                }
+                
+                attempt++;
+                if (attempt <= options.MaxRetries)
+                {
+                    await Task.Delay(options.RetryDelay, cancellationToken);
+                    continue;
+                }
+                
+                // Should not reach here, but just in case
+                throw new JsonApiHttpException(statusCode, 
+                    $"HTTP request failed with status code {httpResponse.StatusCode}", content);
+            }
+            catch (HttpRequestException) when (attempt < options.MaxRetries)
+            {
+                attempt++;
+                if (attempt <= options.MaxRetries)
+                {
+                    await Task.Delay(options.RetryDelay, cancellationToken);
+                    continue;
+                }
+                throw;
+            }
+        }
     }
 }

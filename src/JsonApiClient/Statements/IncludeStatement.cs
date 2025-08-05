@@ -10,6 +10,6 @@ internal class IncludeStatement<TEntity>(Expression<Func<TEntity,object>> expres
     public KeyValuePair<string,string> Translate()
     {
         var includedSubresource = SubresourceSelectorExpressionVisitor.VisitExpression(expression.Body);
-        return new KeyValuePair<string, string>($"include",includedSubresource);
+        return new KeyValuePair<string, string>("include", includedSubresource ?? string.Empty);
     }
 }
